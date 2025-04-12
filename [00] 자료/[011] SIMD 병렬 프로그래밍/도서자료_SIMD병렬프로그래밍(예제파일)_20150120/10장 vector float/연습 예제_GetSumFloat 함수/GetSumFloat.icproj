@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="11.1"
+	Name="GetSumFloat"
+	ProjectGUID="{1EA21121-6F99-4926-B848-1AD6F4DC756E}"
+	VCNestedProjectGUID="{B60B7ACE-94AC-4235-8069-33D682ADAC24}"
+	VCNestedProjectFileName="GetSumFloat.vcproj">
+	<Configurations/>
+	<Files/>
+</VisualStudioProject>

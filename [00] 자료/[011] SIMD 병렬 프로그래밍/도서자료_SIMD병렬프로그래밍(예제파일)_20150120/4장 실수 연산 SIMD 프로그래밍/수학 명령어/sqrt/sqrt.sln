@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqrt", "sqrt.vcproj", "{459CCE03-B303-46B4-9478-97185E7DA252}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{459CCE03-B303-46B4-9478-97185E7DA252}.Debug|Win32.ActiveCfg = Debug|Win32
+		{459CCE03-B303-46B4-9478-97185E7DA252}.Debug|Win32.Build.0 = Debug|Win32
+		{459CCE03-B303-46B4-9478-97185E7DA252}.Release|Win32.ActiveCfg = Release|Win32
+		{459CCE03-B303-46B4-9478-97185E7DA252}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

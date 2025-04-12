@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ks_c_5601-1987"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="11.1"
+	Name="MemcopyTest"
+	ProjectGUID="{68D31DA7-060F-4273-8F50-8793D1C6D2BE}"
+	VCNestedProjectGUID="{329F02CA-705D-40E5-BCE5-47E494823BE4}"
+	VCNestedProjectFileName="MemcopyTest.vcproj">
+	<Configurations/>
+	<Files/>
+</VisualStudioProject>

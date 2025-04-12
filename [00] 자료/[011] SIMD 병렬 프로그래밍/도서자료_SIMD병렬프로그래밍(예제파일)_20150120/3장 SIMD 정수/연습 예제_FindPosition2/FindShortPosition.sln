@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindShortPosition", "FindShortPosition.vcproj", "{E1581F09-8CFC-4A3D-BA27-DCB0A7B2B586}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1581F09-8CFC-4A3D-BA27-DCB0A7B2B586}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E1581F09-8CFC-4A3D-BA27-DCB0A7B2B586}.Debug|Win32.Build.0 = Debug|Win32
+		{E1581F09-8CFC-4A3D-BA27-DCB0A7B2B586}.Release|Win32.ActiveCfg = Release|Win32
+		{E1581F09-8CFC-4A3D-BA27-DCB0A7B2B586}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

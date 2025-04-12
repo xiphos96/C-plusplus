@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixMul", "MatrixMul.vcproj", "{0F2106EF-3726-43A4-87CB-7A201521632B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F2106EF-3726-43A4-87CB-7A201521632B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0F2106EF-3726-43A4-87CB-7A201521632B}.Debug|Win32.Build.0 = Debug|Win32
+		{0F2106EF-3726-43A4-87CB-7A201521632B}.Release|Win32.ActiveCfg = Release|Win32
+		{0F2106EF-3726-43A4-87CB-7A201521632B}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
