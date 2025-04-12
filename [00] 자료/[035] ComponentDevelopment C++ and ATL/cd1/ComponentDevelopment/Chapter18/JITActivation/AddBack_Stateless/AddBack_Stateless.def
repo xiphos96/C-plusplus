@@ -1,0 +1,9 @@
+; AddBack_Stateless.def : Declares the module parameters.
+
+LIBRARY      "AddBack_Stateless.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

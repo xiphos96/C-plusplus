@@ -1,0 +1,11 @@
+[
+	object,
+	uuid(783964A0-A074-11d1-B20C-0060970A3516)
+]
+interface IHello : IUnknown
+{
+	import "unknwn.idl";
+
+	HRESULT sayHello([in, string]wchar_t* name, 
+					[out, string]wchar_t** message);
+};

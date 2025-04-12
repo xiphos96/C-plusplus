@@ -1,0 +1,9 @@
+; Transfer.def : Declares the module parameters.
+
+LIBRARY      "Transfer.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

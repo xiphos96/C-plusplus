@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemOutServer", "RemOutServer.vcproj", "{7DEAC461-8147-4EF3-8EB7-798962F6C565}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemOutServerPS", "RemOutServerPS.vcproj", "{01A9E50C-EF21-47AE-A536-1722AABADCE0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7DEAC461-8147-4EF3-8EB7-798962F6C565} = {7DEAC461-8147-4EF3-8EB7-798962F6C565}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{7DEAC461-8147-4EF3-8EB7-798962F6C565}.Debug.ActiveCfg = Debug|Win32
+		{7DEAC461-8147-4EF3-8EB7-798962F6C565}.Debug.Build.0 = Debug|Win32
+		{7DEAC461-8147-4EF3-8EB7-798962F6C565}.Release.ActiveCfg = Release|Win32
+		{7DEAC461-8147-4EF3-8EB7-798962F6C565}.Release.Build.0 = Release|Win32
+		{01A9E50C-EF21-47AE-A536-1722AABADCE0}.Debug.ActiveCfg = Debug|Win32
+		{01A9E50C-EF21-47AE-A536-1722AABADCE0}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

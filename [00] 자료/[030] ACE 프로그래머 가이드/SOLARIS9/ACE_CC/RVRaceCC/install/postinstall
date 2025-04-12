@@ -1,0 +1,30 @@
+# $Id: postinstall,v 1.2 1999/02/03 21:02:51 shuston Exp $
+#
+# This script runs at the end of installation of ACE on Solaris.  It creates
+# any links to library files that are needed.
+#
+# CLIENT_BASEDIR is the path of the base install directory on the target.
+# CLASSES has all of the classes that were installed.
+#
+# If the actions of the script are changed, preremove will also probably
+# need a corresponding change.
+
+for class in $CLASSES
+do
+
+    case $class in
+      'base' ) /bin/rm -f $PKG_INSTALL_ROOT/$CLIENT_BASEDIR/ace/libACE.so
+               /bin/ln -s $PKG_INSTALL_ROOT/usr/lib/libACE.so \
+                          $PKG_INSTALL_ROOT/$CLIENT_BASEDIR/ace/libACE.so
+               ;;
+
+      'netsvcs' )
+               /bin/rm -f $PKG_INSTALL_ROOT/$CLIENT_BASEDIR/netsvcs/lib/libnetsvcs.so
+               /bin/ln -s $PKG_INSTALL_ROOT/usr/lib/libnetsvcs.so \
+                          $PKG_INSTALL_ROOT/$CLIENT_BASEDIR/netsvcs/lib/libnetsvcs.so
+               ;;
+    esac
+
+done
+
+exit 0

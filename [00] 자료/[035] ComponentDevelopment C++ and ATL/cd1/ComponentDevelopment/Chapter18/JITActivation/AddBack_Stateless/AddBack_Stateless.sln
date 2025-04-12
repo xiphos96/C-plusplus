@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AddBack_Stateless", "AddBack_Stateless.vcproj", "{ACF9B85B-1423-4357-86AF-621475B9E286}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AddBack_StatelessPS", "AddBack_StatelessPS.vcproj", "{C9181B7C-9087-415C-AB70-7E95C9C7D568}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACF9B85B-1423-4357-86AF-621475B9E286} = {ACF9B85B-1423-4357-86AF-621475B9E286}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ACF9B85B-1423-4357-86AF-621475B9E286}.Debug.ActiveCfg = Debug|Win32
+		{ACF9B85B-1423-4357-86AF-621475B9E286}.Debug.Build.0 = Debug|Win32
+		{ACF9B85B-1423-4357-86AF-621475B9E286}.Release.ActiveCfg = Release|Win32
+		{ACF9B85B-1423-4357-86AF-621475B9E286}.Release.Build.0 = Release|Win32
+		{C9181B7C-9087-415C-AB70-7E95C9C7D568}.Debug.ActiveCfg = Debug|Win32
+		{C9181B7C-9087-415C-AB70-7E95C9C7D568}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

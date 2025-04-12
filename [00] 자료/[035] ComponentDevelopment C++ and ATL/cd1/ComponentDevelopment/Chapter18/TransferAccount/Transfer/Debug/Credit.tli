@@ -1,0 +1,18 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (b1f229ab).
+//
+// c:\componentdevelopment\chapter18\transferaccount\transfer\debug\Credit.tli
+//
+// Wrapper implementations for Win32 type library Credit.Credit.1
+// compiler-generated file created 03/23/04 at 11:14:02 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ICredit wrapper method implementations
+//
+
+inline HRESULT ICredit::ChangeAccount ( long accountID, long amount ) {
+    HRESULT _hr = raw_ChangeAccount(accountID, amount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

@@ -1,0 +1,134 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "HA Status DLL"=HA_Status.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "HA Status LIB"=HA_Status_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Get Opt EXE"=Get_Opt.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Get Opt Static EXE"=Get_Opt_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Get Opt Long EXE"=Get_Opt_Long.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Get Opt Long Static EXE"=Get_Opt_Long_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ARGV Example EXE"=ARGV_Example.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ARGV Example Static EXE"=ARGV_Example_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

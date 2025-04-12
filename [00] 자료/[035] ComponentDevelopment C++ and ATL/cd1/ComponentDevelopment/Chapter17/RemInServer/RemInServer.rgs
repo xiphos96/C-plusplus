@@ -1,0 +1,15 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'RemInServer'
+		{
+//            val DllSurrogate = s ''					// 서버 시스템에만 지정
+//            val RemoteServerName = s 'NTSERVER'		// 클라이언트 시스템에만 지정
+		}
+		'RemInServer.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

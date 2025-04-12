@@ -1,0 +1,19 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (dc9e39ca).
+//
+// c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack_Stateless.tli
+//
+// Wrapper implementations for Win32 type library AddBack_Stateless.AddBack.1
+// compiler-generated file created 03/23/04 at 12:06:57 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IAddBack wrapper method implementations
+//
+
+inline long IAddBack::Add ( long addend, long sum ) {
+    long _result = 0;
+    HRESULT _hr = raw_Add(addend, sum, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

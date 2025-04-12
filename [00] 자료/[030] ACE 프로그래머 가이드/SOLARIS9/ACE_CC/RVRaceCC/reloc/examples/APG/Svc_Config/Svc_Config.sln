@@ -1,0 +1,50 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HA Configurable Server Dynamic", "HA_Configurable_Server_Dynamic.vcproj", "{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HA Configurable Server Static", "HA_Configurable_Server_Static.vcproj", "{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HA Status", "HA_Status.vcproj", "{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.0 = {ace.vcproj}
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.0 = {ace.vcproj}
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Debug.ActiveCfg = Debug|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Debug.Build.0 = Debug|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Release.ActiveCfg = Release|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Release.Build.0 = Release|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.ActiveCfg = Static Debug|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.Build.0 = Static Debug|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.ActiveCfg = Static Release|Win32
+		{3AD2C60A-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.Build.0 = Static Release|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Debug.ActiveCfg = Debug|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Debug.Build.0 = Debug|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Release.ActiveCfg = Release|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Release.Build.0 = Release|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.ActiveCfg = Static Debug|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.Build.0 = Static Debug|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.ActiveCfg = Static Release|Win32
+		{EB2EC1E7-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.Build.0 = Static Release|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Debug.ActiveCfg = Debug|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Debug.Build.0 = Debug|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Release.ActiveCfg = Release|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Release.Build.0 = Release|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.ActiveCfg = Static Debug|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Static Debug.Build.0 = Static Debug|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.ActiveCfg = Static Release|Win32
+		{DA5052AC-FECA-1BAD-87B5-E33AE29C15CD}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

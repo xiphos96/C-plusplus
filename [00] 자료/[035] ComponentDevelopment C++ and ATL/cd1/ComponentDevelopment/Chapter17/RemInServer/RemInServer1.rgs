@@ -1,0 +1,26 @@
+HKCR
+{
+	RemInServer.RemInServer.1 = s 'RemInServer Class'
+	{
+		CLSID = s '{8E31E071-1F25-48A8-86CD-8AF1C83B064A}'
+	}
+	RemInServer.RemInServer = s 'RemInServer Class'
+	{
+		CLSID = s '{8E31E071-1F25-48A8-86CD-8AF1C83B064A}'
+		CurVer = s 'RemInServer.RemInServer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8E31E071-1F25-48A8-86CD-8AF1C83B064A} = s 'RemInServer Class'
+		{
+			ProgID = s 'RemInServer.RemInServer.1'
+			VersionIndependentProgID = s 'RemInServer.RemInServer'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Neutral'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{B60AEB24-7381-4561-9CB8-B45A205D52DA}'
+		}
+	}
+}

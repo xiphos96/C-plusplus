@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AddFront1", "AddFront1\AddFront1.vcproj", "{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AddFront2", "AddFront2\AddFront2.vcproj", "{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Debug.ActiveCfg = Debug|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Debug.Build.0 = Debug|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Release.ActiveCfg = Release|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Release.Build.0 = Release|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Debug.ActiveCfg = Debug|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Debug.Build.0 = Debug|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Release.ActiveCfg = Release|Win32
+		{DB89A8B7-E4B3-47C0-9F38-2FAB65DB1E93}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

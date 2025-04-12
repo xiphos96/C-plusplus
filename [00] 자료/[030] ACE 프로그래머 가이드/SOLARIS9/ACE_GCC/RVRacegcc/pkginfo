@@ -1,0 +1,11 @@
+PKG=RVRacegcc
+NAME=ADAPTIVE Communication Environment 5.3b
+CLASSES=none
+VERSION=5.3b
+CATEGORY=application
+ARCH=sparc
+DESC=C++ networked application toolkit
+VENDOR=Riverace Corporation and Washington University at St. Louis
+EMAIL=info@riverace.com
+BASEDIR=/opt/RIVRace-gcc
+PSTAMP=essie20031011095747

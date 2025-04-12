@@ -1,0 +1,197 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Activate EXE"=Activate.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Activate Static EXE"=Activate_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Condition Variables EXE"=Condition_Variables.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Condition Variables Static EXE"=Condition_Variables_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Guards EXE"=Guards.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Guards Static EXE"=Guards_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Blocks EXE"=Message_Blocks.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Blocks Static EXE"=Message_Blocks_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue EXE"=Message_Queue.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Static EXE"=Message_Queue_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mutexes EXE"=Mutexes.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mutexes Static EXE"=Mutexes_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

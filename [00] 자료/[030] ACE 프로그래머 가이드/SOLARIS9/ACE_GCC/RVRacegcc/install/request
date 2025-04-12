@@ -1,0 +1,50 @@
+#!/bin/sh
+#
+# $Id: request,v 1.2 1999/02/03 21:04:40 shuston Exp $
+#
+# request script for installation of ACE on Solaris 2.5 and up.
+#
+# Queries the user as to which classes of the kit will be installed.
+
+trap 'exit 3' 15
+# determine if and where general executables should be placed
+ans=`ckyorn -d y \
+-p "Would you like the base ACE programming environment installed"
+` || exit $?
+if [ "$ans" = y ]
+then
+   CLASSES="$CLASSES base"
+fi
+
+ans=`ckyorn -d y \
+-p "Would you like the ACE documentation installed"
+` || exit $?
+if [ "$ans" = y ]
+then
+   CLASSES="$CLASSES docs"
+fi
+
+ans=`ckyorn -d n \
+-p "Would you like the ACE network services installed"
+` || exit $?
+if [ "$ans" = y ]
+then
+   CLASSES="$CLASSES netsvcs"
+fi
+
+ans=`ckyorn -d n \
+-p "Would you like source code for the ACE sample and test programs installed"
+` || exit $?
+if [ "$ans" = y ]
+then
+   CLASSES="$CLASSES examples"
+fi
+
+# Now write the new CLASSES out for the installation to read and act on
+
+cat >$1 <<!
+CLASSES=$CLASSES
+!
+
+exit 0
+

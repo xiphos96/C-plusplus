@@ -1,0 +1,197 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Activate EXE"=Activate.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Activate Static EXE"=Activate_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Condition Variables EXE"=Condition_Variables.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Condition Variables Static EXE"=Condition_Variables_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Guards EXE"=Guards.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Guards Static EXE"=Guards_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Blocks EXE"=Message_Blocks.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Blocks Static EXE"=Message_Blocks_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue EXE"=Message_Queue.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Static EXE"=Message_Queue_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mutexes EXE"=Mutexes.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mutexes Static EXE"=Mutexes_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

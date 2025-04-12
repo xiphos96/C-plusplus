@@ -1,0 +1,72 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (6328dc01).
+//
+// c:\componentdevelopment\chapter11\addfront\addfront2\debug\AddBackAgg.tlh
+//
+// C++ source equivalent of Win32 type library AddBackAgg.AddBack.1
+// compiler-generated file created 03/16/04 at 18:38:28 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("edcf0b1a-cfaf-4e3b-a124-ce5fec080656"))
+/* LIBID */ __AddBackAgg;
+struct /* coclass */ CAddBack;
+struct __declspec(uuid("b91e5e26-3781-4d46-bfa2-1a7d44da3cbf"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("ea7eb9a7-bca0-4833-8883-e4609a820fd5"))
+CAddBack;
+    // [ default ] interface IAddBack
+
+struct __declspec(uuid("b91e5e26-3781-4d46-bfa2-1a7d44da3cbf"))
+IAddBack : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add ( ) = 0;
+      virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_AddBackAgg =
+    {0xedcf0b1a,0xcfaf,0x4e3b,{0xa1,0x24,0xce,0x5f,0xec,0x08,0x06,0x56}};
+extern "C" const GUID __declspec(selectany) CLSID_CAddBack =
+    {0xea7eb9a7,0xbca0,0x4833,{0x88,0x83,0xe4,0x60,0x9a,0x82,0x0f,0xd5}};
+extern "C" const GUID __declspec(selectany) IID_IAddBack =
+    {0xb91e5e26,0x3781,0x4d46,{0xbf,0xa2,0x1a,0x7d,0x44,0xda,0x3c,0xbf}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter11\addfront\addfront2\debug\AddBackAgg.tli"
+
+#pragma pack(pop)

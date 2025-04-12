@@ -1,0 +1,268 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\ExplorerPopupDemo.rc2""  // Microsoft Visual C++에서 편집되지 않은 리소스\r\n"
+    "#include ""afxres.rc""         // 표준 구성 요소\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ExplorerPopupDemo.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ExplorerPopupDemo 정보"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "ExplorerPopupDemo 버전 1.0",IDC_STATIC,40,10,119,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright (c) 2003",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_EXPLORERPOPUPDEMO_DIALOG DIALOGEX 0, 0, 269, 191
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "ExplorerPopupDemo"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "주소 :",IDC_STATIC,7,7,23,16,SS_CENTERIMAGE
+    EDITTEXT        IDC_ADDRESS_EDIT,33,7,229,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,25,255,1
+    RTEXT           "ShellExecute()로 열기 :",IDC_STATIC,7,33,142,16,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "열기",IDC_SHELLEXECUTE_BUTTON,154,33,50,16
+    RTEXT           "새 웹브라우저로 열기 :",IDC_STATIC,7,53,142,16,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "열기",IDC_NEW_BUTTON,154,53,50,16
+    RTEXT           "기존 웹브라우저를 사용해서 새로 열기 :",IDC_STATIC,7,73,
+                    142,16,SS_CENTERIMAGE
+    PUSHBUTTON      "열기",IDC_NEW_USING_WEBBROWSER_BUTTON,154,73,50,16
+    CONTROL         "",IDC_EXPLORER,"{8856F961-340A-11D0-A96B-00C04FD705A2}",
+                    WS_TABSTOP,212,33,50,56
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,95,255,1
+    RTEXT           "새 웹브라우저로 열고 닫기 :",IDC_STATIC,7,101,142,16,
+                    SS_CENTERIMAGE
+    PUSHBUTTON      "열기",IDC_NEW_EX_BUTTON,154,101,50,16
+    PUSHBUTTON      "닫기",IDC_CLOSE_BUTTON,212,101,50,16,WS_DISABLED
+    CONTROL         "메뉴",IDC_MENU_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,38,124,39,9
+    CONTROL         "툴바",IDC_TOOLBAR_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,82,124,39,9
+    CONTROL         "주소창",IDC_ADDRESSBAR_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,126,124,39,9
+    CONTROL         "상태바",IDC_STATUSBAR_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,170,124,39,9
+    CONTROL         "크기 조절",IDC_RESIZE_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,214,124,48,9
+    LTEXT           "위치 : (",IDC_STATIC,37,139,26,16,SS_CENTERIMAGE
+    EDITTEXT        IDC_POS_X_EDIT,65,139,27,16,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           ",",IDC_STATIC,95,139,8,16,SS_CENTERIMAGE
+    EDITTEXT        IDC_POS_Y_EDIT,105,139,27,16,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           ")",IDC_STATIC,133,139,8,16,SS_CENTERIMAGE
+    LTEXT           "크기 : (",IDC_STATIC,155,139,25,16,SS_CENTERIMAGE
+    EDITTEXT        IDC_CX_EDIT,183,139,27,16,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           "*",IDC_STATIC,213,139,8,16,SS_CENTERIMAGE
+    EDITTEXT        IDC_CY_EDIT,225,139,27,16,ES_AUTOHSCROLL | ES_NUMBER
+    CTEXT           ")",IDC_STATIC,255,139,8,16,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,163,255,1
+    DEFPUSHBUTTON   "확인",IDOK,212,169,50,16
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>\0"
+            VALUE "FileDescription", "TODO: <파일 설명>\0"
+            VALUE "FileVersion", "1.0.0.1\0"
+            VALUE "InternalName", "ExplorerPopupDemo.exe\0"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved.\0"
+            VALUE "OriginalFilename", "ExplorerPopupDemo.exe\0"
+            VALUE "ProductName", "TODO: <제품 이름>\0"
+            VALUE "ProductVersion", "1.0.0.1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "변환", 0x412, 949
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_EXPLORERPOPUPDEMO_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 262
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 184
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+IDR_MANIFEST            24      MOVEABLE PURE   "res\\ExplorerPopupDemo.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EXPLORERPOPUPDEMO_DIALOG DLGINIT
+BEGIN
+    IDC_EXPLORER, 0x376, 160, 0
+0x0000, 0x0000, 0x004c, 0x0000, 0x07c0, 0x0000, 0x0968, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x004c, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0xd0e0, 0x0057, 0x3573, 0x11cf, 0x69ae, 0x0008, 0x2e2b, 0x6212, 
+0x0008, 0x0000, 0x0000, 0x0000, 0x004c, 0x0000, 0x1401, 0x0002, 0x0000, 
+0x0000, 0x00c0, 0x0000, 0x0000, 0x4600, 0x0080, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "ExplorerPopupDemo 정보(&A)..."
+END
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\ExplorerPopupDemo.rc2"  // Microsoft Visual C++에서 편집되지 않은 리소스
+#include "afxres.rc"         // 표준 구성 요소
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

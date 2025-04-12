@@ -1,0 +1,74 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (db40837a).
+//
+// c:\componentdevelopment\chapter08\atlwindowsapp\hellodialog\debug\Helloserver.tlh
+//
+// C++ source equivalent of Win32 type library HelloServer.Hello.1
+// compiler-generated file created 03/10/04 at 23:19:28 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("7ba0c5c3-0dde-4429-a2e1-1667b4bf0d46"))
+/* LIBID */ __HelloServer;
+struct /* coclass */ CHello;
+struct __declspec(uuid("41ef5b75-eb72-4b62-a335-f927f97d1b1a"))
+/* interface */ IHello;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IHello, __uuidof(IHello));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("0925c1ab-9be3-44be-aa11-0bea2129ace2"))
+CHello;
+    // [ default ] interface IHello
+
+struct __declspec(uuid("41ef5b75-eb72-4b62-a335-f927f97d1b1a"))
+IHello : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT sayHello (
+        unsigned short * name,
+        unsigned short * * message );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_sayHello (
+        /*[in]*/ unsigned short * name,
+        /*[out]*/ unsigned short * * message ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_HelloServer =
+    {0x7ba0c5c3,0x0dde,0x4429,{0xa2,0xe1,0x16,0x67,0xb4,0xbf,0x0d,0x46}};
+extern "C" const GUID __declspec(selectany) CLSID_CHello =
+    {0x0925c1ab,0x9be3,0x44be,{0xaa,0x11,0x0b,0xea,0x21,0x29,0xac,0xe2}};
+extern "C" const GUID __declspec(selectany) IID_IHello =
+    {0x41ef5b75,0xeb72,0x4b62,{0xa3,0x35,0xf9,0x27,0xf9,0x7d,0x1b,0x1a}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter08\atlwindowsapp\hellodialog\debug\Helloserver.tli"
+
+#pragma pack(pop)

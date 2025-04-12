@@ -1,0 +1,141 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (b8ce28c2).
+//
+// c:\componentdevelopment\chapter10\atlevent\addfront2\debug\AddBack.tlh
+//
+// C++ source equivalent of Win32 type library AddBack.AddBack.1
+// compiler-generated file created 03/15/04 at 23:14:50 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("4e1e8d00-91ce-497b-8784-5d72dae6e96d"))
+/* LIBID */ __AddBackLib;
+struct __declspec(uuid("6f80fa9c-ab06-47e4-84e1-b71151760bda"))
+/* dispinterface */ _IAddBackEvents;
+struct /* coclass */ AddBack;
+struct __declspec(uuid("b714a149-c4f8-4b50-8bee-926c84f99fb2"))
+/* dual interface */ IAddBack;
+struct __declspec(uuid("d90d5240-acd0-11d1-913a-0020af715af0"))
+/* dual interface */ IAddBackEvents;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IAddBackEvents, __uuidof(_IAddBackEvents));
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+_COM_SMARTPTR_TYPEDEF(IAddBackEvents, __uuidof(IAddBackEvents));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("6f80fa9c-ab06-47e4-84e1-b71151760bda"))
+_IAddBackEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT ChangedAddEnd (
+        short newVal );
+    HRESULT ChangedSum (
+        short newVal );
+};
+
+struct __declspec(uuid("cb30e04c-a741-4e83-b21f-096ded8351d5"))
+AddBack;
+    // [ default ] interface IAddBack
+    // [ default, source ] dispinterface _IAddBackEvents
+    // [ source ] interface IAddBackEvents
+
+struct __declspec(uuid("b714a149-c4f8-4b50-8bee-926c84f99fb2"))
+IAddBack : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+    HRESULT Clear ( );
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add ( ) = 0;
+      virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+      virtual HRESULT __stdcall get_AddEnd (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_AddEnd (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_Sum (
+        /*[out,retval]*/ short * pVal ) = 0;
+};
+
+struct __declspec(uuid("d90d5240-acd0-11d1-913a-0020af715af0"))
+IAddBackEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ChangedAddEnd (
+        short newVal );
+    HRESULT ChangedSum (
+        short newVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ChangedAddEnd (
+        /*[in]*/ short newVal ) = 0;
+      virtual HRESULT __stdcall raw_ChangedSum (
+        /*[in]*/ short newVal ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_AddBackLib =
+    {0x4e1e8d00,0x91ce,0x497b,{0x87,0x84,0x5d,0x72,0xda,0xe6,0xe9,0x6d}};
+extern "C" const GUID __declspec(selectany) DIID__IAddBackEvents =
+    {0x6f80fa9c,0xab06,0x47e4,{0x84,0xe1,0xb7,0x11,0x51,0x76,0x0b,0xda}};
+extern "C" const GUID __declspec(selectany) CLSID_AddBack =
+    {0xcb30e04c,0xa741,0x4e83,{0xb2,0x1f,0x09,0x6d,0xed,0x83,0x51,0xd5}};
+extern "C" const GUID __declspec(selectany) IID_IAddBack =
+    {0xb714a149,0xc4f8,0x4b50,{0x8b,0xee,0x92,0x6c,0x84,0xf9,0x9f,0xb2}};
+extern "C" const GUID __declspec(selectany) IID_IAddBackEvents =
+    {0xd90d5240,0xacd0,0x11d1,{0x91,0x3a,0x00,0x20,0xaf,0x71,0x5a,0xf0}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter10\atlevent\addfront2\debug\AddBack.tli"
+
+#pragma pack(pop)

@@ -1,0 +1,61 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Alarm", "Alarm.vcproj", "{F9000EFE-FECA-1BAD-B251-8D4C95553B96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task", "Task.vcproj", "{990426FF-FECA-1BAD-B251-8D4C95553B96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Timers", "Timers.vcproj", "{19568FBF-FECA-1BAD-B251-8D4C95553B96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Upcall", "Upcall.vcproj", "{E95611E0-FECA-1BAD-B251-8D4C95553B96}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.0 = {ace.vcproj}
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.0 = {ace.vcproj}
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.0 = {ace.vcproj}
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Debug.ActiveCfg = Debug|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Debug.Build.0 = Debug|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Release.ActiveCfg = Release|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Release.Build.0 = Release|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Static Debug.ActiveCfg = Static Debug|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Static Debug.Build.0 = Static Debug|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Static Release.ActiveCfg = Static Release|Win32
+		{F9000EFE-FECA-1BAD-B251-8D4C95553B96}.Static Release.Build.0 = Static Release|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Debug.ActiveCfg = Debug|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Debug.Build.0 = Debug|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Release.ActiveCfg = Release|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Release.Build.0 = Release|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Static Debug.ActiveCfg = Static Debug|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Static Debug.Build.0 = Static Debug|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Static Release.ActiveCfg = Static Release|Win32
+		{990426FF-FECA-1BAD-B251-8D4C95553B96}.Static Release.Build.0 = Static Release|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Debug.ActiveCfg = Debug|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Debug.Build.0 = Debug|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Release.ActiveCfg = Release|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Release.Build.0 = Release|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Static Debug.ActiveCfg = Static Debug|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Static Debug.Build.0 = Static Debug|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Static Release.ActiveCfg = Static Release|Win32
+		{19568FBF-FECA-1BAD-B251-8D4C95553B96}.Static Release.Build.0 = Static Release|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Debug.ActiveCfg = Debug|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Debug.Build.0 = Debug|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Release.ActiveCfg = Release|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Release.Build.0 = Release|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Static Debug.ActiveCfg = Static Debug|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Static Debug.Build.0 = Static Debug|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Static Release.ActiveCfg = Static Release|Win32
+		{E95611E0-FECA-1BAD-B251-8D4C95553B96}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

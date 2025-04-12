@@ -1,0 +1,25 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (9d93b452).
+//
+// c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack.tli
+//
+// Wrapper implementations for Win32 type library AddBack.AddBack.1
+// compiler-generated file created 03/23/04 at 12:06:57 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface IAddBack wrapper method implementations
+//
+
+inline HRESULT IAddBack::Add ( long addend ) {
+    HRESULT _hr = raw_Add(addend);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IAddBack::getSum ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_getSum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}

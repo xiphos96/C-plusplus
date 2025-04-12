@@ -1,0 +1,39 @@
+// Credit.idl : IDL source for Credit
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Credit.tlb) and marshalling code.
+
+#include "mtxattr.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(454FADB8-BFCB-4572-95DD-0F28D9F40180),
+	dual,
+	nonextensible,
+	helpstring("ICredit Interface"),
+	pointer_default(unique)
+]
+interface ICredit : IDispatch{
+	[id(1), helpstring("method ChangeAccount")] HRESULT ChangeAccount([in] long accountID, [in] long amount);
+};
+[
+	uuid(8CF377DA-E093-424B-8BF5-C722A914811E),
+	version(1.0),
+	helpstring("Credit 1.0 Type Library")
+]
+library CreditLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(EBE71C3A-E151-4420-9FBD-23EC0BA7DC55),
+		custom(TLBATTR_TRANS_SUPPORTED,0),
+		helpstring("Credit Class")
+	]
+	coclass Credit
+	{
+		[default] interface ICredit;
+	};
+};

@@ -1,0 +1,149 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Allocator", "Allocator.vcproj", "{73AD22B6-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Array", "Array.vcproj", "{B90011DC-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DLList", "DLList.vcproj", "{6944FE7E-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hash Map", "Hash_Map.vcproj", "{6761D02C-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hash Map Hash", "Hash_Map_Hash.vcproj", "{E262DCA5-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Map Manager", "Map_Manager.vcproj", "{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Map Manager Specialization", "Map_Manager_Specialization.vcproj", "{F1F70D06-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Queues", "Queues.vcproj", "{195246A8-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RB Tree", "RB_Tree.vcproj", "{7C6427D9-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RB Tree Functors", "RB_Tree_Functors.vcproj", "{0E390228-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sets", "Sets.vcproj", "{190421B9-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Stacks", "Stacks.vcproj", "{195053C6-FECA-1BAD-8408-181C1BBA1670}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{73AD22B6-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{B90011DC-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{6944FE7E-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{6761D02C-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{E262DCA5-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{2DB3F73E-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{F1F70D06-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{195246A8-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{7C6427D9-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{0E390228-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{190421B9-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Debug.ActiveCfg = Debug|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Debug.Build.0 = Debug|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Release.ActiveCfg = Release|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Release.Build.0 = Release|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Static Debug.ActiveCfg = Static Debug|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Static Debug.Build.0 = Static Debug|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Static Release.ActiveCfg = Static Release|Win32
+		{195053C6-FECA-1BAD-8408-181C1BBA1670}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

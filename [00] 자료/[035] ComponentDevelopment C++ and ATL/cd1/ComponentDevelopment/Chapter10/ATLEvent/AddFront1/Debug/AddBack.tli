@@ -1,0 +1,79 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (d2fdf3f0).
+//
+// c:\componentdevelopment\chapter10\atlevent\addfront1\debug\AddBack.tli
+//
+// Wrapper implementations for Win32 type library AddBack.AddBack.1
+// compiler-generated file created 03/16/04 at 12:39:48 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _IAddBackEvents wrapper method implementations
+//
+
+inline HRESULT _IAddBackEvents::ChangedAddEnd ( short newVal ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", newVal);
+}
+
+inline HRESULT _IAddBackEvents::ChangedSum ( short newVal ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002", newVal);
+}
+
+//
+// interface IAddBack wrapper method implementations
+//
+
+inline HRESULT IAddBack::Add ( ) {
+    HRESULT _hr = raw_Add();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IAddBack::AddTen ( ) {
+    HRESULT _hr = raw_AddTen();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IAddBack::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline short IAddBack::GetAddEnd ( ) {
+    short _result = 0;
+    HRESULT _hr = get_AddEnd(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IAddBack::PutAddEnd ( short pVal ) {
+    HRESULT _hr = put_AddEnd(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline short IAddBack::GetSum ( ) {
+    short _result = 0;
+    HRESULT _hr = get_Sum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IAddBackEvents wrapper method implementations
+//
+
+inline HRESULT IAddBackEvents::ChangedAddEnd ( short newVal ) {
+    HRESULT _hr = raw_ChangedAddEnd(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IAddBackEvents::ChangedSum ( short newVal ) {
+    HRESULT _hr = raw_ChangedSum(newVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

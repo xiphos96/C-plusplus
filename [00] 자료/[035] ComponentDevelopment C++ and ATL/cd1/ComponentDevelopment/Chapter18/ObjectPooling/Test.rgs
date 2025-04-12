@@ -1,0 +1,27 @@
+HKCR
+{
+	ObjectPooling.Test.1 = s 'Test Class'
+	{
+		CLSID = s '{AD7A32E6-23F4-4491-9ECD-95B736639643}'
+	}
+	ObjectPooling.Test = s 'Test Class'
+	{
+		CLSID = s '{AD7A32E6-23F4-4491-9ECD-95B736639643}'
+		CurVer = s 'ObjectPooling.Test.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AD7A32E6-23F4-4491-9ECD-95B736639643} = s 'Test Class'
+		{
+			ProgID = s 'ObjectPooling.Test.1'
+			VersionIndependentProgID = s 'ObjectPooling.Test'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{1931E31A-3F75-4B92-8017-DE889C183871}'
+		}
+	}
+}

@@ -1,0 +1,68 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (dc9e39ca).
+//
+// c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack_Stateless.tlh
+//
+// C++ source equivalent of Win32 type library AddBack_Stateless.AddBack.1
+// compiler-generated file created 03/23/04 at 12:06:57 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace AddBack_StatelessLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("7fe4263e-c0ce-4d60-91bd-97e41a8df90d"))
+/* LIBID */ __AddBack_StatelessLib;
+struct /* coclass */ AddBack;
+struct __declspec(uuid("72505db0-8db0-422e-b274-2f7a166cc684"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("0f790972-d8eb-4705-a752-8086a7e41a8b"))
+AddBack;
+    // [ default ] interface IAddBack
+
+struct __declspec(uuid("72505db0-8db0-422e-b274-2f7a166cc684"))
+IAddBack : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long Add (
+        long addend,
+        long sum );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ long addend,
+        /*[in]*/ long sum,
+        /*[out,retval]*/ long * result ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack_Stateless.tli"
+
+} // namespace AddBack_StatelessLib
+
+#pragma pack(pop)

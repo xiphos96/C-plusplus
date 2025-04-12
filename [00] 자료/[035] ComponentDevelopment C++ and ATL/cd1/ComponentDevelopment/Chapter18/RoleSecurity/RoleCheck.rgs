@@ -1,0 +1,27 @@
+HKCR
+{
+	RoleSecurity.RoleCheck.1 = s 'RoleCheck Class'
+	{
+		CLSID = s '{33C25248-D36C-4F25-B9B8-D01453B9DF4A}'
+	}
+	RoleSecurity.RoleCheck = s 'RoleCheck Class'
+	{
+		CLSID = s '{33C25248-D36C-4F25-B9B8-D01453B9DF4A}'
+		CurVer = s 'RoleSecurity.RoleCheck.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {33C25248-D36C-4F25-B9B8-D01453B9DF4A} = s 'RoleCheck Class'
+		{
+			ProgID = s 'RoleSecurity.RoleCheck.1'
+			VersionIndependentProgID = s 'RoleSecurity.RoleCheck'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{A9387104-3537-48C4-A3E5-F9016458CC5B}'
+		}
+	}
+}

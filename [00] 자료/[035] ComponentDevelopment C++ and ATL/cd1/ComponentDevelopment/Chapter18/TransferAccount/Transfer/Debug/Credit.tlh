@@ -1,0 +1,63 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (b1f229ab).
+//
+// c:\componentdevelopment\chapter18\transferaccount\transfer\debug\Credit.tlh
+//
+// C++ source equivalent of Win32 type library Credit.Credit.1
+// compiler-generated file created 03/23/04 at 11:14:02 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("8cf377da-e093-424b-8bf5-c722a914811e"))
+/* LIBID */ __CreditLib;
+struct /* coclass */ Credit;
+struct __declspec(uuid("454fadb8-bfcb-4572-95dd-0f28d9f40180"))
+/* dual interface */ ICredit;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICredit, __uuidof(ICredit));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("ebe71c3a-e151-4420-9fbd-23ec0ba7dc55"))
+Credit;
+    // [ default ] interface ICredit
+
+struct __declspec(uuid("454fadb8-bfcb-4572-95dd-0f28d9f40180"))
+ICredit : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ChangeAccount (
+        long accountID,
+        long amount );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ChangeAccount (
+        /*[in]*/ long accountID,
+        /*[in]*/ long amount ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter18\transferaccount\transfer\debug\Credit.tli"
+
+#pragma pack(pop)

@@ -1,0 +1,377 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "DLList EXE"=DLList.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLList Static EXE"=DLList_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Stacks EXE"=Stacks.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Stacks Static EXE"=Stacks_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Queues EXE"=Queues.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Queues Static EXE"=Queues_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Array EXE"=Array.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Array Static EXE"=Array_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Sets EXE"=Sets.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Sets Static EXE"=Sets_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager EXE"=Map_Manager.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager Static EXE"=Map_Manager_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager Specialization EXE"=Map_Manager_Specialization.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager Specialization Static EXE"=Map_Manager_Specialization_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map EXE"=Hash_Map.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Static EXE"=Hash_Map_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Hash EXE"=Hash_Map_Hash.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Hash Static EXE"=Hash_Map_Hash_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree EXE"=RB_Tree.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree Static EXE"=RB_Tree_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree Functors EXE"=RB_Tree_Functors.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree Functors Static EXE"=RB_Tree_Functors_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Allocator EXE"=Allocator.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Allocator Static EXE"=Allocator_Static.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

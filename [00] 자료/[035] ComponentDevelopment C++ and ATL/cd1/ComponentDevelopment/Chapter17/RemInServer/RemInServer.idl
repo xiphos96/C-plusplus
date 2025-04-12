@@ -1,0 +1,53 @@
+// RemInServer.idl : RemInServer의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(RemInServer.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+// IAddEnd
+[
+	object,
+	uuid("6D8A8A88-F393-4CEB-B54B-7CC5C4F7ACAE"),
+	helpstring("IAddEnd 인터페이스"),
+	pointer_default(unique)
+]
+interface IAddEnd : IUnknown {
+	[propget, helpstring("속성 AddEnd")] HRESULT AddEnd([out, retval] SHORT* pVal);
+	[propput, helpstring("속성 AddEnd")] HRESULT AddEnd([in] SHORT newVal);
+	[propget, helpstring("속성 Sum")] HRESULT Sum([out, retval] SHORT* pVal);
+	[helpstring("메서드 Clear")] HRESULT Clear(void);
+};
+
+// IAdd
+[
+	object,
+	uuid("727F03FE-D17C-4b35-8822-C411CF069D4B"),
+	helpstring("IAdd 인터페이스"),
+	pointer_default(unique)
+]
+interface IAdd : IUnknown {
+	[helpstring("메서드 Add")] HRESULT Add(void);
+	[helpstring("메서드 AddTen")] HRESULT AddTen(void);
+};
+
+[
+	uuid(B60AEB24-7381-4561-9CB8-B45A205D52DA),
+	version(1.0),
+	helpstring("RemInServer 1.0 형식 라이브러리")
+]
+library RemInServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(8E31E071-1F25-48A8-86CD-8AF1C83B064A),
+		helpstring("RemInServer Class")
+	]
+	coclass RemInServer
+	{
+		[default] interface IAddEnd;
+		interface IAdd;
+	};
+};

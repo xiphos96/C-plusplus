@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemInServer", "RemInServer.vcproj", "{FE14EB59-7381-4D59-85EE-EF81C5F61EBE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RemInServerPS", "RemInServerPS.vcproj", "{15D0BF84-3283-463E-98FD-E172A3846A75}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FE14EB59-7381-4D59-85EE-EF81C5F61EBE} = {FE14EB59-7381-4D59-85EE-EF81C5F61EBE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{FE14EB59-7381-4D59-85EE-EF81C5F61EBE}.Debug.ActiveCfg = Debug|Win32
+		{FE14EB59-7381-4D59-85EE-EF81C5F61EBE}.Debug.Build.0 = Debug|Win32
+		{FE14EB59-7381-4D59-85EE-EF81C5F61EBE}.Release.ActiveCfg = Release|Win32
+		{FE14EB59-7381-4D59-85EE-EF81C5F61EBE}.Release.Build.0 = Release|Win32
+		{15D0BF84-3283-463E-98FD-E172A3846A75}.Debug.ActiveCfg = Debug|Win32
+		{15D0BF84-3283-463E-98FD-E172A3846A75}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

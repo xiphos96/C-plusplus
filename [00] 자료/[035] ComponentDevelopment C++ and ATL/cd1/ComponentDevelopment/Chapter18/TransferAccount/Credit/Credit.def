@@ -1,0 +1,9 @@
+; Credit.def : Declares the module parameters.
+
+LIBRARY      "Credit.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

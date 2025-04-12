@@ -1,0 +1,3869 @@
+Microsoft eMbedded Visual Tools Workspace File, Format Version 3.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "Framework Component DLL DLL"=Framework_Component_DLL.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Framework Component DLL LIB"=Framework_Component_DLL_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "DLL Test Lib DLL"=DLL_Test_Lib.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLL Test Lib LIB"=DLL_Test_Lib_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "Service Config DLL DLL"=Service_Config_DLL.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Service Config DLL LIB"=Service_Config_DLL_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "ACE Test EXE"=ACE_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Aio Platform Test EXE"=Aio_Platform_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Aio Platform Test Static EXE"=Aio_Platform_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Arg Shifter Test EXE"=Arg_Shifter_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Arg Shifter Test Static EXE"=Arg_Shifter_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ARGV Test EXE"=ARGV_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "ARGV Test Static EXE"=ARGV_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Atomic Op Test EXE"=Atomic_Op_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Atomic Op Test Static EXE"=Atomic_Op_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Auto IncDec Test EXE"=Auto_IncDec_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Auto IncDec Test Static EXE"=Auto_IncDec_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Barrier Test EXE"=Barrier_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Barrier Test Static EXE"=Barrier_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Basic Types Test EXE"=Basic_Types_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Basic Types Test Static EXE"=Basic_Types_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Bound Ptr Test EXE"=Bound_Ptr_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Bound Ptr Test Static EXE"=Bound_Ptr_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Buffer Stream Test EXE"=Buffer_Stream_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Buffer Stream Test Static EXE"=Buffer_Stream_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cache Map Manager Test EXE"=Cache_Map_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cache Map Manager Test Static EXE"=Cache_Map_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Accept Conn Test EXE"=Cached_Accept_Conn_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Accept Conn Test Static EXE"=Cached_Accept_Conn_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Allocator Test EXE"=Cached_Allocator_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Allocator Test Static EXE"=Cached_Allocator_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Conn Test EXE"=Cached_Conn_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Cached Conn Test Static EXE"=Cached_Conn_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Capabilities Test EXE"=Capabilities_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Capabilities Test Static EXE"=Capabilities_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR File Test EXE"=CDR_File_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR File Test Static EXE"=CDR_File_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR Test EXE"=CDR_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR Test Static EXE"=CDR_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Collection Test EXE"=Collection_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Collection Test Static EXE"=Collection_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Config Test EXE"=Config_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Config Test Static EXE"=Config_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Conn Test EXE"=Conn_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Conn Test Static EXE"=Conn_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Date Time Test EXE"=Date_Time_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Date Time Test Static EXE"=Date_Time_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dev Poll Reactor Test EXE"=Dev_Poll_Reactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dev Poll Reactor Test Static EXE"=Dev_Poll_Reactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dirent Test EXE"=Dirent_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dirent Test Static EXE"=Dirent_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLList Test EXE"=DLList_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLList Test Static EXE"=DLList_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLL Test EXE"=DLL_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "DLL Test Static EXE"=DLL_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Enum Interfaces Test EXE"=Enum_Interfaces_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Enum Interfaces Test Static EXE"=Enum_Interfaces_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Env Value Test EXE"=Env_Value_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Env Value Test Static EXE"=Env_Value_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Future Test EXE"=Future_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Future Test Static EXE"=Future_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Future Set Test EXE"=Future_Set_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Future Set Test Static EXE"=Future_Set_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Get Opt Test EXE"=Get_Opt_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Get Opt Test Static EXE"=Get_Opt_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Handle Set Test EXE"=Handle_Set_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Handle Set Test Static EXE"=Handle_Set_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "High Res Timer Test EXE"=High_Res_Timer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "High Res Timer Test Static EXE"=High_Res_Timer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Manager Test EXE"=Hash_Map_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Manager Test Static EXE"=Hash_Map_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Bucket Iterator Test EXE"=Hash_Map_Bucket_Iterator_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Hash Map Bucket Iterator Test Static EXE"=Hash_Map_Bucket_Iterator_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "INET Addr Test EXE"=INET_Addr_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "INET Addr Test Static EXE"=INET_Addr_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "IOStream Test EXE"=IOStream_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "IOStream Test Static EXE"=IOStream_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Lazy Map Manager Test EXE"=Lazy_Map_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Lazy Map Manager Test Static EXE"=Lazy_Map_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Log Msg Test EXE"=Log_Msg_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Log Msg Test Static EXE"=Log_Msg_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Logging Strategy Test EXE"=Logging_Strategy_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Logging Strategy Test Static EXE"=Logging_Strategy_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Malloc Test EXE"=Malloc_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Malloc Test Static EXE"=Malloc_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Test EXE"=Map_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Test Static EXE"=Map_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager Test EXE"=Map_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Map Manager Test Static EXE"=Map_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Max Default Port Test EXE"=Max_Default_Port_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Max Default Port Test Static EXE"=Max_Default_Port_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MEM Stream Test EXE"=MEM_Stream_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MEM Stream Test Static EXE"=MEM_Stream_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mem Map Test EXE"=Mem_Map_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Mem Map Test Static EXE"=Mem_Map_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MM Shared Memory Test EXE"=MM_Shared_Memory_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MM Shared Memory Test Static EXE"=MM_Shared_Memory_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT Reactor Timer Test EXE"=MT_Reactor_Timer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT Reactor Timer Test Static EXE"=MT_Reactor_Timer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT Reactor Upcall Test EXE"=MT_Reactor_Upcall_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT Reactor Upcall Test Static EXE"=MT_Reactor_Upcall_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT SOCK Test EXE"=MT_SOCK_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "MT SOCK Test Static EXE"=MT_SOCK_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Block Test EXE"=Message_Block_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Block Test Static EXE"=Message_Block_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Test EXE"=Message_Queue_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Test Static EXE"=Message_Queue_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Test Ex EXE"=Message_Queue_Test_Ex.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Test Ex Static EXE"=Message_Queue_Test_Ex_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Notifications Test EXE"=Message_Queue_Notifications_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Message Queue Notifications Test Static EXE"=Message_Queue_Notifications_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Multicast Test EXE"=Multicast_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Multicast Test Static EXE"=Multicast_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "New Fail Test EXE"=New_Fail_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "New Fail Test Static EXE"=New_Fail_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Notify Performance Test EXE"=Notify_Performance_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Notify Performance Test Static EXE"=Notify_Performance_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Object Manager Test EXE"=Object_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Object Manager Test Static EXE"=Object_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Obstack Test EXE"=Obstack_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Obstack Test Static EXE"=Obstack_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OrdMultiSet Test EXE"=OrdMultiSet_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OrdMultiSet Test Static EXE"=OrdMultiSet_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OS Test EXE"=OS_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "OS Test Static EXE"=OS_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Scatter Gather Test EXE"=Proactor_Scatter_Gather_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Scatter Gather Test Static EXE"=Proactor_Scatter_Gather_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Test EXE"=Proactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Test Static EXE"=Proactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Timer Test EXE"=Proactor_Timer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Proactor Timer Test Static EXE"=Proactor_Timer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Mutex Test EXE"=Process_Mutex_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Mutex Test Static EXE"=Process_Mutex_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Strategy Test EXE"=Process_Strategy_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Strategy Test Static EXE"=Process_Strategy_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Buffer Test EXE"=Priority_Buffer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Buffer Test Static EXE"=Priority_Buffer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dynamic Priority Test EXE"=Dynamic_Priority_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Dynamic Priority Test Static EXE"=Dynamic_Priority_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Task Test EXE"=Priority_Task_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Task Test Static EXE"=Priority_Task_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Reactor Test EXE"=Priority_Reactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Priority Reactor Test Static EXE"=Priority_Reactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Manager Test EXE"=Process_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Process Manager Test Static EXE"=Process_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Pipe Test EXE"=Pipe_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Pipe Test Static EXE"=Pipe_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree Test EXE"=RB_Tree_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RB Tree Test Static EXE"=RB_Tree_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactors Test EXE"=Reactors_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactors Test Static EXE"=Reactors_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Exceptions Test EXE"=Reactor_Exceptions_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Exceptions Test Static EXE"=Reactor_Exceptions_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Notify Test EXE"=Reactor_Notify_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Notify Test Static EXE"=Reactor_Notify_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Dispatch Order Test EXE"=Reactor_Dispatch_Order_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Dispatch Order Test Static EXE"=Reactor_Dispatch_Order_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Performance Test EXE"=Reactor_Performance_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Performance Test Static EXE"=Reactor_Performance_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Timer Test EXE"=Reactor_Timer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reactor Timer Test Static EXE"=Reactor_Timer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reader Writer Test EXE"=Reader_Writer_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reader Writer Test Static EXE"=Reader_Writer_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Recursive Condition Test EXE"=Recursive_Condition_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Recursive Condition Test Static EXE"=Recursive_Condition_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Recursive Mutex Test EXE"=Recursive_Mutex_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Recursive Mutex Test Static EXE"=Recursive_Mutex_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Refcounted Auto Ptr Test EXE"=Refcounted_Auto_Ptr_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Refcounted Auto Ptr Test Static EXE"=Refcounted_Auto_Ptr_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reverse Lock Test EXE"=Reverse_Lock_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Reverse Lock Test Static EXE"=Reverse_Lock_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Semaphore Test EXE"=Semaphore_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Semaphore Test Static EXE"=Semaphore_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Signal Test EXE"=Signal_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Signal Test Static EXE"=Signal_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Sigset Ops Test EXE"=Sigset_Ops_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Sigset Ops Test Static EXE"=Sigset_Ops_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Simple Message Block Test EXE"=Simple_Message_Block_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Simple Message Block Test Static EXE"=Simple_Message_Block_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Test EXE"=SOCK_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Test Static EXE"=SOCK_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Connector Test EXE"=SOCK_Connector_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Connector Test Static EXE"=SOCK_Connector_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Send Recv Test EXE"=SOCK_Send_Recv_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SOCK Send Recv Test Static EXE"=SOCK_Send_Recv_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SPIPE Test EXE"=SPIPE_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SPIPE Test Static EXE"=SPIPE_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SString Test EXE"=SString_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SString Test Static EXE"=SString_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SV Shared Memory Test EXE"=SV_Shared_Memory_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "SV Shared Memory Test Static EXE"=SV_Shared_Memory_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Svc Handler Test EXE"=Svc_Handler_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Svc Handler Test Static EXE"=Svc_Handler_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Task Test EXE"=Task_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Task Test Static EXE"=Task_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Manager Test EXE"=Thread_Manager_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Manager Test Static EXE"=Thread_Manager_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Mutex Test EXE"=Thread_Mutex_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Mutex Test Static EXE"=Thread_Mutex_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Test EXE"=Thread_Pool_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Test Static EXE"=Thread_Pool_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Timeprobe Test EXE"=Timeprobe_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Timeprobe Test Static EXE"=Timeprobe_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Time Service Test EXE"=Time_Service_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Time Service Test Static EXE"=Time_Service_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Time Value Test EXE"=Time_Value_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Time Value Test Static EXE"=Time_Value_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Timer Queue Test EXE"=Timer_Queue_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Timer Queue Test Static EXE"=Timer_Queue_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Token Strategy Test EXE"=Token_Strategy_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Token Strategy Test Static EXE"=Token_Strategy_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TP Reactor Test EXE"=TP_Reactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TP Reactor Test Static EXE"=TP_Reactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TSS Test EXE"=TSS_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TSS Test Static EXE"=TSS_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Vector Test EXE"=Vector_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Vector Test Static EXE"=Vector_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UPIPE SAP Test EXE"=UPIPE_SAP_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "UPIPE SAP Test Static EXE"=UPIPE_SAP_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Upgradable RW Test EXE"=Upgradable_RW_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Upgradable RW Test Static EXE"=Upgradable_RW_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Naming Test EXE"=Naming_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Naming Test Static EXE"=Naming_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Reactor Test EXE"=Thread_Pool_Reactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Reactor Test Static EXE"=Thread_Pool_Reactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Reactor Resume Test EXE"=Thread_Pool_Reactor_Resume_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Thread Pool Reactor Resume Test Static EXE"=Thread_Pool_Reactor_Resume_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "XtReactor Test EXE"=XtReactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "XtReactor Test Static EXE"=XtReactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FlReactor Test EXE"=FlReactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "FlReactor Test Static EXE"=FlReactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TkReactor Test EXE"=TkReactor_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "TkReactor Test Static EXE"=TkReactor_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Codecs Test EXE"=Codecs_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Codecs Test Static EXE"=Codecs_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Tokens Test EXE"=Tokens_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Tokens Test Static EXE"=Tokens_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR Array Test EXE"=CDR_Array_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "CDR Array Test Static EXE"=CDR_Array_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Service Config Test EXE"=Service_Config_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Service Config Test Static EXE"=Service_Config_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Framework Component Test EXE"=Framework_Component_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "Framework Component Test Static EXE"=Framework_Component_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Fragment Test EXE"=RMCast\RMCast_Fragment_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Fragment Test Static EXE"=RMCast\RMCast_Fragment_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Membership Test EXE"=RMCast\RMCast_Membership_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Membership Test Static EXE"=RMCast\RMCast_Membership_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Reassembly Test EXE"=RMCast\RMCast_Reassembly_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Reassembly Test Static EXE"=RMCast\RMCast_Reassembly_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Reordering Test EXE"=RMCast\RMCast_Reordering_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Reordering Test Static EXE"=RMCast\RMCast_Reordering_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Retransmission Test EXE"=RMCast\RMCast_Retransmission_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast Retransmission Test Static EXE"=RMCast\RMCast_Retransmission_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast UDP Best Effort Test EXE"=RMCast\RMCast_UDP_Best_Effort_Test.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast DLL
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace DLL
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "RMCast UDP Best Effort Test Static EXE"=RMCast\RMCast_UDP_Best_Effort_Test_Static.vcp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name RMCast LIB
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name ace LIB
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloServer", "HelloServer.vcproj", "{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloServerPS", "HelloServerPS.vcproj", "{5B136005-A114-4591-AC11-ED30DF913E00}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC} = {0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}.Debug.ActiveCfg = Debug|Win32
+		{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}.Debug.Build.0 = Debug|Win32
+		{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}.Release.ActiveCfg = Release|Win32
+		{0C4118C6-29C8-4864-94CF-9DA89DAAF7CC}.Release.Build.0 = Release|Win32
+		{5B136005-A114-4591-AC11-ED30DF913E00}.Debug.ActiveCfg = Debug|Win32
+		{5B136005-A114-4591-AC11-ED30DF913E00}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

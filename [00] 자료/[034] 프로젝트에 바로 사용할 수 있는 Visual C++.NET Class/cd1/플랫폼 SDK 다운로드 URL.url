@@ -1,0 +1,8 @@
+[DEFAULT]
+BASEURL=http://www.microsoft.com/msdownload/platformsdk/sdkupdate/default.htm
+[DOC_frmParent#22]
+BASEURL=http://www.microsoft.com/msdownload/platformsdk/sdkupdate/home.htm
+ORIGURL=home.htm
+[InternetShortcut]
+URL=http://www.microsoft.com/msdownload/platformsdk/sdkupdate/default.htm
+Modified=30E32DE0108AC4017F

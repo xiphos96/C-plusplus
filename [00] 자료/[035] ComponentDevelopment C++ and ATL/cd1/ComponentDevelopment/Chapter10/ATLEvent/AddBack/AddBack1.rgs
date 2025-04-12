@@ -1,0 +1,27 @@
+HKCR
+{
+	AddBack.AddBack.1 = s 'AddBack Class'
+	{
+		CLSID = s '{CB30E04C-A741-4E83-B21F-096DED8351D5}'
+	}
+	AddBack.AddBack = s 'AddBack Class'
+	{
+		CLSID = s '{CB30E04C-A741-4E83-B21F-096DED8351D5}'
+		CurVer = s 'AddBack.AddBack.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CB30E04C-A741-4E83-B21F-096DED8351D5} = s 'AddBack Class'
+		{
+			ProgID = s 'AddBack.AddBack.1'
+			VersionIndependentProgID = s 'AddBack.AddBack'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{4E1E8D00-91CE-497B-8784-5D72DAE6E96D}'
+		}
+	}
+}

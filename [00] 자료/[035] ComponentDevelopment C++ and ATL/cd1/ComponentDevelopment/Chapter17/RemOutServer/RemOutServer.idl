@@ -1,0 +1,54 @@
+// RemOutServer.idl : RemOutServer의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(RemOutServer.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+// IAddEnd
+[
+	object,
+	uuid("6D8A8A88-F393-4CEB-B54B-7CC5C4F7ACAE"),
+	helpstring("IAddEnd 인터페이스"),
+	pointer_default(unique)
+]
+interface IAddEnd : IUnknown {
+	[propget, helpstring("속성 AddEnd")] HRESULT AddEnd([out, retval] SHORT* pVal);
+	[propput, helpstring("속성 AddEnd")] HRESULT AddEnd([in] SHORT newVal);
+	[propget, helpstring("속성 Sum")] HRESULT Sum([out, retval] SHORT* pVal);
+	[helpstring("메서드 Clear")] HRESULT Clear(void);
+};
+
+// IAdd
+[
+	object,
+	uuid("727F03FE-D17C-4b35-8822-C411CF069D4B"),
+	helpstring("IAdd 인터페이스"),
+	pointer_default(unique)
+]
+interface IAdd : IUnknown {
+	[helpstring("메서드 Add")] HRESULT Add(void);
+	[helpstring("메서드 AddTen")] HRESULT AddTen(void);
+};
+
+[
+	uuid(F8D05E24-249D-413B-B9DA-07B5DA7DE4CA),
+	version(1.0),
+	helpstring("RemOutServer 1.0 형식 라이브러리")
+]
+library RemOutServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(1C5CC077-597A-4DAC-8FB2-C5492D4E0487),
+		helpstring("RemOutServer Class")
+	]
+	coclass RemOutServer
+	{
+		[default] interface IAddEnd;
+		interface IAdd;
+	};
+};

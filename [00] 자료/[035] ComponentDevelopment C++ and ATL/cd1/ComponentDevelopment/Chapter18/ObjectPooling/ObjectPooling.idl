@@ -1,0 +1,36 @@
+// ObjectPooling.idl : IDL source for ObjectPooling
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ObjectPooling.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(2C6025FD-238D-4D94-86A5-525764197A70),
+	dual,
+	nonextensible,
+	helpstring("ITest Interface"),
+	pointer_default(unique)
+]
+interface ITest : IDispatch{
+};
+[
+	uuid(1931E31A-3F75-4B92-8017-DE889C183871),
+	version(1.0),
+	helpstring("ObjectPooling 1.0 Type Library")
+]
+library ObjectPoolingLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(AD7A32E6-23F4-4491-9ECD-95B736639643),
+		helpstring("Test Class")
+	]
+	coclass Test
+	{
+		[default] interface ITest;
+	};
+};

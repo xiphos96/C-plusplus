@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Credit", "Credit.vcproj", "{ABC582A2-7C0C-4E78-9117-6413AF6B2433}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CreditPS", "CreditPS.vcproj", "{5209F1A3-0B50-4DD9-94D1-A36291E29F82}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABC582A2-7C0C-4E78-9117-6413AF6B2433} = {ABC582A2-7C0C-4E78-9117-6413AF6B2433}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{ABC582A2-7C0C-4E78-9117-6413AF6B2433}.Debug.ActiveCfg = Debug|Win32
+		{ABC582A2-7C0C-4E78-9117-6413AF6B2433}.Debug.Build.0 = Debug|Win32
+		{ABC582A2-7C0C-4E78-9117-6413AF6B2433}.Release.ActiveCfg = Release|Win32
+		{ABC582A2-7C0C-4E78-9117-6413AF6B2433}.Release.Build.0 = Release|Win32
+		{5209F1A3-0B50-4DD9-94D1-A36291E29F82}.Debug.ActiveCfg = Debug|Win32
+		{5209F1A3-0B50-4DD9-94D1-A36291E29F82}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

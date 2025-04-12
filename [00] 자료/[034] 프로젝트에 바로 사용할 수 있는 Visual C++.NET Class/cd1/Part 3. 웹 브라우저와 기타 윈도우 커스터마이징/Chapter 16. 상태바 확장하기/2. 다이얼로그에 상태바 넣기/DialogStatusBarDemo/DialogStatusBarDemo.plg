@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DialogStatusBarDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/DialogStatusBarDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\DialogStatusBarDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCD.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/DialogStatusBarDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\DialogStatusBar.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\DialogStatusBarDemo.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\DialogStatusBarDemoDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCD.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCE.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/DialogStatusBarDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCE.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCF.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/DialogStatusBarDemo.pdb" /debug /machine:IX86 /out:"Release60/DialogStatusBarDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\DialogStatusBar.obj"
+".\Release60\DialogStatusBarDemo.obj"
+".\Release60\DialogStatusBarDemoDlg.obj"
+".\Release60\stdafx.obj"
+".\Release60\DialogStatusBarDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPCF.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\2. 다이얼로그에 상태바 넣기\DialogStatusBarDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+DialogStatusBar.cpp
+DialogStatusBarDemo.cpp
+DialogStatusBarDemoDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+DialogStatusBarDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

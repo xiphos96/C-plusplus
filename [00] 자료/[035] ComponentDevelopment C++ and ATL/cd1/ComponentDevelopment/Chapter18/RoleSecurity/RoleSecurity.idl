@@ -1,0 +1,37 @@
+// RoleSecurity.idl : IDL source for RoleSecurity
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (RoleSecurity.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(1C7D46AA-2001-43B5-85EE-297D71E05A75),
+	dual,
+	nonextensible,
+	helpstring("IRoleCheck Interface"),
+	pointer_default(unique)
+]
+interface IRoleCheck : IDispatch{
+	[id(1), helpstring("method SecurityCheck")] HRESULT SecurityCheck([out, retval]BSTR* result);
+};
+[
+	uuid(A9387104-3537-48C4-A3E5-F9016458CC5B),
+	version(1.0),
+	helpstring("RoleSecurity 1.0 Type Library")
+]
+library RoleSecurityLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(33C25248-D36C-4F25-B9B8-D01453B9DF4A),
+		helpstring("RoleCheck Class")
+	]
+	coclass RoleCheck
+	{
+		[default] interface IRoleCheck;
+	};
+};

@@ -1,0 +1,62 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: PictureDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/PictureDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\PictureDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF1.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/PictureDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\ChildFrm.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\MainFrm.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\Picture.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\PictureDemo.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\PictureDemoDoc.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\PictureDemoView.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF1.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF2.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/PictureDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF2.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF3.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/PictureDemo.pdb" /debug /machine:IX86 /out:"Release60/PictureDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\ChildFrm.obj"
+".\Release60\MainFrm.obj"
+".\Release60\Picture.obj"
+".\Release60\PictureDemo.obj"
+".\Release60\PictureDemoDoc.obj"
+".\Release60\PictureDemoView.obj"
+".\Release60\stdafx.obj"
+".\Release60\PictureDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPF3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 20. GDI 그래픽 응용하기\1. 다양한 이미지 다루기\PictureDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+ChildFrm.cpp
+MainFrm.cpp
+Picture.cpp
+PictureDemo.cpp
+PictureDemoDoc.cpp
+PictureDemoView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+PictureDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

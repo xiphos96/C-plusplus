@@ -1,0 +1,60 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(49EF6A18-9E69-41F5-ABA5-127EF4AFC6AB),
+	dual,
+	helpstring("ICustomer 인터페이스"),
+	pointer_default(unique)
+] 
+#line 15 "c:\\componentdevelopment\\chpater15\\custinfo\\customer.h"
+interface ICustomer : IDispatch {
+#line 17 "c:\\componentdevelopment\\chpater15\\custinfo\\customer.h"
+	[propget,id(1),helpstring("속성 CustName")] HRESULT  CustName([out,retval] BSTR *pVal );
+	[propput,id(1),helpstring("속성 CustName")] HRESULT  CustName([in] BSTR newVal);
+	[propget,id(2),helpstring("속성 CustAddr")] HRESULT  CustAddr([out,retval] BSTR *pVal );
+	[propput,id(2),helpstring("속성 CustAddr")] HRESULT  CustAddr([in] BSTR newVal);
+	[propget,id(3),helpstring("속성 CustTelno")] HRESULT  CustTelno([out,retval] BSTR *pVal );
+	[propput,id(3),helpstring("속성 CustTelno")] HRESULT  CustTelno([in] BSTR newVal);
+};
+
+
+[ version(1.0), uuid(A3F6ED4A-C8B6-44D0-87CA-712031AF4B7F), helpstring("CustInfo 1.0 형식 라이브러리") ]
+library CustInfo
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(B026A791-5A90-4CDB-9AD4-6B8DAE24374D),
+		helpstring("_ICustomerEvents 인터페이스")
+	] 
+#line 33 "c:\\componentdevelopment\\chpater15\\custinfo\\customer.h"
+	dispinterface _ICustomerEvents {
+	properties:
+
+	methods:
+		[id(1),helpstring("메서드 OnChangedCustName")] void  ChangedCustName([in] BSTR newName);
+		[id(2),helpstring("메서드 OnChangedCustAddr")] void  ChangedCustAddr([in] BSTR newAddr);
+		[id(3),helpstring("메서드 OnChangedCustTelno")] void  ChangedCustTelno([in] BSTR newTelno);
+	};
+
+	[
+		version(1.0),
+		uuid(0B16B70E-AA0B-4D14-B57C-1CED7F86A581),
+		helpstring("Customer Class")
+	] 
+#line 52 "c:\\componentdevelopment\\chpater15\\custinfo\\customer.h"
+	coclass CCustomer {
+		interface ICustomer;
+		[default, source]	interface _ICustomerEvents;
+	};
+
+}
+

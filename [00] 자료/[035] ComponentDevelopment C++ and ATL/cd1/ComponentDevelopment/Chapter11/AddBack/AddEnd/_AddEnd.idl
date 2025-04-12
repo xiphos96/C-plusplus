@@ -1,0 +1,45 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(B60724AA-9874-4C9A-B53F-ED2FFD36738F),
+	dual,
+	helpstring("IAddEnd 인터페이스"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chapter11\\addback\\addend\\addendo.h"
+interface IAddEnd : IDispatch {
+#line 16 "c:\\componentdevelopment\\chapter11\\addback\\addend\\addendo.h"
+	[propget,id(1),helpstring("속성 AddEnd")] HRESULT  AddEnd([out,retval] SHORT *pVal);
+	[propput,id(1),helpstring("속성 AddEnd")] HRESULT  AddEnd([in] SHORT newVal);
+	[propget,id(2),helpstring("속성 Sum")] HRESULT  Sum([out,retval] SHORT *pVal);
+	[propput,id(2),helpstring("속성 Sum")] HRESULT  Sum([in] SHORT newVal);
+	[id(3),helpstring("메서드 Clear")] HRESULT  Clear();
+};
+
+
+[ version(1.0), uuid(48EA00CE-D4D1-4734-A58F-53D4EE10FABB), helpstring("AddEnd 1.0 형식 라이브러리") ]
+library AddEnd
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(74FD8F48-4B50-4DB3-B195-B74A4B79393F),
+		helpstring("AddEnd Class"),
+		aggregatable
+	] 
+#line 37 "c:\\componentdevelopment\\chapter11\\addback\\addend\\addendo.h"
+	coclass CAddEnd {
+		interface IAddEnd;
+	};
+
+}
+

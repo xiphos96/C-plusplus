@@ -1,0 +1,60 @@
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("a0938237-41d8-4a07-a06d-b4ed2706e777"))
+/* LIBID */ __AddBack;
+[export] __interface __declspec(uuid("6b789d4f-b967-4f16-b0f2-32e2fda6e05f"))
+/* dispinterface */ _IAddBackEvents;
+struct /* coclass */ CAddBack;
+[export] __interface __declspec(uuid("d3af576a-cde3-4c6b-bbe4-678deb0156b7"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IAddBackEvents, __uuidof(_IAddBackEvents));
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+[uuid("6b789d4f-b967-4f16-b0f2-32e2fda6e05f"),dispinterface]
+__interface _IAddBackEvents : IDispatch
+{
+    //
+    // Wrapper methods
+    //
+
+    // Methods:
+   [id(0x1)] HRESULT ChangedAddEnd (
+        [in] short newVal );
+   [id(0x2)] HRESULT ChangedSum (
+        [in] short newVal );
+};
+
+struct __declspec(uuid("f792f6d3-7005-4cb8-9c7f-35313b3ade5b"))
+CAddBack;
+    // [ default ] interface IAddBack
+    // [ default, source ] dispinterface _IAddBackEvents
+
+[uuid("d3af576a-cde3-4c6b-bbe4-678deb0156b7"),dual]
+__interface IAddBack : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+      [id(0x1)] HRESULT __stdcall Add ( );
+      [id(0x2)] HRESULT __stdcall AddTen ( );
+      [id(0x3)] HRESULT __stdcall Clear ( );
+      [id(0x4),propget] HRESULT __stdcall AddEnd (
+        [out,retval] short * pVal );
+      [id(0x4),propput] HRESULT __stdcall AddEnd (
+        [in] short pVal );
+      [id(0x5),propget] HRESULT __stdcall Sum (
+        [out,retval] short * pVal );
+};

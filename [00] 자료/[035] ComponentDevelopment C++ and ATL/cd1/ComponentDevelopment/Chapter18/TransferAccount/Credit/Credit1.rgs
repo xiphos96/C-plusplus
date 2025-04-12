@@ -1,0 +1,27 @@
+HKCR
+{
+	Credit.Credit.1 = s 'Credit Class'
+	{
+		CLSID = s '{EBE71C3A-E151-4420-9FBD-23EC0BA7DC55}'
+	}
+	Credit.Credit = s 'Credit Class'
+	{
+		CLSID = s '{EBE71C3A-E151-4420-9FBD-23EC0BA7DC55}'
+		CurVer = s 'Credit.Credit.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {EBE71C3A-E151-4420-9FBD-23EC0BA7DC55} = s 'Credit Class'
+		{
+			ProgID = s 'Credit.Credit.1'
+			VersionIndependentProgID = s 'Credit.Credit'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{8CF377DA-E093-424B-8BF5-C722A914811E}'
+		}
+	}
+}

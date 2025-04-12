@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExplorerUIDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA5.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/ExplorerUIDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\1. 웹브라우저 컨트롤의 모양 바꾸기\ExplorerUIDemo\CustomControlSite.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\1. 웹브라우저 컨트롤의 모양 바꾸기\ExplorerUIDemo\ExplorerUIDemo.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA5.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA6.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/ExplorerUIDemo.pdb" /debug /machine:IX86 /out:"Release60/ExplorerUIDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\CustomControlSite.obj"
+".\Release60\ExplorerUIDemo.obj"
+".\Release60\ExplorerUIDemoDlg.obj"
+".\Release60\stdafx.obj"
+".\Release60\webbrowser2.obj"
+".\Release60\ExplorerUIDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA6.tmp"
+<h3>Output Window</h3>
+Compiling...
+CustomControlSite.cpp
+ExplorerUIDemo.cpp
+Generating Code...
+Linking...
+   Creating library Release60/ExplorerUIDemo.lib and object Release60/ExplorerUIDemo.exp
+
+
+
+<h3>Results</h3>
+ExplorerUIDemo.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

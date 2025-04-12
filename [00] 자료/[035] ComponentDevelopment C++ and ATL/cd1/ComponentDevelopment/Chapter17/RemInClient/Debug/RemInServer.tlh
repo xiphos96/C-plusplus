@@ -1,0 +1,113 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (853dfb15).
+//
+// c:\componentdevelopment\chapter17\reminclient\debug\RemInServer.tlh
+//
+// C++ source equivalent of Win32 type library RemInServer.RemInServer.1
+// compiler-generated file created 03/23/04 at 10:59:03 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("b60aeb24-7381-4561-9cb8-b45a205d52da"))
+/* LIBID */ __RemInServerLib;
+struct /* coclass */ RemInServer;
+struct __declspec(uuid("6d8a8a88-f393-4ceb-b54b-7cc5c4f7acae"))
+/* interface */ IAddEnd;
+struct __declspec(uuid("727f03fe-d17c-4b35-8822-c411cf069d4b"))
+/* interface */ IAdd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddEnd, __uuidof(IAddEnd));
+_COM_SMARTPTR_TYPEDEF(IAdd, __uuidof(IAdd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("8e31e071-1f25-48a8-86cd-8af1c83b064a"))
+RemInServer;
+    // [ default ] interface IAddEnd
+    // interface IAdd
+
+struct __declspec(uuid("6d8a8a88-f393-4ceb-b54b-7cc5c4f7acae"))
+IAddEnd : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+    HRESULT Clear ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_AddEnd (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_AddEnd (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_Sum (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+};
+
+struct __declspec(uuid("727f03fe-d17c-4b35-8822-c411cf069d4b"))
+IAdd : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add ( );
+    HRESULT AddTen ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add ( ) = 0;
+      virtual HRESULT __stdcall raw_AddTen ( ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_RemInServerLib =
+    {0xb60aeb24,0x7381,0x4561,{0x9c,0xb8,0xb4,0x5a,0x20,0x5d,0x52,0xda}};
+extern "C" const GUID __declspec(selectany) CLSID_RemInServer =
+    {0x8e31e071,0x1f25,0x48a8,{0x86,0xcd,0x8a,0xf1,0xc8,0x3b,0x06,0x4a}};
+extern "C" const GUID __declspec(selectany) IID_IAddEnd =
+    {0x6d8a8a88,0xf393,0x4ceb,{0xb5,0x4b,0x7c,0xc5,0xc4,0xf7,0xac,0xae}};
+extern "C" const GUID __declspec(selectany) IID_IAdd =
+    {0x727f03fe,0xd17c,0x4b35,{0x88,0x22,0xc4,0x11,0xcf,0x06,0x9d,0x4b}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter17\reminclient\debug\RemInServer.tli"
+
+#pragma pack(pop)

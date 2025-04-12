@@ -1,0 +1,39 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(41EF5B75-EB72-4B62-A335-F927F97D1B1A),
+	helpstring("IHello 인터페이스"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chapter07\\helloattributewizard\\hello.h"
+interface IHello : IUnknown {
+#line 16 "c:\\componentdevelopment\\chapter07\\helloattributewizard\\hello.h"
+	[helpstring("메서드 sayHello")] HRESULT  sayHello([in] wchar_t *name, [out] wchar_t **message );
+};
+
+
+[ version(1.0), uuid(7BA0C5C3-0DDE-4429-A2E1-1667B4BF0D46), helpstring("HelloServer 1.0 형식 라이브러리") ]
+library HelloServer
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(0925C1AB-9BE3-44BE-AA11-0BEA2129ACE2),
+		helpstring("Hello Class")
+	] 
+#line 32 "c:\\componentdevelopment\\chapter07\\helloattributewizard\\hello.h"
+	coclass CHello {
+		interface IHello;
+	};
+
+}
+

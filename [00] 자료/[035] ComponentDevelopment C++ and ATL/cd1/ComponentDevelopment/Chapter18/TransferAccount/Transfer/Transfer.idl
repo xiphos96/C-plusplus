@@ -1,0 +1,39 @@
+// Transfer.idl : IDL source for Transfer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Transfer.tlb) and marshalling code.
+
+#include "mtxattr.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(5569DD76-9C3C-4925-8731-321845516F71),
+	dual,
+	nonextensible,
+	helpstring("ITransfer Interface"),
+	pointer_default(unique)
+]
+interface ITransfer : IDispatch{
+	[id(1), helpstring("method MoveMoney")] HRESULT MoveMoney([in] long srcAccount, [in] long destAccount, [in] long amount);
+};
+[
+	uuid(B8AD32AB-7138-46F4-B9AA-A421E076803F),
+	version(1.0),
+	helpstring("Transfer 1.0 Type Library")
+]
+library TransferLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(6A1F644C-67C1-4CF2-A2C7-67FEA3EE1414),
+		custom(TLBATTR_TRANS_REQNEW,0),
+		helpstring("Transfer Class")
+	]
+	coclass Transfer
+	{
+		[default] interface ITransfer;
+	};
+};

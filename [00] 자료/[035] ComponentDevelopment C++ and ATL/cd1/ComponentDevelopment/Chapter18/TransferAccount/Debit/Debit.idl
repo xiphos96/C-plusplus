@@ -1,0 +1,39 @@
+// Debit.idl : IDL source for Debit
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Debit.tlb) and marshalling code.
+
+#include "mtxattr.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(29C6E783-552F-42FA-A87D-DA16D91ECF3F),
+	dual,
+	nonextensible,
+	helpstring("IDebit Interface"),
+	pointer_default(unique)
+]
+interface IDebit : IDispatch{
+	[id(1), helpstring("method ChangeAccount")] HRESULT ChangeAccount([in] long accountID, [in] long amount);
+};
+[
+	uuid(695DF806-1E90-47B3-9E24-358686B62D1A),
+	version(1.0),
+	helpstring("Debit 1.0 Type Library")
+]
+library DebitLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(7238505D-8F66-47A7-A9D7-CD0B2499BBC8),
+		custom(TLBATTR_TRANS_SUPPORTED,0),
+		helpstring("Debit Class")
+	]
+	coclass Debit
+	{
+		[default] interface IDebit;
+	};
+};

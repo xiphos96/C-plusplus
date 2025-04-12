@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'AddBack_Stateless'
+		'AddBack_Stateless.DLL'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+}

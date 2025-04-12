@@ -1,0 +1,55 @@
+import "docobj.idl";
+
+#line 9 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+interface _IAddBackEvents;
+#line 12 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+interface IAddBack;
+[
+	uuid(d3af576a-cde3-4c6b-bbe4-678deb0156b7),
+	dual
+] 
+#line 45 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+interface IAddBack : IDispatch {
+#line 51 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+	[id(0x1)] HRESULT  Add();
+	[id(0x2)] HRESULT  AddTen();
+	[id(0x3)] HRESULT  Clear();
+	[propget,id(0x4)] HRESULT  AddEnd([out,retval] short *pVal);
+#line 56 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+	[propput,id(0x4)] HRESULT  AddEnd([in] short pVal);
+#line 58 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+	[propget,id(0x5)] HRESULT  Sum([out,retval] short *pVal);
+};
+
+
+[ version(1.0), uuid(a7464953-5fa3-3f82-b48d-6611b39d9f8d) ]
+library AddFront
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(6b789d4f-b967-4f16-b0f2-32e2fda6e05f)
+	] 
+#line 26 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+	dispinterface _IAddBackEvents {
+	properties:
+
+	methods:
+#line 33 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+		[id(0x1)] HRESULT  ChangedAddEnd([in] short newVal);
+#line 35 "c:\\componentdevelopment\\chapter10\\comevent\\addfront\\debug\\addback.tlh"
+		[id(0x2)] HRESULT  ChangedSum([in] short newVal);
+	};
+
+	[
+		uuid(718DA686-250E-37D3-8FA2-4ABC2444CDA9),
+		version(1.0),
+		noncreatable
+	] 
+	coclass __Impl__IAddBackEvents {
+		[default] interface IUnknown;
+	};
+
+}
+

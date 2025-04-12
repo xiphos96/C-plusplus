@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ControlStatusBarDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/ControlStatusBarDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\ControlStatusBarDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC7.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/ControlStatusBarDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\ControlStatusBar.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\ControlStatusBarDemo.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\ControlStatusBarDemoDoc.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\ControlStatusBarDemoView.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC7.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC8.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/ControlStatusBarDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC8.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC9.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/ControlStatusBarDemo.pdb" /debug /machine:IX86 /out:"Release60/ControlStatusBarDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\ControlStatusBar.obj"
+".\Release60\ControlStatusBarDemo.obj"
+".\Release60\ControlStatusBarDemoDoc.obj"
+".\Release60\ControlStatusBarDemoView.obj"
+".\Release60\MainFrm.obj"
+".\Release60\stdafx.obj"
+".\Release60\ControlStatusBarDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC9.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 16. 상태바 확장하기\1. 상태바에 컨트롤 넣기\ControlStatusBarDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+ControlStatusBar.cpp
+ControlStatusBarDemo.cpp
+ControlStatusBarDemoDoc.cpp
+ControlStatusBarDemoView.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ControlStatusBarDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

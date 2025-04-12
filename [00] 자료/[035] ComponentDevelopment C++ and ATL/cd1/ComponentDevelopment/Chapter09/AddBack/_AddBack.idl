@@ -1,0 +1,45 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(CE06761C-AF3B-4606-A6E9-CF7FE4DA1F2F),
+	dual,
+	helpstring("IAddBack 인터페이스"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chapter09\\addback\\addbacko.h"
+interface IAddBack : IDispatch {
+#line 16 "c:\\componentdevelopment\\chapter09\\addback\\addbacko.h"
+	[id(1),helpstring("메서드 Add")] HRESULT  Add();
+	[id(2),helpstring("메서드 AddTen")] HRESULT  AddTen();
+	[id(3),helpstring("메서드 Clear")] HRESULT  Clear();
+	[propget,id(4),helpstring("속성 AddEnd")] HRESULT  AddEnd([out,retval] SHORT *pVal);
+	[propput,id(4),helpstring("속성 AddEnd")] HRESULT  AddEnd([in] SHORT newVal);
+	[propget,id(5),helpstring("속성 Sum")] HRESULT  Sum([out,retval] SHORT *pVal);
+};
+
+
+[ version(1.0), uuid(26193A54-724C-40E8-ABE7-74E03CFD6AF9), helpstring("AddBack 1.0 형식 라이브러리") ]
+library AddBack
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(7C550737-8DD8-4091-BD15-18A43D74BD7A),
+		helpstring("AddBack Class")
+	] 
+#line 38 "c:\\componentdevelopment\\chapter09\\addback\\addbacko.h"
+	coclass CAddBack {
+		interface IAddBack;
+	};
+
+}
+

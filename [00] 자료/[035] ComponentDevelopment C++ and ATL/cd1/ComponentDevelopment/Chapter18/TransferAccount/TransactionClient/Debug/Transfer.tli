@@ -1,0 +1,18 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (7407539b).
+//
+// c:\componentdevelopment\chapter18\transferaccount\transactionclient\debug\Transfer.tli
+//
+// Wrapper implementations for Win32 type library Transfer.Transfer.1
+// compiler-generated file created 03/23/04 at 11:29:35 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ITransfer wrapper method implementations
+//
+
+inline HRESULT ITransfer::MoveMoney ( long srcAccount, long destAccount, long amount ) {
+    HRESULT _hr = raw_MoveMoney(srcAccount, destAccount, amount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}

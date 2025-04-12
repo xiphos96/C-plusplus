@@ -1,0 +1,9 @@
+; AddBack.def : Declares the module parameters.
+
+LIBRARY      "AddBack.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

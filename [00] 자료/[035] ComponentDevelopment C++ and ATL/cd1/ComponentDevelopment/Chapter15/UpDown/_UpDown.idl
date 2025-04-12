@@ -1,0 +1,58 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(E110287D-B638-4CB4-9AD1-E502664EEBBA),
+	dual,
+	helpstring("IUpDownCtl 인터페이스"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chpater15\\updown\\updownctl.h"
+interface IUpDownCtl : IDispatch {
+#line 16 "c:\\componentdevelopment\\chpater15\\updown\\updownctl.h"
+	[propget,id(1),helpstring("속성 MinValue")] HRESULT  MinValue([out,retval] short *pVal);
+	[propput,id(1),helpstring("속성 MinValue")] HRESULT  MinValue([in] short newVal);
+	[propget,id(2),helpstring("속성 MaxValue")] HRESULT  MaxValue([out,retval] short *pVal);
+	[propput,id(2),helpstring("속성 MaxValue")] HRESULT  MaxValue([in] short newVal);
+	[propget,id(3),helpstring("속성 Value")] HRESULT  Value([out,retval] short *pVal);
+	[propput,id(3),helpstring("속성 Value")] HRESULT  Value([in] short newVal);
+};
+
+
+[ version(1.0), uuid(2A710023-E2A7-4BFB-B402-0546ED64FC4B), helpstring("UpDown 1.0 형식 라이브러리") ]
+library UpDown
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		uuid(98E0E6DC-6884-4D03-A873-10FC84488C8B),
+		helpstring("_IUpDownCtlEvents 인터페이스")
+	] 
+#line 32 "c:\\componentdevelopment\\chpater15\\updown\\updownctl.h"
+	dispinterface _IUpDownCtlEvents {
+	properties:
+
+	methods:
+		[id(1),helpstring("메서드 Changed")] void  Changed([in] short newValue);
+	};
+
+	[
+		version(1.0),
+		uuid(7B8BA776-730A-47D6-9462-EB68C2F8CC2D),
+		helpstring("UpDownCtl Class")
+	] 
+#line 49 "c:\\componentdevelopment\\chpater15\\updown\\updownctl.h"
+	coclass CUpDownCtl {
+		interface IUpDownCtl;
+		[default, source]	interface _IUpDownCtlEvents;
+	};
+
+}
+

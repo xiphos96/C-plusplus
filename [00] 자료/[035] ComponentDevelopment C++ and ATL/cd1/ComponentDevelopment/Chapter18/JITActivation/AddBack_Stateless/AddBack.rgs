@@ -1,0 +1,27 @@
+HKCR
+{
+	AddBack_Stateless.AddBack.1 = s 'AddBack Class'
+	{
+		CLSID = s '{0F790972-D8EB-4705-A752-8086A7E41A8B}'
+	}
+	AddBack_Stateless.AddBack = s 'AddBack Class'
+	{
+		CLSID = s '{0F790972-D8EB-4705-A752-8086A7E41A8B}'
+		CurVer = s 'AddBack_Stateless.AddBack.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {0F790972-D8EB-4705-A752-8086A7E41A8B} = s 'AddBack Class'
+		{
+			ProgID = s 'AddBack_Stateless.AddBack.1'
+			VersionIndependentProgID = s 'AddBack_Stateless.AddBack'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{7FE4263E-C0CE-4D60-91BD-97E41A8DF90D}'
+		}
+	}
+}

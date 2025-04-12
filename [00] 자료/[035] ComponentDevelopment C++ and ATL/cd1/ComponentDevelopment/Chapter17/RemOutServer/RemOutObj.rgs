@@ -1,0 +1,23 @@
+HKCR
+{
+	RemOutServer.RemOutServer.1 = s 'RemOutServer Class'
+	{
+		CLSID = s '{1C5CC077-597A-4DAC-8FB2-C5492D4E0487}'
+	}
+	RemOutServer.RemOutServer = s 'RemOutServer Class'
+	{
+		CLSID = s '{1C5CC077-597A-4DAC-8FB2-C5492D4E0487}'
+		CurVer = s 'RemOutServer.RemOutServer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1C5CC077-597A-4DAC-8FB2-C5492D4E0487} = s 'RemOutServer Class'
+		{
+			ProgID = s 'RemOutServer.RemOutServer.1'
+			VersionIndependentProgID = s 'RemOutServer.RemOutServer'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{F8D05E24-249D-413B-B9DA-07B5DA7DE4CA}'
+		}
+	}
+}

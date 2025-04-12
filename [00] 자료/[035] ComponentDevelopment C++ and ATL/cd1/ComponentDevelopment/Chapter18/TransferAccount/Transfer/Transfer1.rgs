@@ -1,0 +1,27 @@
+HKCR
+{
+	Transfer.Transfer.1 = s 'Transfer Class'
+	{
+		CLSID = s '{6A1F644C-67C1-4CF2-A2C7-67FEA3EE1414}'
+	}
+	Transfer.Transfer = s 'Transfer Class'
+	{
+		CLSID = s '{6A1F644C-67C1-4CF2-A2C7-67FEA3EE1414}'
+		CurVer = s 'Transfer.Transfer.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {6A1F644C-67C1-4CF2-A2C7-67FEA3EE1414} = s 'Transfer Class'
+		{
+			ProgID = s 'Transfer.Transfer.1'
+			VersionIndependentProgID = s 'Transfer.Transfer'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{B8AD32AB-7138-46F4-B9AA-A421E076803F}'
+		}
+	}
+}

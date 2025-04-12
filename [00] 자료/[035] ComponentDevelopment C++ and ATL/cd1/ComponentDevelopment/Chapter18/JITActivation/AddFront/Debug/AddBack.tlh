@@ -1,0 +1,68 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (9d93b452).
+//
+// c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack.tlh
+//
+// C++ source equivalent of Win32 type library AddBack.AddBack.1
+// compiler-generated file created 03/23/04 at 12:06:57 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace AddBackLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("cbd5049c-715d-4c7f-9de8-63aa8d2627cb"))
+/* LIBID */ __AddBackLib;
+struct /* coclass */ AddBack;
+struct __declspec(uuid("e722f847-40e4-4b08-b9ec-1ad574cb3882"))
+/* dual interface */ IAddBack;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddBack, __uuidof(IAddBack));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("4ff97220-1696-4699-a071-67f281e97f6c"))
+AddBack;
+    // [ default ] interface IAddBack
+
+struct __declspec(uuid("e722f847-40e4-4b08-b9ec-1ad574cb3882"))
+IAddBack : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Add (
+        long addend );
+    long getSum ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ long addend ) = 0;
+      virtual HRESULT __stdcall raw_getSum (
+        /*[out,retval]*/ long * sum ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter18\jitactivation\addfront\debug\AddBack.tli"
+
+} // namespace AddBackLib
+
+#pragma pack(pop)

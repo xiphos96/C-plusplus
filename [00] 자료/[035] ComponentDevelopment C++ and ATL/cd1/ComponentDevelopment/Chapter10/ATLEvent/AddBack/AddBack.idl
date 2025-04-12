@@ -1,0 +1,71 @@
+// AddBack.idl : AddBack의 IDL 소스입니다.
+//
+
+// 이 파일은 MIDL 도구에 의해 처리되어
+// 형식 라이브러리(AddBack.tlb) 및 마샬링 코드가 생성됩니다.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(B714A149-C4F8-4B50-8BEE-926C84F99FB2),
+	dual,
+	nonextensible,
+	helpstring("IAddBack 인터페이스"),
+	pointer_default(unique)
+]
+interface IAddBack : IDispatch{
+	[id(1), helpstring("메서드 Add")] HRESULT Add(void);
+	[id(2), helpstring("메서드 AddTen")] HRESULT AddTen(void);
+	[id(3), helpstring("메서드 Clear")] HRESULT Clear(void);
+	[propget, id(4), helpstring("속성 AddEnd")] HRESULT AddEnd([out, retval] SHORT* pVal);
+	[propput, id(4), helpstring("속성 AddEnd")] HRESULT AddEnd([in] SHORT newVal);
+	[propget, id(5), helpstring("속성 Sum")] HRESULT Sum([out, retval] SHORT* pVal);
+};
+
+[
+	object,
+	uuid(D90D5240-ACD0-11d1-913A-0020AF715AF0),
+	dual,
+	nonextensible,
+	helpstring("IAddBackEvents 인터페이스"),
+	pointer_default(unique)
+]
+interface IAddBackEvents : IDispatch
+{
+	[id(1), helpstring("ChangedAddEnd 이벤트")] HRESULT ChangedAddEnd([in] SHORT newVal);
+	[id(2), helpstring("ChangedSum 이벤트")] HRESULT ChangedSum([in] SHORT newVal);
+};
+
+
+[
+	uuid(4E1E8D00-91CE-497B-8784-5D72DAE6E96D),
+	version(1.0),
+	helpstring("AddBack 1.0 형식 라이브러리")
+]
+library AddBackLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(6F80FA9C-AB06-47E4-84E1-B71151760BDA),
+		helpstring("_IAddBackEvents 인터페이스")
+	]
+	dispinterface _IAddBackEvents
+	{
+		properties:
+		methods:
+			[id(1)] void ChangedAddEnd([in] SHORT newVal);
+			[id(2)] void ChangedSum([in] SHORT newVal);
+	};
+	[
+		uuid(CB30E04C-A741-4E83-B21F-096DED8351D5),
+		helpstring("AddBack Class")
+	]
+	coclass AddBack
+	{
+		[default] interface IAddBack;
+		[default, source] dispinterface _IAddBackEvents;
+		[source] interface IAddBackEvents;
+	};
+};

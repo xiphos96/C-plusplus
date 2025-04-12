@@ -1,0 +1,72 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Hash Map", "Hash_Map.vcproj", "{6761D02C-FECA-1BAD-5E18-93A542E1F686}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Malloc", "Malloc.vcproj", "{194F0E33-FECA-1BAD-5E18-93A542E1F686}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Mem Map", "Mem_Map.vcproj", "{2DB7802C-FECA-1BAD-5E18-93A542E1F686}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PI Malloc", "PI_Malloc.vcproj", "{524F0E36-FECA-1BAD-5E18-93A542E1F686}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pool Growth", "Pool_Growth.vcproj", "{374439F1-FECA-1BAD-5E18-93A542E1F686}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.0 = {ace.vcproj}
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.0 = {ace.vcproj}
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.0 = {ace.vcproj}
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.0 = {ace.vcproj}
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Debug.ActiveCfg = Debug|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Debug.Build.0 = Debug|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Release.ActiveCfg = Release|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Release.Build.0 = Release|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Static Debug.ActiveCfg = Static Debug|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Static Debug.Build.0 = Static Debug|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Static Release.ActiveCfg = Static Release|Win32
+		{6761D02C-FECA-1BAD-5E18-93A542E1F686}.Static Release.Build.0 = Static Release|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Debug.ActiveCfg = Debug|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Debug.Build.0 = Debug|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Release.ActiveCfg = Release|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Release.Build.0 = Release|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Static Debug.ActiveCfg = Static Debug|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Static Debug.Build.0 = Static Debug|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Static Release.ActiveCfg = Static Release|Win32
+		{194F0E33-FECA-1BAD-5E18-93A542E1F686}.Static Release.Build.0 = Static Release|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Debug.ActiveCfg = Debug|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Debug.Build.0 = Debug|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Release.ActiveCfg = Release|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Release.Build.0 = Release|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Static Debug.ActiveCfg = Static Debug|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Static Debug.Build.0 = Static Debug|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Static Release.ActiveCfg = Static Release|Win32
+		{2DB7802C-FECA-1BAD-5E18-93A542E1F686}.Static Release.Build.0 = Static Release|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Debug.ActiveCfg = Debug|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Debug.Build.0 = Debug|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Release.ActiveCfg = Release|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Release.Build.0 = Release|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Static Debug.ActiveCfg = Static Debug|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Static Debug.Build.0 = Static Debug|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Static Release.ActiveCfg = Static Release|Win32
+		{524F0E36-FECA-1BAD-5E18-93A542E1F686}.Static Release.Build.0 = Static Release|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Debug.ActiveCfg = Debug|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Debug.Build.0 = Debug|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Release.ActiveCfg = Release|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Release.Build.0 = Release|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Static Debug.ActiveCfg = Static Debug|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Static Debug.Build.0 = Static Debug|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Static Release.ActiveCfg = Static Release|Win32
+		{374439F1-FECA-1BAD-5E18-93A542E1F686}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: AnimGIFDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/AnimGIFDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\AnimGIFDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP103.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/AnimGIFDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\AnimGIF.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\AnimGIFDemo.cpp"
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\AnimGIFDemoDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP103.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP104.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/AnimGIFDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP104.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP105.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/AnimGIFDemo.pdb" /debug /machine:IX86 /out:"Release60/AnimGIFDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\AnimGIF.obj"
+".\Release60\AnimGIFDemo.obj"
+".\Release60\AnimGIFDemoDlg.obj"
+".\Release60\stdafx.obj"
+".\Release60\AnimGIFDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSP105.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 4. 그래픽과 멀티미디어\Chapter 21. GDI+ 그래픽 활용하기\1. GDI+를 사용하여 애니메이션 GIF 출력하기\AnimGIFDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+AnimGIF.cpp
+AnimGIFDemo.cpp
+AnimGIFDemoDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+AnimGIFDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

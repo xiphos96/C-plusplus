@@ -1,0 +1,66 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	dual,
+	uuid(CC72F349-A155-4E77-BAE6-29EEB8355AC0),
+	helpstring("IDHTMLCtlUI 인터페이스"),
+	pointer_default(unique)
+] 
+#line 13 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+interface IDHTMLCtlUI : IDispatch {
+#line 16 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+	[id(1)] HRESULT  OnClick([in] IDispatch *pdispBody, [in] VARIANT varColor);
+	[id(2),helpstring("메서드 GoTo")] HRESULT  GoTo();
+};
+
+[
+	object,
+	uuid(301363E5-1A3D-45E5-9AC5-0D8596AF5F86),
+	dual,
+	helpstring("IDHTMLCtl 인터페이스"),
+	pointer_default(unique)
+] 
+#line 29 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+interface IDHTMLCtl : IDispatch {
+#line 31 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+	[propget,id(1),helpstring("속성 UrlPath")] HRESULT  UrlPath([out,retval] BSTR *pVal );
+	[propput,id(1),helpstring("속성 UrlPath")] HRESULT  UrlPath([in] BSTR newVal);
+	[id(2),helpstring("메서드 GoToURL")] HRESULT  GoToURL();
+};
+
+
+[ version(1.0), uuid(E4FA2653-AB9D-446B-A087-63B0009D0AFE), helpstring("DHTML 1.0 형식 라이브러리") ]
+library DHTML
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(542F7C7E-4296-4389-9A23-33196246AC1F),
+		noncreatable
+	] 
+#line 43 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+	coclass CDHTMLCtlUI {
+		interface IDHTMLCtlUI;
+	};
+
+	[
+		version(1.0),
+		uuid(73FED92B-DA89-4C5D-A99E-9C15E9D480E9),
+		helpstring("DHTMLCtl Class")
+	] 
+#line 87 "c:\\componentdevelopment\\chpater15\\dhtml\\dhtmlctl.h"
+	coclass CDHTMLCtl {
+		interface IDHTMLCtl;
+	};
+
+}
+

@@ -1,0 +1,72 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SigAction", "SigAction.vcproj", "{96333666-FECA-1BAD-87B1-FF9252591BEA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SigGuard", "SigGuard.vcproj", "{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SigHandler", "SigHandler.vcproj", "{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SigHandlers", "SigHandlers.vcproj", "{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SigInfo", "SigInfo.vcproj", "{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.0 = {ace.vcproj}
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.0 = {ace.vcproj}
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.0 = {ace.vcproj}
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.0 = {ace.vcproj}
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Debug.ActiveCfg = Debug|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Debug.Build.0 = Debug|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Release.ActiveCfg = Release|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Release.Build.0 = Release|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.ActiveCfg = Static Debug|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.Build.0 = Static Debug|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Static Release.ActiveCfg = Static Release|Win32
+		{96333666-FECA-1BAD-87B1-FF9252591BEA}.Static Release.Build.0 = Static Release|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Debug.ActiveCfg = Debug|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Debug.Build.0 = Debug|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Release.ActiveCfg = Release|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Release.Build.0 = Release|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.ActiveCfg = Static Debug|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.Build.0 = Static Debug|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Static Release.ActiveCfg = Static Release|Win32
+		{3CF777FE-FECA-1BAD-87B1-FF9252591BEA}.Static Release.Build.0 = Static Release|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Debug.ActiveCfg = Debug|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Debug.Build.0 = Debug|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Release.ActiveCfg = Release|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Release.Build.0 = Release|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.ActiveCfg = Static Debug|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.Build.0 = Static Debug|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Static Release.ActiveCfg = Static Release|Win32
+		{FAE3F66D-FECA-1BAD-87B1-FF9252591BEA}.Static Release.Build.0 = Static Release|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Debug.ActiveCfg = Debug|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Debug.Build.0 = Debug|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Release.ActiveCfg = Release|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Release.Build.0 = Release|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.ActiveCfg = Static Debug|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.Build.0 = Static Debug|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Static Release.ActiveCfg = Static Release|Win32
+		{277C5BE0-FECA-1BAD-87B1-FF9252591BEA}.Static Release.Build.0 = Static Release|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Debug.ActiveCfg = Debug|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Debug.Build.0 = Debug|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Release.ActiveCfg = Release|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Release.Build.0 = Release|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.ActiveCfg = Static Debug|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Static Debug.Build.0 = Static Debug|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Static Release.ActiveCfg = Static Release|Win32
+		{DC5B4B1A-FECA-1BAD-87B1-FF9252591BEA}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

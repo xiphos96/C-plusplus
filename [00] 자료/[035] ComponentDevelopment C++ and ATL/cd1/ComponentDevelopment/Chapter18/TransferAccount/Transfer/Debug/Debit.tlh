@@ -1,0 +1,63 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (bddc421b).
+//
+// c:\componentdevelopment\chapter18\transferaccount\transfer\debug\Debit.tlh
+//
+// C++ source equivalent of Win32 type library Debit.Debit.1
+// compiler-generated file created 03/23/04 at 11:14:02 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("695df806-1e90-47b3-9e24-358686b62d1a"))
+/* LIBID */ __DebitLib;
+struct /* coclass */ Debit;
+struct __declspec(uuid("29c6e783-552f-42fa-a87d-da16d91ecf3f"))
+/* dual interface */ IDebit;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IDebit, __uuidof(IDebit));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("7238505d-8f66-47a7-a9d7-cd0b2499bbc8"))
+Debit;
+    // [ default ] interface IDebit
+
+struct __declspec(uuid("29c6e783-552f-42fa-a87d-da16d91ecf3f"))
+IDebit : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT ChangeAccount (
+        long accountID,
+        long amount );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_ChangeAccount (
+        /*[in]*/ long accountID,
+        /*[in]*/ long amount ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter18\transferaccount\transfer\debug\Debit.tli"
+
+#pragma pack(pop)

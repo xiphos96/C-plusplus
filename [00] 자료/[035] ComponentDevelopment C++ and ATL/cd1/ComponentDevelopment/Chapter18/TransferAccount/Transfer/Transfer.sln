@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Transfer", "Transfer.vcproj", "{37C8AE13-C534-45F4-AFC4-9E5998979836}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TransferPS", "TransferPS.vcproj", "{448E7758-35C6-46EB-8822-0C98503077E9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{37C8AE13-C534-45F4-AFC4-9E5998979836} = {37C8AE13-C534-45F4-AFC4-9E5998979836}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{37C8AE13-C534-45F4-AFC4-9E5998979836}.Debug.ActiveCfg = Debug|Win32
+		{37C8AE13-C534-45F4-AFC4-9E5998979836}.Debug.Build.0 = Debug|Win32
+		{37C8AE13-C534-45F4-AFC4-9E5998979836}.Release.ActiveCfg = Release|Win32
+		{37C8AE13-C534-45F4-AFC4-9E5998979836}.Release.Build.0 = Release|Win32
+		{448E7758-35C6-46EB-8822-0C98503077E9}.Debug.ActiveCfg = Debug|Win32
+		{448E7758-35C6-46EB-8822-0C98503077E9}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+// AddBack_Stateless.idl : IDL source for AddBack_Stateless
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (AddBack_Stateless.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(72505DB0-8DB0-422E-B274-2F7A166CC684),
+	dual,
+	nonextensible,
+	helpstring("IAddBack Interface"),
+	pointer_default(unique)
+]
+interface IAddBack : IDispatch{
+	[id(1), helpstring("method Add")] HRESULT Add([in] long addend, [in] long sum, [out,retval] long* result);
+};
+[
+	uuid(7FE4263E-C0CE-4D60-91BD-97E41A8DF90D),
+	version(1.0),
+	helpstring("AddBack_Stateless 1.0 Type Library")
+]
+library AddBack_StatelessLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(0F790972-D8EB-4705-A752-8086A7E41A8B),
+		helpstring("AddBack Class")
+	]
+	coclass AddBack
+	{
+		[default] interface IAddBack;
+	};
+};

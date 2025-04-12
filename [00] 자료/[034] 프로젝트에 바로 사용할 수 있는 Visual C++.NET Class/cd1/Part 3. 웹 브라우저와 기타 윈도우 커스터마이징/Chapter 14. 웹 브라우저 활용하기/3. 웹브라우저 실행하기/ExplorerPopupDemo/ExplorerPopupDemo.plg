@@ -1,0 +1,56 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ExplorerPopupDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/ExplorerPopupDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\ExplorerPopupDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB5.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/ExplorerPopupDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\ExplorerPopup.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\ExplorerPopupDemo.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\ExplorerPopupDemoDlg.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\webbrowser2.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB5.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB6.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/ExplorerPopupDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB6.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB7.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/ExplorerPopupDemo.pdb" /debug /machine:IX86 /out:"Release60/ExplorerPopupDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\ExplorerPopup.obj"
+".\Release60\ExplorerPopupDemo.obj"
+".\Release60\ExplorerPopupDemoDlg.obj"
+".\Release60\stdafx.obj"
+".\Release60\webbrowser2.obj"
+".\Release60\ExplorerPopupDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPB7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 14. 웹 브라우저 활용하기\3. 웹브라우저 실행하기\ExplorerPopupDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+ExplorerPopup.cpp
+ExplorerPopupDemo.cpp
+ExplorerPopupDemoDlg.cpp
+webbrowser2.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+ExplorerPopupDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

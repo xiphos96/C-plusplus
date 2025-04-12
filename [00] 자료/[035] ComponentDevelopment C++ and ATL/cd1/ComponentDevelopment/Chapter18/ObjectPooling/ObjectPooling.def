@@ -1,0 +1,9 @@
+; ObjectPooling.def : Declares the module parameters.
+
+LIBRARY      "ObjectPooling.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE

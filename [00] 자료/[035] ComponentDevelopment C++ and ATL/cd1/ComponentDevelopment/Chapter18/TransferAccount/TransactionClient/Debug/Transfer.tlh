@@ -1,0 +1,65 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (7407539b).
+//
+// c:\componentdevelopment\chapter18\transferaccount\transactionclient\debug\Transfer.tlh
+//
+// C++ source equivalent of Win32 type library Transfer.Transfer.1
+// compiler-generated file created 03/23/04 at 11:29:35 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("b8ad32ab-7138-46f4-b9aa-a421e076803f"))
+/* LIBID */ __TransferLib;
+struct /* coclass */ Transfer;
+struct __declspec(uuid("5569dd76-9c3c-4925-8731-321845516f71"))
+/* dual interface */ ITransfer;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ITransfer, __uuidof(ITransfer));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("6a1f644c-67c1-4cf2-a2c7-67fea3ee1414"))
+Transfer;
+    // [ default ] interface ITransfer
+
+struct __declspec(uuid("5569dd76-9c3c-4925-8731-321845516f71"))
+ITransfer : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT MoveMoney (
+        long srcAccount,
+        long destAccount,
+        long amount );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_MoveMoney (
+        /*[in]*/ long srcAccount,
+        /*[in]*/ long destAccount,
+        /*[in]*/ long amount ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter18\transferaccount\transactionclient\debug\Transfer.tli"
+
+#pragma pack(pop)

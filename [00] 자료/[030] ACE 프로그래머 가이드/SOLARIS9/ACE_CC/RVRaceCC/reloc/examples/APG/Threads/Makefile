@@ -1,0 +1,19 @@
+# Makefile,v 1.1 2003/10/06 14:11:30 shuston Exp
+#
+# Copyright 2003 Addison-Wesley Inc. All Rights Reserved.
+
+BIN =	Activate \
+	Condition_Variables \
+	Guards \
+	Message_Blocks \
+	Message_Queue \
+	Mutexes
+
+SOURCES = $(addsuffix .cpp,$(BIN))
+
+include $(ACE_ROOT)/include/makeinclude/wrapper_macros.GNU
+include $(ACE_ROOT)/include/makeinclude/macros.GNU
+include $(ACE_ROOT)/include/makeinclude/rules.common.GNU
+include $(ACE_ROOT)/include/makeinclude/rules.nonested.GNU
+include $(ACE_ROOT)/include/makeinclude/rules.bin.GNU
+include $(ACE_ROOT)/include/makeinclude/rules.local.GNU

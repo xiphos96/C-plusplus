@@ -1,0 +1,58 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(13D21EF3-5A50-4FCD-90B7-5984B97718E0),
+	dual,
+	helpstring("IAddBack 인터페이스"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chapter11\\addback\\addbackcon\\addback.h"
+interface IAddBack : IDispatch {
+#line 16 "c:\\componentdevelopment\\chapter11\\addback\\addbackcon\\addback.h"
+	[id(1),helpstring("메서드 Add")] HRESULT  Add();
+	[id(2),helpstring("메서드 AddTen")] HRESULT  AddTen();
+};
+
+[
+	object,
+	uuid(B60724AA-9874-4C9A-B53F-ED2FFD36738F),
+	dual,
+	helpstring("IAddEnd 인터페이스"),
+	pointer_default(unique)
+] 
+#line 27 "c:\\componentdevelopment\\chapter11\\addback\\addbackcon\\addback.h"
+interface IAddEnd : IDispatch {
+#line 29 "c:\\componentdevelopment\\chapter11\\addback\\addbackcon\\addback.h"
+	[propget,id(1),helpstring("속성 AddEnd")] HRESULT  AddEnd([out,retval] SHORT *pVal);
+	[propput,id(1),helpstring("속성 AddEnd")] HRESULT  AddEnd([in] SHORT newVal);
+	[propget,id(2),helpstring("속성 Sum")] HRESULT  Sum([out,retval] SHORT *pVal);
+	[id(3),helpstring("메서드 Clear")] HRESULT  Clear();
+};
+
+
+[ version(1.0), uuid(18B8AE67-4BD2-48E6-A79B-97318BD3D21D), helpstring("AddBackCon 1.0 형식 라이브러리") ]
+library AddBackCon
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(05EFD227-B94B-4F18-B5AD-39037697EFF3),
+		helpstring("AddBack Class")
+	] 
+#line 46 "c:\\componentdevelopment\\chapter11\\addback\\addbackcon\\addback.h"
+	coclass CAddBack {
+		interface IAddBack;
+		interface IAddEnd;
+	};
+
+}
+

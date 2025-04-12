@@ -1,0 +1,41 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(B91E5E26-3781-4D46-BFA2-1A7D44DA3CBF),
+	dual,
+	helpstring("IAddBack 인터페이스"),
+	pointer_default(unique)
+] 
+#line 15 "c:\\componentdevelopment\\chapter11\\addback\\addbackagg\\addback.h"
+interface IAddBack : IDispatch {
+#line 17 "c:\\componentdevelopment\\chapter11\\addback\\addbackagg\\addback.h"
+	[id(1),helpstring("메서드 Add")] HRESULT  Add();
+	[id(2),helpstring("메서드 AddTen")] HRESULT  AddTen();
+};
+
+
+[ version(1.0), uuid(EDCF0B1A-CFAF-4E3B-A124-CE5FEC080656), helpstring("AddBackAgg 1.0 형식 라이브러리") ]
+library AddBackAgg
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(EA7EB9A7-BCA0-4833-8883-E4609A820FD5),
+		helpstring("AddBack Class")
+	] 
+#line 38 "c:\\componentdevelopment\\chapter11\\addback\\addbackagg\\addback.h"
+	coclass CAddBack {
+		interface IAddBack;
+	};
+
+}
+

@@ -1,0 +1,59 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: SymbolDialog - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/SymbolDialog.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolDialog.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC5.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/SymbolDialog.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolChart.cpp"
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolDialog.cpp"
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolDialogDlg.cpp"
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolDlg.cpp"
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\SymbolPreviewStatic.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC5.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC6.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/SymbolDialog.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC6.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC7.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/SymbolDialog.pdb" /debug /machine:IX86 /out:"Release60/SymbolDialog.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\stdafx.obj"
+".\Release60\SymbolChart.obj"
+".\Release60\SymbolDialog.obj"
+".\Release60\SymbolDialogDlg.obj"
+".\Release60\SymbolDlg.obj"
+".\Release60\SymbolPreviewStatic.obj"
+".\Release60\SymbolDialog.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPC7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 1. 다이얼로그 커스터마이징\Chapter 03. 특별한 용도의 다이얼로그\1. 특수문자 선택 다이얼로그\SymbolDialog\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+SymbolChart.cpp
+SymbolDialog.cpp
+SymbolDialogDlg.cpp
+SymbolDlg.cpp
+SymbolPreviewStatic.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+SymbolDialog.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,81 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(B11EC349-D82F-494B-A51C-B1CDC2DF0EB4),
+	dual,
+	helpstring("IShape 인터페이스"),
+	pointer_default(unique)
+] 
+#line 18 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+interface IShape : IDispatch {
+#line 21 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propput,bindable,requestedit,id((-510))] HRESULT  FillColor([in] OLE_COLOR clr);
+#line 23 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propget,bindable,requestedit,id((-510))] HRESULT  FillColor([out,retval] OLE_COLOR *pclr);
+	[propget,id(1),helpstring("속성 ShapeType")] HRESULT  ShapeType([out,retval] short *pVal);
+	[propput,id(1),helpstring("속성 ShapeType")] HRESULT  ShapeType([in] short newVal);
+	[id(2),helpstring("메서드 ChangeShape")] HRESULT  ChangeShape([in]short shpType);
+#line 28 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propputref,bindable,requestedit,id((-512))] HRESULT  Font([in] IFontDisp *pFont);
+#line 30 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propput,bindable,requestedit,id((-512))] HRESULT  Font([in] IFontDisp *pFont);
+#line 32 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propget,bindable,requestedit,id((-512))] HRESULT  Font([out,retval] IFontDisp **ppFont );
+#line 34 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propputref,bindable,requestedit,id((-523))] HRESULT  Picture([in] IPictureDisp *pPicture);
+#line 36 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propput,bindable,requestedit,id((-523))] HRESULT  Picture([in] IPictureDisp *pPicture);
+#line 38 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	[propget,bindable,requestedit,id((-523))] HRESULT  Picture([out,retval] IPictureDisp **ppPicture );
+};
+
+
+[ version(1.0), uuid(44310390-1054-4276-BA74-5328EA23F234), helpstring("Shape 1.0 형식 라이브러리") ]
+library Shape
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(1183C3B8-F389-42E8-B36D-C2C6675713B3),
+		helpstring("ShapeProp Class")
+	] 
+#line 21 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapeprop.h"
+	coclass CShapeProp {
+		[default] interface IUnknown;
+	};
+
+	[
+		uuid(B55B1009-F027-4C95-AE5D-961626ACEF9A),
+		helpstring("_IShapeEvents 인터페이스")
+	] 
+#line 49 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	dispinterface _IShapeEvents {
+	properties:
+
+	methods:
+		[id(1),helpstring("메서드 ClickIn")] void  ClickIn([in] long x, [in] long y);
+		[id(2),helpstring("메서드 ClickOut")] void  ClickOut([in] long x, [in] long y);
+	};
+
+	[
+		version(1.0),
+		uuid(2D1108CF-31BE-4CFC-8EEA-F6CD3EE363BC),
+		helpstring("Shape Class")
+	] 
+#line 67 "c:\\componentdevelopment\\chapter14\\enumprop\\shape\\shapec.h"
+	coclass CShape {
+		interface IShape;
+		[default, source]	interface _IShapeEvents;
+	};
+
+}
+

@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoleSecurity", "RoleSecurity.vcproj", "{581886F9-620B-4992-9152-D0C01A9E5809}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RoleSecurityPS", "RoleSecurityPS.vcproj", "{0DA42C22-B80C-4B87-BA25-26297E644065}"
+	ProjectSection(ProjectDependencies) = postProject
+		{581886F9-620B-4992-9152-D0C01A9E5809} = {581886F9-620B-4992-9152-D0C01A9E5809}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{581886F9-620B-4992-9152-D0C01A9E5809}.Debug.ActiveCfg = Debug|Win32
+		{581886F9-620B-4992-9152-D0C01A9E5809}.Debug.Build.0 = Debug|Win32
+		{581886F9-620B-4992-9152-D0C01A9E5809}.Release.ActiveCfg = Release|Win32
+		{581886F9-620B-4992-9152-D0C01A9E5809}.Release.Build.0 = Release|Win32
+		{0DA42C22-B80C-4B87-BA25-26297E644065}.Debug.ActiveCfg = Debug|Win32
+		{0DA42C22-B80C-4B87-BA25-26297E644065}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustInfo", "CustInfo.vcproj", "{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CustInfoPS", "CustInfoPS.vcproj", "{B3ACCD17-4450-4F92-8BAA-0B15FE9BF811}"
+	ProjectSection(ProjectDependencies) = postProject
+		{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6} = {0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}.Debug.ActiveCfg = Debug|Win32
+		{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}.Debug.Build.0 = Debug|Win32
+		{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}.Release.ActiveCfg = Release|Win32
+		{0A4724C4-BA90-43AA-99E6-987C2FC2EAA6}.Release.Build.0 = Release|Win32
+		{B3ACCD17-4450-4F92-8BAA-0B15FE9BF811}.Debug.ActiveCfg = Debug|Win32
+		{B3ACCD17-4450-4F92-8BAA-0B15FE9BF811}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

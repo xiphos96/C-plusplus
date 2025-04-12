@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ObjectPooling", "ObjectPooling.vcproj", "{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ObjectPoolingPS", "ObjectPoolingPS.vcproj", "{3685C0AE-AD6A-41F5-89BD-01DA4047E02F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9} = {8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}.Debug.ActiveCfg = Debug|Win32
+		{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}.Debug.Build.0 = Debug|Win32
+		{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}.Release.ActiveCfg = Release|Win32
+		{8DCD07D5-71CB-4D1B-93C2-99A96F9BFCC9}.Release.Build.0 = Release|Win32
+		{3685C0AE-AD6A-41F5-89BD-01DA4047E02F}.Debug.ActiveCfg = Debug|Win32
+		{3685C0AE-AD6A-41F5-89BD-01DA4047E02F}.Release.ActiveCfg = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

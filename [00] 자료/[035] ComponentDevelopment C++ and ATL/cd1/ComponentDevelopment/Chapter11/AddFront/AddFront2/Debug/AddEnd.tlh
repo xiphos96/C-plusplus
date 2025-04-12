@@ -1,0 +1,93 @@
+// Created by Microsoft (R) C/C++ Compiler Version 13.10.3077 (59d5c947).
+//
+// c:\componentdevelopment\chapter11\addfront\addfront2\debug\AddEnd.tlh
+//
+// C++ source equivalent of Win32 type library AddEnd.AddEnd.1
+// compiler-generated file created 03/16/04 at 18:33:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("48ea00ce-d4d1-4734-a58f-53d4ee10fabb"))
+/* LIBID */ __AddEnd;
+struct /* coclass */ CAddEnd;
+struct __declspec(uuid("b60724aa-9874-4c9a-b53f-ed2ffd36738f"))
+/* dual interface */ IAddEnd;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(IAddEnd, __uuidof(IAddEnd));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("74fd8f48-4b50-4db3-b195-b74a4b79393f"))
+CAddEnd;
+    // [ default ] interface IAddEnd
+
+struct __declspec(uuid("b60724aa-9874-4c9a-b53f-ed2ffd36738f"))
+IAddEnd : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetAddEnd,put=PutAddEnd))
+    short AddEnd;
+    __declspec(property(get=GetSum,put=PutSum))
+    short Sum;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    short GetAddEnd ( );
+    void PutAddEnd (
+        short pVal );
+    short GetSum ( );
+    void PutSum (
+        short pVal );
+    HRESULT Clear ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_AddEnd (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_AddEnd (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall get_Sum (
+        /*[out,retval]*/ short * pVal ) = 0;
+      virtual HRESULT __stdcall put_Sum (
+        /*[in]*/ short pVal ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+};
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_AddEnd =
+    {0x48ea00ce,0xd4d1,0x4734,{0xa5,0x8f,0x53,0xd4,0xee,0x10,0xfa,0xbb}};
+extern "C" const GUID __declspec(selectany) CLSID_CAddEnd =
+    {0x74fd8f48,0x4b50,0x4db3,{0xb1,0x95,0xb7,0x4a,0x4b,0x79,0x39,0x3f}};
+extern "C" const GUID __declspec(selectany) IID_IAddEnd =
+    {0xb60724aa,0x9874,0x4c9a,{0xb5,0x3f,0xed,0x2f,0xfd,0x36,0x73,0x8f}};
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\componentdevelopment\chapter11\addfront\addfront2\debug\AddEnd.tli"
+
+#pragma pack(pop)

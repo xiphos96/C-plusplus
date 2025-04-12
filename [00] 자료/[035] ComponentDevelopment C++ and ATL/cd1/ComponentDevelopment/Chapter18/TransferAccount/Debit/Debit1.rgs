@@ -1,0 +1,27 @@
+HKCR
+{
+	Debit.Debit.1 = s 'Debit Class'
+	{
+		CLSID = s '{7238505D-8F66-47A7-A9D7-CD0B2499BBC8}'
+	}
+	Debit.Debit = s 'Debit Class'
+	{
+		CLSID = s '{7238505D-8F66-47A7-A9D7-CD0B2499BBC8}'
+		CurVer = s 'Debit.Debit.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7238505D-8F66-47A7-A9D7-CD0B2499BBC8} = s 'Debit Class'
+		{
+			ProgID = s 'Debit.Debit.1'
+			VersionIndependentProgID = s 'Debit.Debit'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Both'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{695DF806-1E90-47B3-9E24-358686B62D1A}'
+		}
+	}
+}

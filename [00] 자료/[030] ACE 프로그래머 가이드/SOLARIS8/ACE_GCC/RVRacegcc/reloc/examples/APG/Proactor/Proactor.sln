@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HA Proactive Status", "HA_Proactive_Status.vcproj", "{49192245-FECA-1BAD-4287-FEF40E1E8717}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+		ConfigName.2 = Static Debug
+		ConfigName.3 = Static Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.0 = {ace.vcproj}
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Debug.ActiveCfg = Debug|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Debug.Build.0 = Debug|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Release.ActiveCfg = Release|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Release.Build.0 = Release|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Static Debug.ActiveCfg = Static Debug|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Static Debug.Build.0 = Static Debug|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Static Release.ActiveCfg = Static Release|Win32
+		{49192245-FECA-1BAD-4287-FEF40E1E8717}.Static Release.Build.0 = Static Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

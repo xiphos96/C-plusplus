@@ -1,0 +1,95 @@
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\prsht.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtml.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\dimm.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\mshtmhst.idl";
+import "c:\program files\microsoft visual studio .net 2003\vc7\platformsdk\include\docobj.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\exdisp.idl";
+import "C:\Program Files\Microsoft Visual Studio .NET 2003\Vc7\PlatformSDK\include\objsafe.idl";
+
+[
+	object,
+	uuid(AD77D5D9-51A6-4D18-918F-8FCFB0DFC8CF),
+	dual,
+	helpstring("IEmployee 牢磐其捞胶"),
+	pointer_default(unique)
+] 
+#line 14 "c:\\componentdevelopment\\chapter12\\company\\company\\employee.h"
+interface IEmployee : IDispatch {
+#line 16 "c:\\componentdevelopment\\chapter12\\company\\company\\employee.h"
+	[propget,id(1),helpstring("加己 Name")] HRESULT  Name([out,retval] BSTR *pVal );
+	[propget,id(2),helpstring("加己 Address")] HRESULT  Address([out,retval] BSTR *pVal );
+	[propget,id(3),helpstring("加己 Telephone")] HRESULT  Telephone([out,retval] BSTR *pVal );
+};
+
+[
+	object,
+	uuid(C6783455-282B-4AB5-BED5-C8D3A8C38E72),
+	dual,
+	helpstring("IEmployees 牢磐其捞胶"),
+	pointer_default(unique)
+] 
+#line 15 "c:\\componentdevelopment\\chapter12\\company\\company\\employees.h"
+interface IEmployees : IDispatch {
+#line 17 "c:\\componentdevelopment\\chapter12\\company\\company\\employees.h"
+	[propget,id(1),helpstring("加己 Count")] HRESULT  Count([out,retval] long *pVal);
+	[propget,id(( 0 )),helpstring("加己 Item")] HRESULT  Item([in] long index, [out,retval] VARIANT *pVal);
+	[propget,id(( -4 )),helpstring("加己 _NewEnum")] HRESULT  _NewEnum([out,retval] IUnknown **pVal );
+};
+
+[
+	object,
+	uuid(E261C0DF-C91A-4E10-ABC4-0A4099FC8E74),
+	dual,
+	helpstring("ICompany 牢磐其捞胶"),
+	pointer_default(unique)
+] 
+#line 15 "c:\\componentdevelopment\\chapter12\\company\\company\\companyo.h"
+interface ICompany : IDispatch {
+#line 17 "c:\\componentdevelopment\\chapter12\\company\\company\\companyo.h"
+	[propget,id(1),helpstring("加己 Employees")] HRESULT  Employees([out,retval] VARIANT *pVal);
+};
+
+
+[ version(1.0), uuid(600CC229-9F29-4DAF-8B7C-F60789527F32), helpstring("Company 1.0 屈侥 扼捞宏矾府") ]
+library Company
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		aggregatable,
+		version(1.0),
+		uuid(BB84AD11-16E2-4196-88DB-EBC8E518DC33),
+		helpstring("Employee Class"),
+		noncreatable
+	] 
+#line 37 "c:\\componentdevelopment\\chapter12\\company\\company\\employee.h"
+	coclass CEmployee {
+		interface IEmployee;
+	};
+
+	[
+		aggregatable,
+		version(1.0),
+		uuid(6D52EEFB-AEE7-4C46-A472-9350BAC970F0),
+		helpstring("Employees Class"),
+		noncreatable
+	] 
+#line 38 "c:\\componentdevelopment\\chapter12\\company\\company\\employees.h"
+	coclass CEmployees {
+		interface IEmployees;
+	};
+
+	[
+		aggregatable,
+		version(1.0),
+		uuid(4BA637B8-6988-4452-925D-E3E9484E0882),
+		helpstring("Company Class")
+	] 
+#line 35 "c:\\componentdevelopment\\chapter12\\company\\company\\companyo.h"
+	coclass CCompany {
+		interface ICompany;
+	};
+
+}
+

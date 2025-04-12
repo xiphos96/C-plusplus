@@ -1,0 +1,62 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CustomPropertySheetDemo - Win32 Release60--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release60/CustomPropertySheetDemo.res" /i ".\Release60" /d "NDEBUG" "D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\CustomPropertySheetDemo.rc"" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE5.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/CustomPropertySheetDemo.pch" /Yu"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\CustomPropertySheet.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\CustomPropertySheetDemo.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\CustomPropertySheetDemoDlg.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\TestPage1.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\TestPage2.cpp"
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\TestSheet.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE5.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp" with contents
+[
+/nologo /MD /W3 /GX /Zi /O2 /D "WIN32" /D "_WINDOWS" /D "NDEBUG" /D "_AFXDLL" /D "_MBCS" /Fp"Release60/CustomPropertySheetDemo.pch" /Yc"stdafx.h" /Fo"Release60/" /Fd"Release60/" /GF /c 
+"D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE6.tmp" 
+Creating temporary file "C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE7.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /incremental:no /pdb:"Release60/CustomPropertySheetDemo.pdb" /debug /machine:IX86 /out:"Release60/CustomPropertySheetDemo.exe" /pdbtype:sept /opt:ref /opt:icf 
+".\Release60\CustomPropertySheet.obj"
+".\Release60\CustomPropertySheetDemo.obj"
+".\Release60\CustomPropertySheetDemoDlg.obj"
+".\Release60\stdafx.obj"
+".\Release60\TestPage1.obj"
+".\Release60\TestPage2.obj"
+".\Release60\TestSheet.obj"
+".\Release60\CustomPropertySheetDemo.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPE7.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\Program Files\Microsoft Visual Studio\VC98\MFC\INCLUDE\afxv_w32.h(119) : warning C4005: '_WIN32_WINDOWS' : macro redefinition
+        D:\예제\Part 3. 웹 브라우저와 기타 윈도우 커스터마이징\Chapter 18. 프로퍼티 시트 확장하기\1. 크기 조절이 가능한 프로퍼티 시트 만들기\CustomProperySheetDemo\stdafx.h(22) : see previous definition of '_WIN32_WINDOWS'
+Compiling...
+CustomPropertySheet.cpp
+CustomPropertySheetDemo.cpp
+CustomPropertySheetDemoDlg.cpp
+TestPage1.cpp
+TestPage2.cpp
+TestSheet.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+CustomPropertySheetDemo.exe - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
