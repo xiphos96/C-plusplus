@@ -1,0 +1,524 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Korean resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "#include ""afxres.rc""  // Standard components\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MYTEST AppWizard\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MYTEST\0"
+            VALUE "LegalCopyright", "Copyright \0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MYTEST.DLL\0"
+            VALUE "ProductName", "GA AppWizard\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CUSTOM1 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "1. 유전자 알고리즘",IDC_STATIC,25,24,130,8
+    LTEXT           "사용할 유전자 알고리즘을 선택하세요",IDC_STATIC,25,49,
+                    202,8
+    GROUPBOX        "",IDC_STATIC,25,72,214,88
+    CONTROL         "단순 유전자 알고리즘(GASimpleGA)",IDC_GA_SIMPLE,"Button",
+                    BS_AUTORADIOBUTTON,35,84,200,10
+    CONTROL         "증분적 유전자 알고리즘(GAIncrementalGA)",
+                    IDC_GA_INCREMENTAL,"Button",BS_AUTORADIOBUTTON,35,102,
+                    202,10
+    CONTROL         "정상적 유전자 알고리즘(GASteadyStateGA)",
+                    IDC_GA_STEADYSTATE,"Button",BS_AUTORADIOBUTTON,35,121,
+                    198,10
+    CONTROL         "딤 유전자 알고리즘(GADemeGA)",IDC_GA_DEME,"Button",
+                    BS_AUTORADIOBUTTON,35,138,192,10
+END
+
+IDD_CUSTOM2 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "2.선택 연산자",IDC_STATIC,27,15,168,8
+    LTEXT           "선택 연산자를 고르세요",IDC_STATIC,27,37,203,8
+    GROUPBOX        "",IDC_STATIC,27,51,204,129
+    CONTROL         "랭크 선택(GARankSelector)",IDC_SELECTOR_RANK,"Button",
+                    BS_AUTORADIOBUTTON,39,79,183,10
+    CONTROL         "룰렛 휠 선택(GARouletteWheelSelector)",
+                    IDC_SELECTOR_ROULETTEWHEEL,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFT,39,96,178,10
+    CONTROL         "토너먼트 선택(GATournamentSelector)",
+                    IDC_SELECTOR_TOURNAMENT,"Button",BS_AUTORADIOBUTTON,39,
+                    113,181,10
+    CONTROL         "결정론적 샘플링(GADSSelector)",IDC_SELECTOR_DS,"Button",
+                    BS_AUTORADIOBUTTON,39,128,178,10
+    CONTROL         "확률적 잔여 샘플링(GASRSSelector)",IDC_SELECTOR_SRS,
+                    "Button",BS_AUTORADIOBUTTON,39,144,181,10
+    CONTROL         "확률적 균일 샘플링(GAUniformSelector)",
+                    IDC_SELECTOR_UNIFORM,"Button",BS_AUTORADIOBUTTON,39,159,
+                    182,10
+    CONTROL         "Default",IDC_SELECTOR_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,39,63,183,10
+END
+
+IDD_CUSTOM3 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "3.스케일링 함수",IDC_STATIC,27,16,175,8
+    LTEXT           "스케일링 함수를 고르세요",IDC_STATIC,27,38,186,8
+    GROUPBOX        "",IDC_STATIC,27,58,204,123
+    CONTROL         "No scaling(GANoScaling)",IDC_SCALING_NO,"Button",
+                    BS_AUTORADIOBUTTON,39,88,183,10
+    CONTROL         "선형 스케일링(GALinearScaling)",IDC_SCALING_LINEAR,
+                    "Button",BS_AUTORADIOBUTTON | BS_LEFT,39,106,178,10
+    CONTROL         "시그마 절단 스케일링(GASigmaTruncationScaling)",
+                    IDC_SCALING_SIGMATRUNCATION,"Button",BS_AUTORADIOBUTTON,
+                    39,124,181,10
+    CONTROL         "멱승 스케일링(GAPowerLawScaling)",IDC_SCALING_POWERLAW,
+                    "Button",BS_AUTORADIOBUTTON,39,143,178,10
+    CONTROL         "Sharing(GASharingScaling)",IDC_SCALING_SHARING,"Button",
+                    BS_AUTORADIOBUTTON,39,161,181,10
+    CONTROL         "Default",IDC_SCALING_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,39,70,183,10
+END
+
+IDD_CUSTOM4 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "4.게놈",IDC_STATIC,21,15,136,8
+    LTEXT           "사용할 게놈의 종류를 고르세요",IDC_STATIC,21,35,234,8
+    GROUPBOX        "",IDC_STATIC,21,50,255,128
+    CONTROL         "1D Binary String Genome",IDC_GENOME_1DBINARYSTRING,
+                    "Button",BS_AUTORADIOBUTTON,30,61,124,10
+    CONTROL         "binary to decimal Genome",IDC_GENOME_BIN2DEC,"Button",
+                    BS_AUTORADIOBUTTON | BS_LEFT,40,74,110,10
+    CONTROL         "1D Array Genome",IDC_GENOME_1DARRAY,"Button",
+                    BS_AUTORADIOBUTTON,30,119,103,10
+    CONTROL         "2D Binary String Genome",IDC_GENOME_2DBINARYSTRING,
+                    "Button",BS_AUTORADIOBUTTON,30,90,125,10
+    CONTROL         "3D Binary String Genome",IDC_GENOME_3DBINARYSTRING,
+                    "Button",BS_AUTORADIOBUTTON,30,105,113,10
+    CONTROL         "1D Array Allele Genome",IDC_GENOME_1DARRAYALLELE,"Button",
+                    BS_AUTORADIOBUTTON,40,133,108,10
+    CONTROL         "String Genome",IDC_GENOME_STRING,"Button",
+                    BS_AUTORADIOBUTTON,40,145,99,10
+    CONTROL         "Real Genome",IDC_GENOME_REAL,"Button",
+                    BS_AUTORADIOBUTTON,40,157,91,10
+    CONTROL         "2D Array Genome",IDC_GENOME_2DARRAY,"Button",
+                    BS_AUTORADIOBUTTON,154,61,103,10
+    CONTROL         "2D Array Allele Genome",IDC_GENOME_2DARRAYALLELE,"Button",
+                    BS_AUTORADIOBUTTON,162,73,115,10
+    CONTROL         "3D Array Genome",IDC_GENOME_3DARRAY,"Button",
+                    BS_AUTORADIOBUTTON,154,89,103,10
+    CONTROL         "3D Array Allele Genome",IDC_GENOME_3DARRAYALLELE,"Button",
+                    BS_AUTORADIOBUTTON,162,100,115,10
+    CONTROL         "List Genome",IDC_GENOME_LIST,"Button",
+                    BS_AUTORADIOBUTTON,154,116,103,10
+    CONTROL         "Tree Genome",IDC_GENOME_TREE,"Button",
+                    BS_AUTORADIOBUTTON,154,131,103,10
+END
+
+IDD_CUSTOM5 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "5.교배 연산자",IDC_STATIC,27,13,193,8
+    LTEXT           "교배 연산자를 고르세요",IDC_STATIC,27,28,212,8
+    GROUPBOX        "",IDC_STATIC,27,43,204,146
+    CONTROL         "Default",IDC_CROSSOVER_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,40,51,183,10
+    CONTROL         "균일 교배 연산자(UniformCrossover)",
+                    IDC_CROSSOVER_UNIFORM,"Button",BS_AUTORADIOBUTTON | 
+                    BS_LEFT,40,65,178,10
+    CONTROL         "Even Odd 교배 연산자(EvenOddCrossover)",
+                    IDC_CROSSOVER_EVENODD,"Button",BS_AUTORADIOBUTTON,40,79,
+                    181,10
+    CONTROL         "1점 교배 연산자(OnePointCrossover)",
+                    IDC_CROSSOVER_ONEPOINT,"Button",BS_AUTORADIOBUTTON,40,93,
+                    178,10
+    CONTROL         "2점 교배 연산자(TwoPointCrossover)",
+                    IDC_CROSSOVER_TWOPOINT,"Button",BS_AUTORADIOBUTTON,40,
+                    106,178,10
+    CONTROL         "부분일치 교배 연산자(PartialMatchCrossover)",
+                    IDC_CROSSOVER_PARTIALMATCH,"Button",BS_AUTORADIOBUTTON,
+                    40,120,178,10
+    CONTROL         "순서기반 교배 연산자(OrderCrossover)",
+                    IDC_CROSSOVER_ORDER,"Button",BS_AUTORADIOBUTTON,40,134,
+                    178,10
+    CONTROL         "순환 교배 연산자(CycleCrossover)",IDC_CROSSOVER_CYCLE,
+                    "Button",BS_AUTORADIOBUTTON,40,147,178,10
+    CONTROL         "산술 교배 연산자(RealArithmeticCrossover)",
+                    IDC_CROSSOVER_REALARITHMETIC,"Button",BS_AUTORADIOBUTTON,
+                    40,160,178,10
+    CONTROL         "혼합 교배 연산자(RealBlendCrossover)",
+                    IDC_CROSSOVER_REALBLEND,"Button",BS_AUTORADIOBUTTON,40,
+                    174,178,10
+END
+
+IDD_CUSTOM6 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "6.돌연변이 연산자",IDC_STATIC,27,17,179,8
+    LTEXT           "돌연변이 연산자를 선택하세요",IDC_STATIC,27,35,232,8
+    GROUPBOX        "",IDC_STATIC,27,51,204,134
+    CONTROL         "Default",IDC_MUTATOR_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,39,61,183,10
+    CONTROL         "교환 돌연변이 연산자(SwapMutator)",IDC_MUTATOR_SWAP,
+                    "Button",BS_AUTORADIOBUTTON | BS_LEFT,39,76,178,10
+    CONTROL         "플립 돌연변이 연산자(FlipMutator)",IDC_MUTATOR_FLIP,
+                    "Button",BS_AUTORADIOBUTTON,39,92,181,10
+    CONTROL         "파괴 돌연변이 연산자(DestructiveMutator)",
+                    IDC_MUTATOR_DESTRUCTIVE,"Button",BS_AUTORADIOBUTTON,39,
+                    109,178,10
+    CONTROL         "하위 트리 교환 돌연변이 연산자(SwapSubtreeMutator)",
+                    IDC_MUTATOR_SWAPSUBTREE,"Button",BS_AUTORADIOBUTTON,39,
+                    125,186,10
+    CONTROL         "노드 교환 돌연변이 연산자(SwapNodeMutator)",
+                    IDC_MUTATOR_SwapNodeMutator,"Button",BS_AUTORADIOBUTTON,
+                    39,140,182,10
+    CONTROL         "가우시안 돌연변이 연산자(RealGaussianMutator)",
+                    IDC_MUTATOR_REALGAUSSIAN,"Button",BS_AUTORADIOBUTTON,39,
+                    155,182,10
+    CONTROL         "균일 돌연변이 연산자(RealUniformMutator)",
+                    IDC_MUTATOR_UNIFORM,"Button",BS_AUTORADIOBUTTON,39,169,
+                    182,10
+END
+
+IDD_CUSTOM7 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "7.초기화 연산자",IDC_STATIC,25,24,258,8
+    LTEXT           "사용할 초기화 연산자를 선택하세요",IDC_STATIC,25,49,254,
+                    8
+    GROUPBOX        "",IDC_STATIC,25,72,214,98
+    CONTROL         "Default",IDC_INITIALIZER_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,35,84,200,10
+    CONTROL         "균일 초기화 연산자(UniformInitializer)",
+                    IDC_INITIALIZER_UNIFORM,"Button",BS_AUTORADIOBUTTON,35,
+                    100,202,10
+    CONTROL         "Set 초기화 연산자(SetInitializer)",IDC_INITIALIZER_SET,
+                    "Button",BS_AUTORADIOBUTTON,35,116,198,10
+    CONTROL         "Unset 초기화 연산자(UnsetInitializer)",
+                    IDC_INITIALIZER_UNSET,"Button",BS_AUTORADIOBUTTON,35,132,
+                    192,10
+    CONTROL         "순서기반 초기화 연산자(OrderedInitializer)",
+                    IDC_INITIALIZER_ORDERED,"Button",BS_AUTORADIOBUTTON,35,
+                    148,192,10
+END
+
+IDD_CUSTOM8 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "8. 비교 연산자와 종료 연산자",IDC_STATIC,25,15,175,8
+    LTEXT           "비교 연산자를 선택하세요",IDC_STATIC,25,37,202,8
+    GROUPBOX        "",IDC_STATIC,25,47,214,66
+    CONTROL         "Default",IDC_COMPARATOR_DEFAULT,"Button",
+                    BS_AUTORADIOBUTTON,35,57,200,10
+    CONTROL         "요소 비교 연산자(ElementComparator)",
+                    IDC_COMPARATOR_ELEMENT,"Button",BS_AUTORADIOBUTTON,35,70,
+                    202,10
+    CONTROL         "비트 비교 연산자(BitComparator)",IDC_COMPARATOR_BIT,
+                    "Button",BS_AUTORADIOBUTTON,35,83,198,10
+    CONTROL         "위상 비교 연산자(TopologyComparator)",
+                    IDC_COMPARATOR_TOPOLOGY,"Button",BS_AUTORADIOBUTTON,35,
+                    96,198,10
+    LTEXT           "종료 연산자를 선택하세요",IDC_STATIC,25,124,202,8
+    GROUPBOX        "",IDC_STATIC,25,134,214,55
+    CONTROL         "세대수에 의한 종료(TerminateUponGeneration)",
+                    IDC_TERMINATOR_GENERATION,"Button",BS_AUTORADIOBUTTON,34,
+                    143,198,10
+    CONTROL         "세대 수렴에 의한 종료(TerminateUponConvergence)",
+                    IDC_TERMINATOR_CONVERGENCE,"Button",BS_AUTORADIOBUTTON,
+                    34,159,198,10
+    CONTROL         "집단의 수렴에 의한 종료(TerminateUponPopConvergence)",
+                    IDC_TERMINATOR_POPCONVERGENCE,"Button",
+                    BS_AUTORADIOBUTTON,34,174,198,10
+END
+
+IDD_CUSTOM9 DIALOG DISCARDABLE  0, 0, 303, 197
+STYLE DS_CONTROL | WS_CHILD | WS_TABSTOP
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "9. 파라미터",IDC_STATIC,24,14,130,8
+    LTEXT           "관련 파라미터를 설정하세요",IDC_STATIC,24,31,202,8
+    GROUPBOX        "GA",IDC_STATIC,24,49,113,138
+    LTEXT           "집단의 크기",IDC_STATIC,30,62,45,8
+    EDITTEXT        IDC_EDIT_POPSIZE,88,58,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_POPSIZE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,119,58,9,14
+    LTEXT           "세대수",IDC_STATIC,30,79,46,8
+    EDITTEXT        IDC_EDIT_NGEN,88,76,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NGEN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,119,76,9,
+                    14
+    LTEXT           "교배 확률",IDC_STATIC,30,98,47,8
+    EDITTEXT        IDC_EDIT_PCROSSOVER,88,95,41,14,ES_AUTOHSCROLL
+    LTEXT           "돌연변이 확률",IDC_STATIC,30,117,53,8
+    EDITTEXT        IDC_EDIT_PMUTATION,88,113,41,14,ES_AUTOHSCROLL
+    LTEXT           "수렴 비율",IDC_STATIC,30,134,46,8
+    EDITTEXT        IDC_EDIT_PCONVERGENCE,89,132,40,14,ES_AUTOHSCROLL
+    LTEXT           "교체 비율",IDC_STATIC,30,151,44,8
+    EDITTEXT        IDC_EDIT_PREPLACEMENT,88,148,41,14,ES_AUTOHSCROLL
+    LTEXT           "교체 게놈수",IDC_STATIC,30,168,54,8
+    EDITTEXT        IDC_EDIT_NREPLACEMENT,88,165,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NREPLACEMENT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,119,165,9,14
+    GROUPBOX        "Genome",IDC_STATIC,151,48,114,138
+    LTEXT           "길이 혹은 폭",IDC_STATIC,156,62,48,8
+    EDITTEXT        IDC_EDIT_WIDTH,213,58,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,244,58,9,
+                    14
+    LTEXT           "높이",IDC_STATIC,155,81,49,8
+    EDITTEXT        IDC_EDIT_HEIGHT,213,76,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_HEIGHT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,244,76,9,14
+    LTEXT           "깊이",IDC_STATIC,155,99,44,8
+    EDITTEXT        IDC_EDIT_DEPTH,213,95,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_DEPTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,244,95,9,
+                    14
+    LTEXT           "변수의 개수",IDC_STATIC,155,117,51,8
+    EDITTEXT        IDC_EDIT_NVAR,213,112,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NVAR,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,244,112,9,
+                    14
+    LTEXT           "비트수",IDC_STATIC,156,133,48,8
+    EDITTEXT        IDC_EDIT_NBIT,213,129,41,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_NBIT,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,244,129,9,
+                    14
+    LTEXT           "변수의 최소값",IDC_STATIC,156,149,55,8
+    EDITTEXT        IDC_EDIT_MIN,213,146,41,14,ES_AUTOHSCROLL
+    LTEXT           "변수의 최대값",IDC_STATIC,156,164,53,8
+    EDITTEXT        IDC_EDIT_MAX,213,162,41,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEMPLATE
+//
+
+NEWPROJ.INF             TEMPLATE DISCARDABLE    "template\\newproj.inf"
+CONFIRM.INF             TEMPLATE DISCARDABLE    "template\\confirm.inf"
+VIEW.H                  TEMPLATE DISCARDABLE    "Template\\View.h"
+DOC.H                   TEMPLATE DISCARDABLE    "Template\\Doc.h"
+GABASEGA.CPP            TEMPLATE DISCARDABLE    "Template\\GABaseGA.cpp"
+GADEMEGA.CPP            TEMPLATE DISCARDABLE    "Template\\GADemeGA.cpp"
+GAGENOME.CPP            TEMPLATE DISCARDABLE    "Template\\GAGenome.cpp"
+GAINCGA.CPP             TEMPLATE DISCARDABLE    "Template\\GAIncGA.cpp"
+GAPARAME.CPP            TEMPLATE DISCARDABLE    "Template\\GAParame.cpp"
+GAPOPULA.CPP            TEMPLATE DISCARDABLE    "Template\\GAPopula.cpp"
+GARANDOM.CPP            TEMPLATE DISCARDABLE    "Template\\garandom.cpp"
+GASCALIN.CPP            TEMPLATE DISCARDABLE    "Template\\GAScalin.cpp"
+GASELECT.CPP            TEMPLATE DISCARDABLE    "Template\\GASelect.cpp"
+GASIMPLE.CPP            TEMPLATE DISCARDABLE    "Template\\GASimple.cpp"
+GASSTATE.CPP            TEMPLATE DISCARDABLE    "Template\\GASState.cpp"
+GASTATIS.CPP            TEMPLATE DISCARDABLE    "Template\\GAStatis.cpp"
+MAINFRM.CPP             TEMPLATE DISCARDABLE    "Template\\MainFrm.cpp"
+MAINFRM.H               TEMPLATE DISCARDABLE    "Template\\MainFrm.h"
+README.TXT              TEMPLATE DISCARDABLE    "Template\\ReadMe.txt"
+DOC.ICO                 TEMPLATE DISCARDABLE    "Template\\res\\Doc.ico"
+ROOT.ICO                TEMPLATE DISCARDABLE    "Template\\res\\root.ico"
+ROOT.RC2                TEMPLATE DISCARDABLE    "Template\\res\\root.rc2"
+TOOLBAR.BMP             TEMPLATE DISCARDABLE    "Template\\res\\Toolbar.bmp"
+RESOURCE.H              TEMPLATE DISCARDABLE    "Template\\Resource.h"
+ROOT.CLW                TEMPLATE DISCARDABLE    "Template\\root.clw"
+ROOT.CPP                TEMPLATE DISCARDABLE    "Template\\root.cpp"
+STDAFX.H                TEMPLATE DISCARDABLE    "Template\\StdAfx.h"
+STDAFX.CPP              TEMPLATE DISCARDABLE    "Template\\StdAfx.cpp"
+DOC.CPP                 TEMPLATE DISCARDABLE    "Template\\Doc.cpp"
+ROOT.H                  TEMPLATE DISCARDABLE    "Template\\root.h"
+ROOT.RC                 TEMPLATE DISCARDABLE    "Template\\root.rc"
+GAERROR.CPP             TEMPLATE DISCARDABLE    "Template\\gaerror.cpp"
+VIEW.CPP                TEMPLATE DISCARDABLE    "Template\\View.cpp"
+GATREEGE.CPP            TEMPLATE DISCARDABLE    "Template\\GATreeGe.cpp"
+GA1DBINS.CPP            TEMPLATE DISCARDABLE    "Template\\GA1DBinS.cpp"
+GA2DARRA.CPP            TEMPLATE DISCARDABLE    "Template\\GA2DArra.cpp"
+GA2DBINS.CPP            TEMPLATE DISCARDABLE    "Template\\GA2DBinS.cpp"
+GA3DARRA.CPP            TEMPLATE DISCARDABLE    "Template\\GA3DArra.cpp"
+GA3DBINS.CPP            TEMPLATE DISCARDABLE    "Template\\GA3DBinS.cpp"
+GAALLELE.CPP            TEMPLATE DISCARDABLE    "Template\\GAAllele.cpp"
+GABIN2DE.CPP            TEMPLATE DISCARDABLE    "Template\\GABin2De.cpp"
+GABINCVT.CPP            TEMPLATE DISCARDABLE    "Template\\gabincvt.cpp"
+GABINSTR.CPP            TEMPLATE DISCARDABLE    "Template\\GABinStr.cpp"
+GALIST.CPP              TEMPLATE DISCARDABLE    "Template\\GAList.cpp"
+GALISTBA.CPP            TEMPLATE DISCARDABLE    "Template\\GAListBA.cpp"
+GALISTGE.CPP            TEMPLATE DISCARDABLE    "Template\\GAListGe.cpp"
+GAREALGE.CPP            TEMPLATE DISCARDABLE    "Template\\GARealGe.cpp"
+GASTRING.CPP            TEMPLATE DISCARDABLE    "Template\\GAString.cpp"
+GATREE.CPP              TEMPLATE DISCARDABLE    "Template\\GATree.cpp"
+GATREEBA.CPP            TEMPLATE DISCARDABLE    "Template\\GATreeBA.cpp"
+GA1DARRA.CPP            TEMPLATE DISCARDABLE    "Template\\GA1DArra.cpp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_GAWIZARD            ICON    DISCARDABLE     "res\\GAWizard.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CUSTOM1, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+    END
+
+    IDD_CUSTOM2, DIALOG
+    BEGIN
+        VERTGUIDE, 27
+    END
+
+    IDD_CUSTOM3, DIALOG
+    BEGIN
+        VERTGUIDE, 27
+    END
+
+    IDD_CUSTOM4, DIALOG
+    BEGIN
+        VERTGUIDE, 21
+    END
+
+    IDD_CUSTOM5, DIALOG
+    BEGIN
+        VERTGUIDE, 27
+    END
+
+    IDD_CUSTOM6, DIALOG
+    BEGIN
+        VERTGUIDE, 27
+    END
+
+    IDD_CUSTOM7, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+    END
+
+    IDD_CUSTOM8, DIALOG
+    BEGIN
+        VERTGUIDE, 25
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Korean resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+#include "afxres.rc"  // Standard components
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

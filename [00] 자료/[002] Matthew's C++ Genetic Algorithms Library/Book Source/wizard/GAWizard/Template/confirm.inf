@@ -1,0 +1,197 @@
+Genetic Algorithm Application of $$root$$
+
+Features:
+
+$$IF(ga_simple)
+   + 단순 유전자 알고리즘을 사용합니다.
+$$ELIF(ga_incremental)
+   + 증분적 유전자 알고리즘을 사용합니다.
+$$ELIF(ga_steadystate)
+   + 정상적 유전자 알고리즘을 사용합니다.
+$$ELIF(ga_deme)
+   + 딤 유전자 알고리즘을 사용합니다.
+$$ENDIF
+
+$$IF(selector_rank)
+   + 랭크 선택 연산자를 사용합니다.
+$$ELIF(selector_roulettewheel)
+   + 룰렛 휠 선택 연산자를 사용합니다.
+$$ELIF(selector_tournament)
+   + 토너먼트 선택 연산자를 사용합니다.
+$$ELIF(selector_ds)
+   + 결정론적 샘플링을 이용합니다.
+$$ELIF(selector_srs)
+   + 확률적 잔여 샘플링을 이용합니다.
+$$ELIF(selector_uniform)
+   + 확률적 균일 샘플링을 이용합니다.
+$$ELIF(selector_default)
+   + 디폴트로 설정되어 있는 선택 연산자를 사용합니다.
+$$ENDIF
+
+$$IF(scaling_no)
+   + 목적함수 값을 스케일링하지 않습니다.
+$$ELIF(scaling_linear)
+   + 선형 스케일링 연산자를 사용합니다.
+$$ELIF(scaling_sigmatruncation)
+   + 시그마 절단 스케일링 연산자를 사용합니다.
+$$ELIF(scaling_powerlaw)
+   + 멱승 스케일링 연산자를 사용합니다.
+$$ELIF(scaling_sharing)
+   + Sharing 스케일링을 이용합니다.
+$$ELIF(scaling_default)
+   + 디폴트로 설정되어 있는 스케일링 함수를 사용합니다.
+$$ENDIF
+
+$$IF(genome_1dbinarystring)
+   + 1D binary string genome을 사용합니다.
+$$ELIF(genome_bin2dec)
+   + binary to decimal genome을 사용합니다.
+$$ELIF(genome_2dbinarystring)
+   + 2D binary string genome을 사용합니다.
+$$ELIF(genome_3dbinarystring)
+   + 3D binary string genome을 사용합니다.
+$$ELIF(genome_1darray)
+   + 1차원 배열 게놈을 사용합니다.
+$$ELIF(genome_1darrayallele)
+   + 1차원 배열 대립형질 게놈을 사용합니다.
+$$ELIF(genome_string)
+   + 스트링 게놈을 사용합니다.
+$$ELIF(genome_real)
+   + 실수 게놈을 사용합니다.
+$$ELIF(genome_2darray)
+   + 2차원 배열 게놈을 사용합니다.
+$$ELIF(genome_2darrayallele)
+   + 2차원 배열 대립형질 게놈을 사용합니다.
+$$ELIF(genome_3darray)
+   + 3차원 배열 게놈을 사용합니다.
+$$ELIF(genome_3darrayallele)
+   + 3차원 배열 대립형질 게놈을 사용합니다.
+$$ELIF(genome_list)
+   + 리스트 게놈을 사용합니다.
+$$ELIF(genome_tree)
+   + 트리 게놈을 사용합니다.
+$$ENDIF
+
+$$IF(crossover_default)
+   + 디폴트로 설정되어 있는 교배 연산자를 사용합니다.
+$$ELIF(crossover_uniform)
+   + 균일 교배 연산자를 사용합니다.
+$$ELIF(crossover_evenodd)
+   + Even Odd 교배 연산자를 사용합니다.
+$$ELIF(crossover_onepoint)
+   + 1점 교배 연산자를 사용합니다.
+$$ELIF(crossover_twopoint)
+   + 2점 교배 연산자를 사용합니다.
+$$ELIF(crossover_partialmatch)
+   + 부분일치 교배 연산자를 사용합니다.
+$$ELIF(crossover_order)
+   + 순서 기반 교배 연산자를 사용합니다.
+$$ELIF(crossover_cycle)
+   + 순환 교배 연산자를 사용합니다.
+$$ELIF(crossover_realarithmetic)
+   + 산술 교배 연산자를 사용합니다.
+$$ELIF(crossover_realblend)
+   + 혼합 교배 연산자를 사용합니다.
+$$ENDIF
+
+$$IF(mutator_default)
+   + 디폴트로 설정되어 있는 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_swap)
+   + 교환 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_flip)
+   + 플립 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_destructive)
+   + 파괴 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_swapsubtree)
+   + 하위 트리 교환 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_swapnode)
+   + 노드 교환 돌연변이 연산자를 사용합니다.
+$$ELIF(mutator_realgaussian)
+   + 가우시안 돌연변이 연산자를 사용합니다.
+$$ENDIF
+
+$$IF(initializer_default)
+   + 디폴트로 설정되어 있는 초기화 연산자를 사용합니다.
+$$ELIF(initializer_uniform)
+   + 균일 초기화 연산자를 사용합니다.
+$$ELIF(initializer_set)
+   + Set 초기화 연산자를 사용합니다.
+$$ELIF(initializer_unset)
+   + Unset 초기화 연산자를 사용합니다.
+$$ELIF(initializer_ordered)
+   + 순서 기반 초기화 연산자를 사용합니다.
+$$ENDIF
+
+$$IF(comparator_default)
+   + 디폴트로 설정되어 있는 비교 연산자를 사용합니다.
+$$ELIF(comparator_element)
+   + 요소 비교 연산자를 사용합니다.
+$$ELIF(comparator_bit)
+   + 비트 비교 연산자를 사용합니다.
+$$ELIF(comparator_topology)
+   + 위상 비교 연산자를 사용합니다.
+$$ENDIF
+
+$$IF(terminator_generation)
+   + 세대수를 이용하는 종료함수를 사용합니다.
+$$ELIF(terminator_convergence)
+   + 세대의 수렴도를 이용하는 종료함수를 사용합니다.
+$$ELIF(terminator_popconvergence)
+   + 집단의 수렴도를 이용하는 종료함수를 사용합니다.
+$$ENDIF
+
+   + 파라미터를 다음과 같이 설정하였습니다.
+		
+	+ 집단의 크기 : $$popsize$$
+
+	+ 세대수 : $$ngen$$
+   
+	+ 돌연변이 확률 : $$pmut$$
+   
+	+ 교배 확률 : $$pcross$$
+$$IF(terminator_convergence || terminator_popconvergence)
+   
+	+ 수렴 비율 : $$pconv$$
+$$ENDIF
+$$IF(ga_deme)
+   
+	+ 교체 비율 : $$prepl$$ 
+   
+	+ 교체 게놈수 : $$nrepl$$
+$$ENDIF
+$$IF(genome_1dbinarystring||genome_gabin2dec||genome_1darray||genome_1darrayallele||genome_string||genome_real)
+   
+	+ 게놈 길이 : $$width$$ 
+$$ELIF(genome_2dbinarystring||genome_2darray||genome_2darrayallele)
+	
+	+ 게놈 폭 : $$width$$
+	
+	+ 게놈 높이 : $$height$$
+$$ELIF(genome_3dbinarystring||genome_3darray||genome_3darrayallele)
+	
+	+ 게놈 폭 : $$width$$
+	
+	+ 게놈 높이 : $$height$$
+	 
+	+ 게놈 깊이 : $$depth$$
+$$ENDIF
+$$IF(genome_1dbinarystring||genome_bin2dec||genome_2dbinarystring||genome_3dbinarystring)
+   
+	+ 변수의 개수 : $$nvar$$
+
+	+ 비트수 : $$nbit$$
+
+	+ 변수의 최소값 : $$varmin$$
+   
+	+ 변수의 최대값 : $$varmax$$
+$$ENDIF
+$$IF(genome_1darrayallele||genome_2darrayallele||genome_3darrayallele||genome_real)
+
+	+ 변수의 최소값 : $$varmin$$
+   
+	+ 변수의 최대값 : $$varmax$$
+$$ENDIF
+$$IF(genome_1dbinarystring||genome_bin2dec||genome_2dbinarystring||genome_3dbinarystring)
+   
+	+ 비트수 : $$nbit$$
+$$ENDIF

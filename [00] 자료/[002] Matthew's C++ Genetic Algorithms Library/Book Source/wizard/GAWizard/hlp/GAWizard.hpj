@@ -1,0 +1,13 @@
+[OPTIONS]
+TITLE=GAWIZARD AppWizard Help
+COMPRESS=true
+WARNING=2
+HLP=GAWizard.HLP
+ERRORLOG=GAWizard.LOG
+
+[FILES]
+GAWizard.rtf
+
+[MAP]
+#include <C:\Program Files\Microsoft Visual Studio\VC98\MFC\include\afxhelp.hm>
+#include <GAWizard.hm>
