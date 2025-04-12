@@ -1,0 +1,783 @@
+listing 1
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+public:
+  void init();
+  void qput(int i);
+  int qget();
+};
+
+listing 2
+queue Q1, Q2;
+
+listing 3
+void queue::qput(int i)
+{
+  if(sloc==100) {
+    cout << "Queue is full.\n";
+    return;
+  }
+  sloc++;
+  q[sloc] = i;
+}
+
+listing 4
+queue ob1, ob2;
+
+ob1.init();
+
+listing 5
+#include <iostream>
+using namespace std;
+
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+public:
+  void init();
+  void qput(int i); 
+  int qget();
+};
+
+// Initialize the queue.
+void queue::init()
+{
+  rloc = sloc = 0;
+}
+
+// Put an integer into the queue.
+void queue::qput(int i)
+{
+  if(sloc==100) {
+    cout << "Queue is full.\n";
+    return;
+  }
+  sloc++;
+  q[sloc] = i;
+}
+
+// Get an integer from the queue.
+int queue::qget()
+{
+  if(rloc == sloc) {
+    cout << "Queue underflow.\n";
+    return 0;
+  }
+  rloc++;
+  return q[rloc];
+}
+
+int main()
+{
+  queue a, b;  // create two queue objects
+
+  a.init();
+  b.init();
+
+  a.qput(10);
+  b.qput(19);
+
+  a.qput(20);
+  b.qput(1);
+
+  cout << "Contents of queue a: ";
+  cout << a.qget() << " ";
+  cout << a.qget() << "\n";
+
+  cout << "Contents of queue b: ";
+  cout << b.qget() << " ";
+  cout << b.qget() << "\n";
+
+  return 0;
+}
+
+listing 6
+a.rloc = 0;
+
+listing 7
+// Demonstrate class member access.
+#include <iostream>
+using namespace std;
+
+class myclass {
+  int a; // private data
+public:
+  int b; // public data
+  void setab(int i); // public functions
+  int geta();
+  void reset();
+};
+
+void myclass::setab(int i)
+{
+  a = i; // refer directly to a
+  b = i*i; // refer directly to b 
+}
+
+int myclass::geta()
+{
+  return a; // refer directly to a
+}
+
+void myclass::reset()
+{
+  // call setab() directly
+  setab(0); // the object is already known
+}
+
+int main()
+{
+  myclass ob;
+
+  ob.setab(5); // set ob.a and ob.b
+  cout << "ob after setab(5): ";
+  cout << ob.geta() << ' ';
+  cout << ob.b; // can access b because it is public
+  cout << '\n';
+
+  ob.b = 20; // can access b because it is public
+  cout << "ob after ob.b=20: ";
+  cout << ob.geta() << ' ';
+  cout << ob.b;
+  cout << '\n';
+
+  ob.reset();
+  cout << "ob after ob.reset(): ";
+  cout << ob.geta() << ' ';
+  cout << ob.b;
+  cout << '\n';
+   
+  return 0;
+}
+
+listing 8
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+public:
+  queue();  // constructor
+  void qput(int i); 
+  int qget();
+};
+
+listing 9
+// This is the constructor.
+queue::queue()
+{
+  sloc = rloc = 0;
+  cout << "Queue Initialized.\n";
+}
+
+listing 10
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+public:
+  queue();  // constructor
+  ~queue(); // destructor
+  void qput(int i); 
+  int qget();
+};
+
+// This is the constructor.
+queue::queue()
+{
+  sloc = rloc = 0;
+  cout << "Queue initialized.\n";
+}
+
+// This is the destructor.
+queue::~queue()
+{
+  cout << "Queue destroyed.\n";
+}
+
+listing 11
+// Demonstrate a constructor and a destructor.
+#include <iostream>
+using namespace std;
+
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+public:
+  queue();  // constructor
+  ~queue(); // destructor
+  void qput(int i); 
+  int qget();
+};
+
+// This is the constructor.
+queue::queue()
+{
+  sloc = rloc = 0;
+  cout << "Queue initialized.\n";
+}
+
+// This is the destructor.
+queue::~queue()
+{
+  cout << "Queue destroyed.\n";
+}
+
+// Put an integer into the queue.
+void queue::qput(int i)
+{
+  if(sloc==100) {
+    cout << "Queue is full.\n";
+    return;
+  }
+  sloc++;
+  q[sloc] = i;
+}
+
+// Get an integer from the queue.
+int queue::qget()
+{
+  if(rloc == sloc) {
+    cout << "Queue Underflow.\n";
+    return 0;
+  }
+  rloc++;
+  return q[rloc];
+}
+
+int main()
+{
+  queue a, b;  // create two queue objects
+
+  a.qput(10);
+  b.qput(19);
+
+  a.qput(20);
+  b.qput(1);
+
+  cout << a.qget() << " ";
+  cout << a.qget() << " ";
+  cout << b.qget() << " ";
+  cout << b.qget() << "\n";
+
+  return 0;
+}
+
+listing 12
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+  int who; // holds the queue's ID number
+public:
+  queue(int id);  // parameterized constructor
+  ~queue(); // destructor
+  void qput(int i); 
+  int qget();
+};
+
+listing 13
+// This is the constructor.
+queue::queue(int id)
+{
+  sloc = rloc = 0;
+  who = id;
+  cout << "Queue " << who << " initialized.\n";
+}
+
+listing 14
+queue a = queue(101);
+
+listing 15
+queue a(101);
+
+listing 16
+// Use a parameterized constructor.
+#include <iostream>
+using namespace std;
+
+// This creates the class queue.
+class queue {
+  int q[100];
+  int sloc, rloc;
+  int who; // holds the queue's ID number
+public:
+  queue(int id);  // parameterized constructor
+  ~queue(); // destructor
+  void qput(int i); 
+  int qget();
+};
+
+// This is the constructor.
+queue::queue(int id)
+{
+  sloc = rloc = 0;
+  who = id;
+  cout << "Queue " << who << " initialized.\n";
+}
+
+// This is the destructor.
+queue::~queue()
+{
+  cout << "Queue " << who << " destroyed.\n";
+}
+
+// Put an integer into the queue.
+void queue::qput(int i)
+{
+  if(sloc==100) {
+    cout << "Queue is full.\n";
+    return;
+  }
+  sloc++;
+  q[sloc] = i;
+}
+
+// Get an integer from the queue.
+int queue::qget()
+{
+  if(rloc == sloc) {
+    cout << "Queue underflow.\n";
+    return 0;
+  }
+  rloc++;
+  return q[rloc];
+}
+
+int main()
+{
+  queue a(1), b(2);  // create two queue objects
+
+  a.qput(10);
+  b.qput(19);
+
+  a.qput(20);
+  b.qput(1);
+
+  cout << a.qget() << " ";
+  cout << a.qget() << " ";
+  cout << b.qget() << " ";
+  cout << b.qget() << "\n";
+
+  return 0;
+}
+
+listing 17
+#include <iostream>
+using namespace std;
+
+class widget {
+  int i;
+  int j;
+public:
+  widget(int a, int b);
+  void put_widget();
+} ;
+
+// Pass 2 arguments to widget().
+widget::widget(int a, int b)
+{
+  i = a;
+  j = b;
+}
+
+void widget::put_widget()
+{
+  cout << i << " " << j << "\n";
+}
+
+int main()
+{
+  widget x(10, 20), y(0, 0);
+
+  x.put_widget();
+  y.put_widget();
+
+  return 0;
+}
+
+listing 18
+#include <iostream>
+using namespace std;
+
+class myclass {
+  int a;
+public:
+  myclass(int x);
+  int get_a();
+};
+
+myclass::myclass(int x)
+{  
+  a = x;
+}
+
+int myclass::get_a()
+{
+  return a;
+}
+
+int main()
+{
+  myclass ob = 4; // calls myclass(4)
+
+  cout << ob.get_a();
+
+  return 0;
+}
+
+listing 19
+myclass ob = myclass(4);
+
+listing 20
+// Use struct to create a class.
+#include <iostream>
+using namespace std;
+
+struct cl {
+  int get_i();       // these are public
+  void put_i(int j); // by default
+private:
+  int i;   
+};
+
+int cl::get_i()
+{
+  return i;
+}
+
+void cl::put_i(int j)
+{
+  i = j;
+}
+
+int main()
+{
+  cl s;
+
+  s.put_i(10);
+  cout << s.get_i();
+
+  return 0;
+}
+
+listing 21
+// Now, use class, instead.
+#include <iostream>
+using namespace std;
+
+class cl {
+  int i; // private by default
+public:
+  int get_i();
+  void put_i(int j);
+};
+
+int cl::get_i()
+{
+  return i;
+}
+
+void cl::put_i(int j)
+{
+  i = j;
+}
+
+int main()
+{
+  cl s;
+
+  s.put_i(10);
+  cout << s.get_i();
+
+  return 0;
+}
+
+listing 22
+// Create union-based class.
+#include <iostream>
+using namespace std;
+
+union u_type {
+  u_type(short int a);  // public by default
+  void showchars();
+  short int i;
+  char ch[2];
+};
+
+// constructor
+u_type::u_type(short int a)
+{
+  i = a;
+}
+
+// Show the characters that comprise a short int.
+void u_type::showchars()
+{
+  cout << ch[0] << " ";
+  cout << ch[1] << "\n";
+}
+
+int main()
+{
+  u_type u(1000);
+
+  u.showchars();
+
+  return 0;
+}
+
+listing 23
+#include <iostream>
+using namespace std;
+
+class cl {
+  int i; // private by default
+public:
+  int get_i();
+  void put_i(int j);
+} ;
+
+inline int cl::get_i()
+{
+  return i;
+}
+
+inline void cl::put_i(int j)
+{
+  i = j;
+}
+
+int main()
+{
+  cl s;
+
+  s.put_i(10);
+  cout << s.get_i();
+
+  return 0;
+}
+
+listing 24
+#include <iostream>
+using namespace std;
+
+class cl {
+  int i; // private by default
+public:
+  // automatic inline functions
+  int get_i() { return i; }
+  void put_i(int j) { i = j; }
+} ;
+
+int main()
+{
+  cl s;
+
+  s.put_i(10);
+  cout << s.get_i();
+
+  return 0;
+}
+
+listing 25
+class cl {
+  int i; // private by default
+public:
+  // inline functions
+  int get_i()
+  {
+    return i;
+  }
+
+  void put_i(int j)
+  {
+     i = j;
+  }
+};
+
+listing 26
+// An example of arrays of objects
+
+#include <iostream>
+using namespace std;
+
+enum resolution {low, medium, high};
+
+class display {
+  int width;
+  int height;
+  resolution res; 
+public:
+  void set_dim(int w, int h) {width = w; height = h;}
+  void get_dim(int &w, int &h) {w = width; h = height;}
+  void set_res(resolution r) {res = r;}
+  resolution get_res() {return res;}
+};
+
+char names[3][7] = {
+  "low",
+  "medium",
+  "high",
+} ;
+
+int main()
+{
+  display display_mode[3];
+  int i, w, h;
+  
+  display_mode[0].set_res(low);
+  display_mode[0].set_dim(640, 480);
+
+  display_mode[1].set_res(medium);
+  display_mode[1].set_dim(800, 600);
+
+  display_mode[2].set_res(high);
+  display_mode[2].set_dim(1600, 1200);
+
+  cout << "Available display modes:\n\n";
+
+  for(i=0; i<3; i++) {
+    cout << names[display_mode[i].get_res()] << ": ";
+    display_mode[i].get_dim(w, h);
+    cout << w << " by " << h << "\n";
+  }
+
+  return 0;
+}
+
+
+listing 27
+// Initialize an array of objects.
+#include <iostream>
+using namespace std;
+ 
+class samp {
+  int a;
+public:
+  samp(int n) { a = n; }
+  int get_a() { return a; }
+};
+
+int main()
+{
+  samp sampArray[4] = { -1, -2, -3, -4 };
+  int i;
+
+  for(i=0; i<4; i++) cout << sampArray[i].get_a() << ' ';
+
+  cout << "\n";
+
+  return 0;
+}
+
+listing 28
+samp sampArray[4] = { samp(-1), samp(-2), samp(-3), samp(-4) };
+
+listing 29
+#include <iostream>
+using namespace std;
+
+class samp {
+  int a, b;
+public:
+  samp(int n, int m) { a = n; b = m; }
+  int get_a() { return a; }
+  int get_b() { return b; }
+};
+
+int main()
+{
+  samp sampArray[4][2] = {
+    samp(1, 2), samp(3, 4), 
+    samp(5, 6), samp(7, 8),
+    samp(9, 10), samp(11, 12),
+    samp(13, 14), samp(15, 16)
+  };
+
+  int i;
+
+  for(i=0; i<4; i++) {
+    cout << sampArray[i][0].get_a() << ' ';
+    cout << sampArray[i][0].get_b() << "\n";
+    cout << sampArray[i][1].get_a() << ' ';
+    cout << sampArray[i][1].get_b() << "\n";
+  }
+
+  cout << "\n";
+
+  return 0;
+}
+
+listing 30
+// A simple example using an object pointer.
+
+#include <iostream>
+using namespace std;
+
+class P_example {
+  int num;
+public:
+  void set_num(int val) {num = val;}
+  void show_num();
+};
+
+void P_example::show_num()
+{
+  cout << num << "\n";
+}
+
+int main()
+{
+  P_example ob, *p; // declare an object and pointer to it
+
+  ob.set_num(1); // access ob directly
+
+  ob.show_num();
+
+  p = &ob; // assign p the address of ob
+  p->show_num();  // access ob using pointer
+
+  return 0;
+}
+
+listing 31
+// Incrementing and decrementing an object pointer.
+#include <iostream>
+using namespace std;
+
+class P_example {
+  int num;
+public:
+  void set_num(int val) {num = val;}
+  void show_num();
+};
+
+void P_example::show_num()
+{
+  cout << num << "\n";
+}
+
+int main()
+{
+  P_example ob[2], *p;
+
+  ob[0].set_num(10);  // access objects directly
+  ob[1].set_num(20);
+
+  p = &ob[0];  // obtain pointer to first element
+  p->show_num(); // show value of ob[0] using pointer
+
+  p++;  // advance to next object
+  p->show_num(); // show value of ob[1] using pointer
+
+  p--;  // retreat to previous object
+  p->show_num(); // again show value of ob[0]
+
+  return 0;
+}
+
+

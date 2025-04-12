@@ -1,0 +1,1 @@
+// scanf와 printf를 이용한 C 예제#include <studio.h>int main(){	int number = 0;	scanf("%d", &number); // 키보드 숫자 입력	printf("모니터 출력: %d \n", number); }// cin과 cout을 이용한 C++ 예제#include <iostream> using namespace std; // std 네임스페이스 지정int main(){	int number = 0;	cin >> number;	cout << "모니터 출력: " << number << endl;}

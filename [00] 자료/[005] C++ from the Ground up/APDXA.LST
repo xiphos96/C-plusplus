@@ -1,0 +1,219 @@
+listing 1
+#include <stdio.h>
+
+int main()
+{
+  printf("|%10.5f|\n", 123.23);
+  printf("|%-10.5f|\n", 123.23);
+  printf("|%10.5s|\n", "Hello there");
+  printf("|%-10.5s|\n", "Hello there");
+
+  return 0;
+}
+
+listing 2
+scanf("%d", &count);
+
+listing 3
+char address[80];
+scanf("%s", address);
+
+listing 4
+scanf("%d%d", &r, &c);
+
+listing 5
+scanf("%d%*c%d", &x, &y);
+
+listing 6
+scanf("%20s", str);
+
+listing 8
+scanf("%c%c%c", &a, &b, &c);
+
+listing 9
+scanf("%st%s", &x, &y);
+
+listing 10
+scanf("%s ", name);
+
+listing 11
+%[XYZ]
+
+listing 12
+/* A simple scanset example. */
+#include <stdio.h>
+
+int main()
+{
+  char s1[80], s2[80];
+
+  printf("Enter numbers, then some letters\n");
+  scanf("%[0123456789]%s", s1, s2);
+  printf("%s %s", s1, s2);
+
+  return 0;
+}
+
+listing 13
+%[A-Z]
+
+listing 14
+/* A scanset example using ranges. */
+#include <stdio.h>
+
+int main()
+{
+  char s1[80], s2[80];
+
+  printf("Enter numbers, then some letters\n");
+  scanf("%[0-9]%[a-zA-Z]", s1, s2);
+  printf("%s %s", s1, s2);
+
+  return 0;
+}
+
+listing 15
+/* A scanset example using inverted ranges. */
+#include <stdio.h>
+
+int main()
+{
+  char s1[80], s2[80];
+
+  printf("Enter non-numbers, then some non-letters\n");
+  scanf("%[^0-9]%[^a-zA-Z]", s1, s2);
+  printf("%s %s", s1, s2);
+
+  return 0;
+}
+
+listing 16
+fp = fopen("test", "w");
+
+listing 17
+if((fp = fopen("test", "w"))==NULL) {
+  printf("Cannot open file.");
+  exit(1);
+}
+
+listing 18
+ch = fgetc(fp);
+
+while(ch!=EOF) {
+  ch = fgetc(fp);
+}
+
+listing 19
+while(!feof(fp)) ch = fgetc(fp);
+
+listing 20
+/* This program will copy one file to another. */
+#include <stdio.h>
+
+int main(int argc, char *argv[])
+{
+  FILE *in, *out;
+  char ch;
+
+  if(argc!=3) {
+    printf("You forgot to enter a filename\n");
+    return 1;
+  }
+
+  if((in=fopen(argv[1], "rb")) == NULL) {
+    printf("Cannot open source file.\n");
+    return 1;
+  }
+  if((out=fopen(argv[2], "wb")) == NULL) {
+    printf("Cannot open destination file.\n");
+    return 1;
+  }
+
+  /* This code actually copies the file. */
+  while(!feof(in)) {
+     ch = fgetc(in);
+     if(!feof(in)) fputc(ch, out);
+  }
+
+  fclose(in);
+  fclose(out);
+
+  return 0;
+}
+
+listing 21
+/* Write a floating point number to a disk file. */
+#include <stdio.h>
+
+int main()
+{
+  FILE *fp;
+  float f = 12.23F;
+
+  if((fp=fopen("test","wb"))==NULL) {
+    printf("Cannot open file.\n");
+    return 1;
+  }
+
+  fwrite(&f, sizeof(float), 1, fp);
+
+  fclose(fp);
+  return 0;
+}
+
+listing 22
+#include <stdio.h>
+
+int main()
+{
+  register int i;
+  FILE *fp;
+  float balance[100];
+
+  /* open for write */
+  if((fp=fopen("balance","w"))==NULL) {
+    printf("Cannot open file.\n");
+    return 1;
+  }
+
+  for(i=0; i<100; i++) balance[i] = (float) i;
+
+  /* This saves the entire balance array in one step. */
+  fwrite(balance, sizeof balance, 1, fp);
+  fclose(fp);
+
+  /* zero array */
+  for(i=0; i<100; i++) balance[i] = 0.0;
+
+  /* open for read */
+  if((fp=fopen("balance","r"))==NULL) {
+    printf("Cannot open file.\n");
+    return 1;
+  }
+
+  /* This reads the entire balance array in one step. */
+  fread(balance, sizeof balance, 1, fp);
+
+  /* display contents of array */
+  for(i=0; i<100; i++) printf("%f ", balance[i]);
+
+  fclose(fp);
+  return 0;
+}
+
+listing 23
+int func1()
+{
+  FILE *fp;
+
+  if((fp=fopen("test", "rb")) == NULL) {
+    printf("cannot open file\n");
+    exit(1);
+  }
+
+  fseek(fp, 234L, SEEK_SET);
+  return getc(fp);   /* read one character */
+                     /* at 234th position */
+}
+
+

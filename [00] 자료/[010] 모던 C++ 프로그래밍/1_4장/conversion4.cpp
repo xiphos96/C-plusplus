@@ -1,0 +1,1 @@
+int main(){	const char *cp;	char *q = static_cast<char*>(cp); 	const_cast<string>(cp);}	

@@ -1,0 +1,1 @@
+#include <iostream>using std::cout;  // cout으로 범위를 좁혀 네임스페이스 지정int main(){	int i = 0;	cin >> i; // 컴파일 오류 발생	cout << i; }

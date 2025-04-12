@@ -1,0 +1,1 @@
+extern const int bufferSize = 200;extern const char[20] domain = "freelec.co.kr";

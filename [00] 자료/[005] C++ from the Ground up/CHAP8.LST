@@ -1,0 +1,562 @@
+listing 1
+#include <iostream>
+using namespace std;
+
+int sqr_it(int x);
+
+int main()
+{
+  int t=10;
+
+  cout << sqr_it(t) << ' ' << t;
+
+  return 0;
+}
+
+int sqr_it(int x)
+{
+  x = x*x;
+  return x;
+}
+
+listing 2
+void swap(int *x, int *y)
+{
+  int temp;
+
+  temp = *x; // save the value at address x
+  *x = *y;   // put y into x
+  *y = temp; // put x into y
+}
+
+listing 3
+#include <iostream>
+using namespace std;
+
+// Declare swap() using pointers.
+void swap(int *x, int *y);
+
+int main()
+{
+  int i, j;
+
+  i = 10;
+  j = 20;
+
+  cout << "initial values of i and j: ";
+  cout << i << ' ' << j << '\n';
+  swap(&j, &i); // call swap() with addresses of i and j
+  cout << "swapped values of i and j: ";
+  cout << i << ' ' << j << '\n';
+
+  return 0;
+}
+
+// Exchange arguments.
+void swap(int *x, int *y)
+{
+  int temp;
+
+  temp = *x; // save the value at address x
+  *x = *y;   // put y into x
+  *y = temp; // put x into y
+}
+
+listing 4
+// Using a reference parameter.
+#include <iostream>
+using namespace std;
+
+void f(int &i);
+
+int main()
+{
+  int val = 1;
+
+  cout << "Old value for val: " << val << '\n';
+
+  f(val); // pass address of val to f()
+
+  cout << "New value for val: " << val << '\n';
+
+  return 0;
+}
+
+void f(int &i)
+{
+  i = 10; // this modifies calling argument
+}
+
+listing 5
+void f(int &i)
+{
+  i = 10; // this modifies calling argument
+}
+
+listing 6
+i = 10;
+
+listing 7
+f(val);  // pass address of val to f()
+
+listing 8
+#include <iostream>
+using namespace std;
+
+// Declare swap() using reference parameters.
+void swap(int &x, int &y);
+
+int main()
+{
+  int i, j;
+
+  i = 10;
+  j = 20;
+
+  cout << "initial values of i and j: ";
+  cout << i << ' ' << j << '\n';
+  swap(j, i);
+  cout << "swapped values of i and j: ";
+  cout << i << ' ' << j << '\n';
+
+  return 0;
+}
+
+/* Here, swap() is defined as using call-by-reference,
+   not call-by-value. Thus, it can exchange the two
+   arguments it is called with.
+*/
+void swap(int &x, int &y)
+{
+  int temp;
+
+  temp = x; // save the value at address x
+  x = y;    // put y into x
+  y = temp; // put x into y
+}
+
+listing 9
+void swap(int& x, int& y);
+
+listing 10
+float* p;
+
+listing 11
+int* a, b;
+
+listing 12
+// Returning a reference.
+#include <iostream>
+using namespace std;
+
+double &f();
+
+double val = 100.0;
+
+int main()
+{
+  double newval;
+
+  cout << f() << '\n'; // display val's value
+
+  newval = f(); // assign value of val to newval
+  cout << newval << '\n'; // display newval's value
+
+  f() = 99.1; // change val's value
+  cout << f() << '\n'; // display val's new value
+
+  return 0;
+}
+
+double &f()
+{
+  return val; // return reference to val
+}
+
+listing 13
+cout << f() << '\n'; // display val's value
+
+listing 14
+return val; // return reference to val
+
+listing 15
+newval = f(); // assign value of val to newval
+
+listing 16
+f() = 99.1; // change val's value
+
+listing 17
+#include <iostream>
+using namespace std;
+
+double &change_it(int i); // return a reference
+
+double vals[] = {1.1, 2.2, 3.3, 4.4, 5.5};
+
+int main()
+{
+  int i;
+
+  cout << "Here are the original values: ";
+  for(i=0; i<5; i++)
+    cout << vals[i] << ' ';
+  cout << '\n';
+
+  change_it(1) = 5298.23; // change 2nd element
+  change_it(3) = -98.8; // change 4th element
+
+  cout << "Here are the changed values: ";
+  for(i=0; i<5; i++)
+    cout << vals[i] << ' ';
+  cout << '\n';
+
+  return 0;
+}
+
+double &change_it(int i)
+{
+  return vals[i]; // return a reference to the ith element
+}
+
+listing 18
+// Error, cannot return reference to local var.
+int &f()
+{
+  int i=10;
+  return i;
+}
+
+listing 19
+#include <iostream>
+using namespace std;
+
+int &put(int i); // put value into the array
+int get(int i); // obtain a value from the array
+
+int vals[10];
+int error = -1;
+
+int main()
+{
+  put(0) = 10; // put values into the array
+  put(1) = 20;
+  put(9) = 30;
+
+  cout << get(0) << ' ';
+  cout << get(1) << ' ';
+  cout << get(9) << ' ';
+
+  // now, intentionally generate an error
+  put(12) = 1; // Out of Bounds
+
+  return 0;
+}
+
+// Put a value into the array.
+int &put(int i)
+{
+  if(i>=0 && i<10)
+    return vals[i]; // return a reference to the ith element
+  else {
+    cout << "Bounds Error!\n";
+    return error; // return a reference to error
+  }
+}
+
+// Get a value from the array.
+int get(int i)
+{
+  if(i>=0 && i<10)
+    return vals[i]; // return the value of the ith element
+  else {
+    cout << "Bounds Error!\n";
+    return error; // return an error
+  }
+}
+
+listing 20
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int j, k;
+  int &i = j; // independent reference
+
+  j = 10;
+
+  cout << j << " " << i; // outputs 10 10
+
+  k = 121;
+  i = k; // copies k's value into j
+         // not k's address
+
+  cout << "\n" << j;  // outputs 121
+
+  return 0;
+}
+
+listing 21
+// Overload a function three times.
+#include <iostream>
+using namespace std;
+
+void f(int i);        // integer parameter
+void f(int i, int j); // two integer parameters
+void f(double k);     // one double parameter
+
+int main()
+{
+  f(10);     // call f(int)
+
+  f(10, 20); // call f(int, int)
+
+  f(12.23);  // call f(double)
+
+  return 0;
+}
+
+void f(int i)
+{
+  cout << "In f(int), i is " << i << '\n';
+}
+
+void f(int i, int j)
+{
+  cout << "In f(int, int), i is " << i;
+  cout << ", j is " << j << '\n';
+}
+
+void f(double k)
+{
+  cout << "In f(double), k is " << k << '\n';
+}
+
+listing 22
+// Create an overloaded abs function.
+#include <iostream>
+using namespace std;
+
+// myabs() is overloaded three ways.
+int myabs(int i);
+double myabs(double d);
+long myabs(long l);
+
+int main()
+{
+  cout << myabs(-10) << "\n";
+
+  cout << myabs(-11.0) << "\n";
+
+  cout << myabs(-9L) << "\n";
+
+  return 0;
+}
+
+int myabs(int i)
+{
+  cout << "Using integer myabs(): ";
+
+  if(i<0) return -i;
+  else return i;
+}
+
+double myabs(double d)
+{
+  cout << "Using double myabs(): ";
+
+  if(d<0.0) return -d;
+  else return d;
+}
+
+long myabs(long l)
+{
+  cout << "Using long myabs(): ";
+
+  if(l<0) return -l;
+  else return l;
+}
+
+listing 23
+overload myfunc;
+
+listing 24
+void myfunc(double num = 0.0, char ch = 'X')
+{
+  .
+  .
+  .
+}
+
+listing 25
+myfunc(198.234, 'A');  // pass explicit values
+
+myfunc(10.1); // pass num a value, let ch default
+
+myfunc();   // let both num and ch default
+
+listing 26
+#include <iostream>
+using namespace std;
+
+void clrscr(int size=25);
+
+int main()
+{
+  int i;
+
+  for(i=0; i<30; i++ ) cout << i << '\n';
+  clrscr(); // clears 25 lines
+
+  for(i=0; i<30; i++ ) cout << i << '\n';
+  clrscr(10); // clears 10 lines
+
+  return 0;
+}
+
+void clrscr(int size)
+{
+   for(; size; size--) cout << '\n';
+}
+
+listing 27
+// wrong!
+void f(int a = 1, int b);
+
+listing 28
+int myfunc(float f, char *str, int i=10, int j);
+
+listing 29
+void mystrcat(char *s1, char *s2, int len);
+void mystrcat(char *s1, char *s2);
+
+listing 30
+// A customized version of strcat().
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+void mystrcat(char *s1, char *s2, int len = -1);
+
+int main()
+{
+  char str1[80] = "This is a test";
+  char str2[80] = "0123456789";
+
+  mystrcat(str1, str2, 5); // concatenate 5 chars
+  cout << str1 << '\n';
+
+  strcpy(str1, "this is a test"); // reset str1
+
+  mystrcat(str1, str2); // concatenate entire string
+  cout << str1 << '\n';
+
+  return 0;
+}
+
+// A custom version of strcat().
+void mystrcat(char *s1, char *s2, int len)
+{
+  // find end of s1
+  while(*s1) s1++;
+
+  if(len == -1) len = strlen(s2);
+
+  while(*s2 && len) {
+    *s1 = *s2; // copy chars
+    s1++;
+    s2++;
+    len--;
+  }
+
+  *s1 = '\0'; // null terminate s1
+}
+
+listing 31
+int myfunc(double d);
+.
+.
+.
+cout << myfunc('c');  // not an error, conversion applied
+
+listing 32
+// Overloading ambiguity
+#include <iostream>
+using namespace std;
+
+float myfunc(float i);
+double myfunc(double i);
+
+int main()
+{
+  // unambiguous, calls myfunc(double)
+  cout << myfunc(10.1) << " ";
+
+  // ambiguous
+  cout << myfunc(10);
+
+  return 0;
+}
+
+float myfunc(float i)
+{
+  return i;
+}
+
+double myfunc(double i)
+{
+  return -i;
+}
+
+listing 33
+#include <iostream>
+using namespace std;
+
+char myfunc(unsigned char ch);
+char myfunc(char ch);
+
+int main()
+{
+  cout << myfunc('c');  // this calls myfunc(char)
+  cout << myfunc(88) << " "; // ambiguous
+
+  return 0;
+}
+
+char myfunc(unsigned char ch)
+{
+  return ch-1;
+}
+
+
+char myfunc(char ch)
+{
+  return ch+1;
+}
+
+listing 34
+#include <iostream>
+using namespace std;
+
+int myfunc(int i);
+int myfunc(int i, int j=1);
+
+int main()
+{
+  cout << myfunc(4, 5) << " "; // unambiguous
+  cout << myfunc(10); // ambiguous
+
+  return 0;
+}
+
+int myfunc(int i)
+{
+  return i;
+}
+
+int myfunc(int i, int j)
+{
+  return i*j;
+}
+
+

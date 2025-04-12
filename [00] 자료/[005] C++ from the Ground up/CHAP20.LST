@@ -1,0 +1,716 @@
+listing 1
+namespace CounterNameSpace {
+  int upperbound;
+  int lowerbound;
+
+  class counter {
+     int count;
+   public:
+     counter(int n) { 
+       if(n <= upperbound) count = n;
+       else count = upperbound;
+     }
+
+     void reset(int n) {
+       if(n <= upperbound) count = n;
+     }
+
+     int run() {
+       if(count > lowerbound) return count--;
+       else return lowerbound;
+     }
+  };
+}
+
+listing 2
+if(count > lowerbound) return count--;
+
+listing 3
+CounterNameSpace::upperbound = 10;
+
+listing 4
+CounterNameSpace::counter ob;
+
+listing 5
+// Demonstrate a namespace.
+#include <iostream>
+using namespace std;
+
+namespace CounterNameSpace {
+  int upperbound;
+  int lowerbound;
+
+  class counter {
+     int count;
+   public:
+     counter(int n) { 
+       if(n <= upperbound) count = n;
+       else count = upperbound;
+     }
+
+     void reset(int n) {
+       if(n <= upperbound) count = n;
+     }
+
+     int run() {
+       if(count > lowerbound) return count--;
+       else return lowerbound;
+     }
+  };
+}
+
+int main()
+{
+  CounterNameSpace::upperbound = 100;
+  CounterNameSpace::lowerbound = 0;
+
+  CounterNameSpace::counter ob1(10);
+  int i;
+
+  do {
+    i = ob1.run();
+    cout << i << " ";
+  } while(i > CounterNameSpace::lowerbound);
+  cout << endl;
+
+  CounterNameSpace::counter ob2(20);
+
+  do {
+    i = ob2.run();
+    cout << i << " ";
+  } while(i > CounterNameSpace::lowerbound);
+  cout << endl;
+
+  ob2.reset(100);
+  CounterNameSpace::lowerbound = 90;
+  do {
+    i = ob2.run();
+    cout << i << " ";
+  } while(i > CounterNameSpace::lowerbound);
+
+  return 0;
+}
+
+listing 6
+namespace NS {
+  int i;
+}
+
+// ...
+
+namespace NS {
+  int j;
+}
+
+listing 7
+using CounterNameSpace::lowerbound; // only lowerbound is visible
+lowerbound = 10; // OK because lowerbound is visible
+
+using namespace CounterNameSpace; // all members are visible
+upperbound = 100; // OK because all members are now visible
+
+listing 8
+// Demonstrate using.
+#include <iostream>
+using namespace std;
+
+namespace CounterNameSpace {
+  int upperbound;
+  int lowerbound;
+
+  class counter {
+     int count;
+   public:
+     counter(int n) { 
+       if(n <= upperbound) count = n;
+       else count = upperbound;
+     }
+
+     void reset(int n) {
+       if(n <= upperbound) count = n;
+     }
+
+     int run() {
+       if(count > lowerbound) return count--;
+       else return lowerbound;
+     }
+  };
+}
+
+int main()
+{
+  // use only upperbound from CounterNameSpace
+  using CounterNameSpace::upperbound; 
+
+  // now, no qualification needed to set upperbound 
+  upperbound = 100;
+
+  // qualification still needed for lowerbound, etc.
+  CounterNameSpace::lowerbound = 0;
+
+  CounterNameSpace::counter ob1(10);
+  int i;
+
+  do {
+    i = ob1.run();
+    cout << i << " ";
+  } while(i > CounterNameSpace::lowerbound);
+  cout << endl;
+
+  // Now, use entire CounterNameSpace
+  using namespace CounterNameSpace;
+
+  counter ob2(20);
+
+  do {
+    i = ob2.run();
+    cout << i << " ";
+  } while(i > lowerbound);
+  cout << endl;
+
+  ob2.reset(100);
+  lowerbound = 90;
+  do {
+    i = ob2.run();
+    cout << i << " ";
+  } while(i > lowerbound);
+
+  return 0;
+}
+
+listing 9
+using namespace std;
+
+listing 10
+// Use explicit std:: qualification.
+#include <iostream>
+
+int main()
+{
+  double val;
+
+  std::cout << "Enter a number: ";
+
+  std::cin >> val;
+
+  std::cout << "This is your number: ";
+  std::cout << val;
+
+  return 0;
+}
+
+listing 11
+// Bring only a few names into the global namespace.
+#include <iostream>
+
+// gain access to cout and cin
+using std::cout;
+using std::cin;
+
+int main()
+{
+  double val;
+
+  cout << "Enter a number: ";
+
+  cin >> val;
+  cout << "This is your number: ";
+  cout << val;
+
+  return 0;
+}
+
+listing 12
+#include <iostream>
+using namespace std;
+
+void vline(int i), hline(int i);
+
+int main()
+{
+  void (*p)(int i);
+
+  p = vline; // point to vline()
+
+  (*p)(4); // call vline()
+
+  p = hline; // point to hline()
+
+  (*p)(3); // call hline()
+
+  return 0;
+}
+
+void hline(int i)
+{
+   for( ;i; i--) cout << "-";
+   cout << "\n";
+}
+
+void vline(int i)
+{
+  for( ; i; i--) cout << "|\n";
+}
+
+listing 13
+(*p)(4);
+
+listing 14
+p(4); 
+
+
+listing 15
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+using namespace std;
+
+int comp(const void *a, const void *b);
+
+int main()
+{
+  char str[] = "Function pointers provide flexibility.";
+
+  qsort(str, strlen(str), 1, comp);
+  cout << "sorted string: " << str;
+
+  return 0;
+}
+
+int comp(const void *a, const void *b)
+{
+  return * (char *) a - * (char *) b;
+}
+
+listing 16
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int comp(const void *a, const void *b);
+
+int main()
+{
+  int num[] = {10, 4, 3, 6, 5 ,7 ,8};
+  int i;
+
+  qsort(num, 7, sizeof(int), comp);
+
+  for(i=0; i<7; i++)
+    cout << num[i] << ' ';
+
+  return 0;
+}
+
+int comp(const void *a, const void *b)
+{
+  return * (int *) a - * (int *) b;
+}
+
+listing 17
+/* Illustrate assigning function pointers to
+   overloaded functions. */
+#include <iostream>
+using namespace std;
+
+// Output count number of spaces.
+void space(int count)
+{
+  for( ; count; count--) cout << ' ';
+}
+
+// Output count number of chs.
+void space(int count, char ch)
+{
+  for( ; count; count--) cout << ch;
+}
+
+int main()
+{
+  /* Create a pointer to void function with
+     one int parameter. */
+  void (*fp1)(int);
+
+  /* Create a pointer to void function with
+     one int parameter and one character parameter. */
+  void (*fp2)(int, char);
+
+  fp1 = space; // gets address of space(int)
+
+  fp2 = space; // gets address of space(int, char)
+
+  fp1(22);  // output 22 spaces - same as (*fp1)(22)
+  cout << "|\n";
+
+  fp2(30, 'x'); // output 30 xs - same as (*fp2)(30, 'x')
+  cout << "|\n";
+
+  return 0;
+}
+
+listing 18
+#include <iostream>
+using namespace std;
+
+class ShareVar {
+  static int num;
+public:
+  void setnum(int i) { num = i; };
+  void shownum() { cout << num << " "; }
+};
+
+int ShareVar::num; // define num
+
+int main()
+{
+  ShareVar a, b;
+
+  a.shownum(); // prints 0
+  b.shownum(); // prints 0
+
+  a.setnum(10); // set static num to 10
+
+  a.shownum(); // prints 10
+  b.shownum(); // also prints 10
+
+  return 0;
+}
+
+listing 19
+class X {
+  int some_var;
+public:
+  int f1() const; // const member function
+};
+
+listing 20
+/*
+   Demonstrate const member functions.
+   This program won't compile.
+*/
+#include <iostream>
+using namespace std;
+
+class Demo {
+  int i;
+public:
+  int geti() const {
+    return i; // ok
+  }
+
+  void seti(int x) const {
+    i = x; // error!
+  }
+};
+
+int main()
+{
+  Demo ob;
+
+  ob.seti(1900); 
+  cout << ob.geti();
+
+  return 0;
+}
+
+listing 21
+// Demonstrate mutable.
+#include <iostream>
+using namespace std;
+
+class Demo {
+  mutable int i;
+  int j;
+public:
+  int geti() const {
+    return i; // ok
+  }
+
+  void seti(int x) const {
+    i = x; // now, OK.
+  }
+
+/* The following function won't compile.
+  void setj(int x) const {
+    j = x; // Still Wrong!
+  }
+*/
+};
+
+int main()
+{
+  Demo ob;
+
+  ob.seti(1900); 
+  cout << ob.geti();
+
+  return 0;
+}
+
+listing 22
+#include <iostream>
+using namespace std;
+
+class myclass {
+  int a;
+public:
+  myclass(int x) { a = x; } 
+  int geta() { return a; }
+};
+ 
+int main()
+{
+  myclass ob(4);
+
+  cout << ob.geta();
+
+  return 0;
+}
+
+listing 23
+myclass ob = 4; // automatically converts into myclass(4)
+
+listing 24
+myclass ob(4);
+
+listing 25
+#include <iostream>
+using namespace std;
+
+class myclass {
+  int a;
+public:
+  explicit myclass(int x) { a = x; } 
+  int geta() { return a; }
+};
+
+listing 26
+myclass ob(110); 
+
+listing 27
+#include <iostream>
+using namespace std;
+
+class myclass {
+  int num;
+public:
+  myclass(int i) { num = i; }
+  int getnum() { return num; }
+};
+
+int main()
+{
+  myclass o(10);
+
+  cout << o.getnum() << endl; // displays 10
+
+  // now, use implicit conversion to assign new value
+  o = 1000;
+
+  cout << o.getnum() << endl; // displays 1000
+
+  return 0;
+}
+  
+listing 28
+o = 1000;
+
+listing 29
+#include <iostream> 
+using namespace std; 
+ 
+class myclass { 
+  int numA; 
+  int numB; 
+public: 
+  /* Initialize numA and numB inside the myclass constructor 
+     using normal syntax. */ 
+  myclass(int x, int y) { 
+    numA = x; 
+    numB = y; 
+  } 
+ 
+  int getNumA() { return numA; } 
+  int getNumB() { return numB; } 
+}; 
+ 
+int main() 
+{ 
+  myclass ob1(7, 9), ob2(5, 2); 
+ 
+  cout << "Values in ob1 are " << ob1.getNumB() <<
+          " and " << ob1.getNumA() << endl; 
+ 
+  cout << "Values in ob2 are " << ob2.getNumB() <<
+          " and " << ob2.getNumA() << endl;
+  
+  return 0; 
+}
+
+listing 30
+#include <iostream> 
+using namespace std; 
+ 
+class myclass { 
+  const int numA; // const member
+  const int numB; // const member
+public: 
+  // Initialize numA and numB using initialization syntax.
+  myclass(int x, int y) : numA(x), numB(y) { } 
+ 
+  int getNumA() { return numA; } 
+  int getNumB() { return numB; } 
+}; 
+ 
+int main() 
+{ 
+  myclass ob1(7, 9), ob2(5, 2); 
+ 
+  cout << "Values in ob1 are " << ob1.getNumB() <<
+          " and " << ob1.getNumA() << endl; 
+ 
+  cout << "Values in ob2 are " << ob2.getNumB() <<
+          " and " << ob2.getNumA() << endl;
+  
+  return 0; 
+}
+
+listing 31
+#include <iostream>
+using namespace std;
+
+extern "C" void myCfunc();
+
+int main()
+{
+  myCfunc();
+
+  return 0;
+}
+
+// This will link as a C function.
+void myCfunc()
+{
+  cout << "This links as a C function.\n";
+}
+
+listing 32
+// Pointer-to-member example.
+#include <iostream>
+using namespace std;
+
+class myclass {
+public:
+  int sum;
+  void myclass::sum_it(int x);
+};
+
+void myclass::sum_it(int x) {
+  int i;
+
+  sum = 0;
+  for(i=x; i; i--) sum += i;
+}
+
+int main()
+{
+  int myclass::*dp;  // pointer to an integer class member
+  void (myclass::*fp)(int x); // pointer to member function
+  myclass c;
+
+  dp = &myclass::sum;  // get address of data
+  fp = &myclass::sum_it; // get address of function
+
+  (c.*fp)(7);  // compute summation of 7
+  cout << "summation of 7 is " << c.*dp;
+
+  return 0;
+}
+
+listing 33
+#include <iostream>
+using namespace std;
+
+class myclass {
+public:
+  int sum;
+  void myclass::sum_it(int x);
+};
+
+void myclass::sum_it(int x) {
+  int i;
+
+  sum = 0;
+  for(i=x; i; i--) sum += i;
+}
+
+int main()
+{
+  int myclass::*dp;  // pointer to an integer class member
+  void (myclass::*fp)(int x); // pointer to member function
+  myclass *c, d; // c is now a pointer to an object
+
+  c = &d; // give c the address of an object
+
+  dp = &myclass::sum;  // get address of data
+  fp = &myclass::sum_it; // get address of function
+
+  (c->*fp)(7);  // now, use ->* to call function
+  cout << "summation of 7 is " << c->*dp; // use ->*
+
+  return 0;
+}
+
+listing 34
+operator int() { return x * y * z; }
+
+listing 35
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+
+  three_d operator+(three_d op2) ;
+  friend ostream &operator<<(ostream &stream, three_d &obj);
+
+  operator int() {return x * y * z; }
+} ;
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d &obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+three_d three_d::operator+(three_d op2)
+{
+  three_d temp(0, 0, 0);
+
+  temp.x = x+op2.x;
+  temp.y = y+op2.y;
+  temp.z = z+op2.z;
+  return temp;
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(2, 3, 4);
+
+  cout << a << b;
+
+  cout <<  b+100;  // displays 124 because of conversion to int
+  cout << "\n";
+
+  a = a + b; // add two three_d objects - no conversion
+
+  cout << a;  // displays 3, 5, 7 
+
+  return 0;
+}
+

@@ -1,0 +1,1022 @@
+listing 1
+// Overload operators using member functions.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) {x = i; y = j; z = k; }
+
+  three_d operator+(three_d op2); // op1 is implied
+  three_d operator=(three_d op2); // op1 is implied
+
+  void show() ;
+};
+
+// Overload +.
+three_d three_d::operator+(three_d op2)
+{
+  three_d temp;
+
+  temp.x = x + op2.x; // These are integer additions
+  temp.y = y + op2.y; // and the + retains is original
+  temp.z = z + op2.z; // meaning relative to them.
+  return temp;
+}
+
+// Overload assignment.
+three_d three_d::operator=(three_d op2)
+{
+  x = op2.x; // These are integer assignments
+  y = op2.y; // and the = retains its original
+  z = op2.z; // meaning relative to them.
+  return *this;
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(10, 10, 10), c;
+
+  a.show();
+  b.show();
+
+  c = a + b; // add a and b together
+  c.show();
+
+  c = a + b + c; // add a, b and c together
+  c.show();
+
+  c = b = a; // demonstrate multiple assignment
+  c.show();
+  b.show();
+
+  return 0;
+}
+
+listing 2
+temp.x = x + op2.x;
+
+listing 3
+a = b = c = d;
+
+listing 4
+// Overload a unary operator.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) {x = i; y = j; z = k; }
+
+  three_d operator+(three_d op2); // op1 is implied
+  three_d operator=(three_d op2); // op1 is implied
+  three_d operator++(); // prefix version of ++
+
+  void show() ;
+} ;
+
+// Overload +.
+three_d three_d::operator+(three_d op2)
+{
+  three_d temp;
+
+  temp.x = x + op2.x; // These are integer additions
+  temp.y = y + op2.y; // and the + retains is original
+  temp.z = z + op2.z; // meaning relative to them.
+  return temp;
+}
+
+// Overload assignment.
+three_d three_d::operator=(three_d op2)
+{
+  x = op2.x; // These are integer assignments
+  y = op2.y; // and the = retains its original
+  z = op2.z; // meaning relative to them.
+  return *this;
+}
+
+// Overload the prefix version of ++.
+three_d three_d::operator++()
+{
+  x++; // increment x, y, and z 
+  y++; 
+  z++;
+  return *this;
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(10, 10, 10), c;
+  a.show();
+  b.show();
+
+  c = a + b; // add a and b together
+  c.show();
+
+  c = a + b + c; // add a, b and c together
+  c.show();
+
+  c = b = a; // demonstrate multiple assignment
+  c.show();
+  b.show();
+
+  ++c;  // increment c
+  c.show();
+
+  return 0;
+}
+
+listing 5
+++O;
+
+listing 6
+O++;
+
+listing 7
+three_d three_d::operator++(int notused);
+
+listing 8
+// Overload the postfix version of ++.
+three_d three_d::operator++(int notused)
+{
+  three_d temp = *this; // save original value
+
+  x++;  // increment x, y, and z
+  y++;
+  z++;
+  return temp; // return original value
+}
+
+listing 9
+three_d temp = *this;
+
+listing 10
+// Demonstrate prefix and postfix ++.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) {x = i; y = j; z = k; }
+
+  three_d operator+(three_d op2); // op1 is implied
+  three_d operator=(three_d op2); // op1 is implied
+  three_d operator++(); // prefix version of ++
+  three_d operator++(int notused); // postfix version of ++
+
+  void show() ;
+};
+
+// Overload +.
+three_d three_d::operator+(three_d op2)
+{
+  three_d temp;
+
+  temp.x = x + op2.x; // These are integer additions
+  temp.y = y + op2.y; // and the + retains its original
+  temp.z = z + op2.z; // meaning relative to them.
+  return temp;
+}
+
+// Overload assignment.
+three_d three_d::operator=(three_d op2)
+{
+  x = op2.x; // These are integer assignments
+  y = op2.y; // and the = retains its original
+  z = op2.z; // meaning relative to them.
+  return *this;
+}
+
+// Overload the prefix version of ++.
+three_d three_d::operator++()
+{
+  x++;  // increment x, y, and z
+  y++;
+  z++;
+  return *this; // return altered value
+}
+
+// Overload the postfix version of ++.
+three_d three_d::operator++(int notused)
+{
+  three_d temp = *this; // save original value
+
+  x++; // increment x, y, and z
+  y++;
+  z++;
+  return temp; // return original value
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show( )
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(10, 10, 10), c;
+  a.show();
+  b.show();
+
+  c = a + b; // add a and b together
+  c.show();
+
+  c = a + b + c; // add a, b and c together
+  c.show();
+
+  c = b = a; // demonstrate multiple assignment
+  c.show();
+  b.show();
+
+  ++c; // prefix increment
+  c.show();
+
+  c++; // postfix increment
+  c.show();
+
+  a = ++c; // a receives c's value after increment
+  a.show(); // a and c
+  c.show(); // are the same
+
+  a = c++; // a receives c's value prior to increment
+  a.show(); // a and c
+  c.show(); // now differ
+
+  return 0;
+}
+
+listing 11
+// Overload subtraction.
+three_d three_d::operator-(three_d op2)
+{
+  three_d temp;
+
+  temp.x = x - op2.x;
+  temp.y = y - op2.y;
+  temp.z = z - op2.z;
+  return temp;
+}
+
+listing 12
+// Overload + using a friend.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) { x = i; y = j; z = k;}
+
+  friend three_d operator+(three_d op1, three_d op2);
+  three_d operator=(three_d op2); // op2 is implied
+
+  void show() ;
+} ;
+
+// This is now a friend function.
+three_d operator+(three_d op1, three_d op2)
+{
+  three_d temp;
+
+  temp.x = op1.x + op2.x; 
+  temp.y = op1.y + op2.y; 
+  temp.z = op1.z + op2.z; 
+  return temp;
+}
+
+// Overload assignment.
+three_d three_d::operator=(three_d op2)
+{
+  x = op2.x; 
+  y = op2.y; 
+  z = op2.z; 
+  return *this;
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(10, 10, 10), c;
+
+  a.show();
+  b.show();
+
+  c = a + b; // add a and b together
+  c.show();
+
+  c = a + b + c; // add a, b and c together
+  c.show();
+
+  c = b = a;  // demonstrate multiple assignment
+  c.show();
+  b.show();
+
+  return 0;
+}
+
+listing 13
+O = O + 10; // will work
+
+listing 14
+O = 10 + O; // won't work
+
+listing 15
+#include <iostream>
+using namespace std;
+
+class CL {
+public:
+  int count;
+  CL operator=(CL obj);
+  friend CL operator+(CL ob, int i);
+  friend CL operator+(int i, CL ob);
+};
+
+CL CL::operator=(CL obj)
+{
+  count = obj.count;
+  return *this;
+}
+
+// This handles ob + int.
+CL operator+(CL ob, int i)
+{
+  CL temp;
+
+  temp.count = ob.count + i;
+  return temp;
+}
+
+// This handles int + ob.
+CL operator+(int i, CL ob)
+{
+  CL temp;
+
+  temp.count = ob.count + i;
+  return temp;
+}
+
+int main()
+{
+  CL O;
+
+  O.count = 10;
+  cout << O.count << " "; // outputs 10
+
+  O = 10 + O; // add object to integer
+  cout << O.count << " "; // outputs 20
+
+  O = O + 12; // add integer to object
+  cout << O.count;        // outputs 32
+
+  return 0;
+}
+
+listing 16
+// Overload the prefix form of ++.
+three_d three_d::operator++()
+{
+  x++;
+  y++;
+  z++;
+  return *this;
+}
+
+listing 17
+// THIS WILL NOT WORK
+three_d operator++(three_d op1)
+{
+  op1.x++;
+  op1.y++;
+  op1.z++;
+  return op1;
+}
+
+listing 18
+// This program uses friend operator++() functions.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) {x = i; y = j; z = k; }
+
+  friend three_d operator+(three_d op1, three_d op2);
+  three_d operator=(three_d op2); 
+
+  // use a reference to overload the ++
+  friend three_d operator++(three_d &op1);
+  friend three_d operator++(three_d &op1, int notused);
+
+  void show() ;
+} ;
+
+// This is now a friend function.
+three_d operator+(three_d op1, three_d op2)
+{
+  three_d temp;
+
+  temp.x = op1.x + op2.x; 
+  temp.y = op1.y + op2.y; 
+  temp.z = op1.z + op2.z; 
+  return temp;
+}
+
+// Overload the =.
+three_d three_d::operator=(three_d op2)
+{
+  x = op2.x; 
+  y = op2.y; 
+  z = op2.z; 
+  return *this;
+}
+
+/* Overload prefix ++ using a friend function.
+   This requires the use of a reference parameter. */
+three_d operator++(three_d &op1)
+{
+  op1.x++;
+  op1.y++;
+  op1.z++;
+  return op1;
+}
+
+/* Overload postfix ++ using a friend function.
+   This requires the use of a reference parameter. */
+three_d operator++(three_d &op1, int notused)
+{
+  three_d temp = op1;
+
+  op1.x++;
+  op1.y++;
+  op1.z++;
+  return temp;
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(10, 10, 10), c;
+
+  a.show();
+  b.show();
+
+  c = a + b; // add a and b together
+  c.show();
+
+  c = a + b + c; // add a, b and c together
+  c.show();
+
+  c = b = a; // demonstrate multiple assignment
+  c.show();
+  b.show();
+
+  ++c; // prefix increment
+  c.show();
+
+  c++; // postfix increment
+  c.show();
+
+  a = ++c; // a receives c's value after increment
+  a.show( ); // a and c
+  c.show( ); // are the same
+
+  a = c++; // a receives c's value prior to increment
+  a.show( ); // a and c
+  c.show( ); // now differ
+
+  return 0;
+}
+
+listing 19
+// Overload ==.
+bool three_d::operator==(three_d op2)
+{
+  if((x == op2.x) && (y == op2.y) && (z == op2.z))
+    return true;
+  else
+    return false;
+}
+
+listing 20
+three_d a, b;
+
+// ...
+
+if(a == b) cout << "a equals b\n";
+else cout << "a does not equal b\n";
+
+listing 21
+// An error generated by returning an object.
+#include <iostream>
+#include <cstring> 
+#include <cstdlib>
+using namespace std;
+
+class sample {
+  char *s;
+public:
+  sample() { s = 0; }
+  sample(const sample &ob); // copy constructor
+  ~sample( ) { if(s) delete [] s; cout << "Freeing s\n"; }
+  void show() { cout << s << "\n"; }
+  void set(char *str);
+};
+
+// Copy constructor.
+sample::sample(const sample &ob)
+{
+  s = new char[strlen(ob.s)+1];
+
+  strcpy(s, ob.s);
+}
+
+// Load a string.
+void sample::set(char *str)
+{
+  s = new char[strlen(str)+1];
+
+  strcpy(s, str);
+}
+
+// Return an object of type sample.
+sample input()
+{
+  char instr[80];
+  sample str;
+
+  cout << "Enter a string: ";
+  cin >> instr;
+
+  str.set(instr);
+  return str;
+}
+
+int main()
+{
+  sample ob;
+
+  // assign returned object to ob
+  ob = input();  // This causes an error!!!!
+  ob.show();
+
+  return 0;
+}
+
+listing 22
+// This program is now fixed.
+#include <iostream>
+#include <cstring>
+#include <cstdlib>
+using namespace std;
+
+class sample {
+  char *s;
+public:
+  sample(); // normal constructor
+  sample(const sample &ob); // copy constructor
+  ~sample( ) { if(s) delete [] s; cout << "Freeing s\n"; }
+  void show() { cout << s << "\n"; }
+  void set(char *str);
+  sample operator=(sample &ob); // overload assignment
+};
+
+// Normal constructor.
+sample::sample()
+{
+  s = new char('\0'); // s points to a null string.
+} 
+
+// Copy constructor.
+sample::sample(const sample &ob)
+{
+  s = new char[strlen(ob.s)+1];
+
+  strcpy(s, ob.s);
+}
+
+// Load a string.
+void sample::set(char *str)
+{
+  s = new char[strlen(str)+1];
+
+  strcpy(s, str);
+}
+
+// Overload assignment operator.
+sample sample::operator=(sample &ob)
+{
+  /* If the target string is not large enough
+     then allocate a new string. */
+  if(strlen(ob.s) > strlen(s)) {
+    delete [] s;
+    s = new char[strlen(ob.s)+1];
+  }
+  strcpy(s, ob.s);
+  return *this;
+}
+
+// Return an object of type sample.
+sample input()
+{
+  char instr[80];
+  sample str;
+
+  cout << "Enter a string: ";
+  cin >> instr;
+
+  str.set(instr);
+  return str;
+}
+
+int main()
+{
+  sample ob;
+
+  // assign returned object to ob
+  ob = input();  // This is now OK
+  ob.show();
+
+  return 0;
+}
+
+listing 23
+O[3]
+
+listing 24
+O.operator[](3)
+
+listing 25
+// Overload [].
+#include <iostream>
+using namespace std;
+
+const int SIZE = 3;
+
+class atype {
+  int a[SIZE];
+public:
+  atype() {
+    register int i;
+
+    for(i=0; i<SIZE; i++) a[i] = i;
+  }
+  int operator[](int i) {return a[i];}
+};
+
+int main()
+{
+  atype ob;
+
+  cout << ob[2];  // displays 2
+
+  return 0;
+}
+
+listing 26
+// Return a reference from [].
+#include <iostream>
+using namespace std;
+
+const int SIZE = 3;
+
+class atype {
+  int a[SIZE];
+public:
+  atype() {
+    register int i;
+
+    for(i=0; i<SIZE; i++) a[i] = i;
+  }
+  int &operator[](int i) {return a[i];}
+};
+
+int main()
+{
+  atype ob;
+
+  cout << ob[2];  // displays 2
+  cout << " ";
+
+  ob[2] = 25;  // [] on left of =
+
+  cout << ob[2];  // now displays 25
+
+  return 0;
+}
+
+listing 27
+// A safe array example.
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+const int SIZE = 3;
+
+class atype {
+  int a[SIZE];
+public:
+  atype() {
+    register int i;
+
+    for(i=0; i<SIZE; i++) a[i] = i;
+  }
+  int &operator[](int i);
+};
+
+// Provide range checking for atype.
+int &atype::operator[](int i)
+{
+  if(i<0 || i> SIZE-1) {
+    cout << "\nIndex value of ";
+    cout << i << " is out-of-bounds.\n";
+    exit(1);
+  }
+  return a[i];
+}
+
+int main()
+{
+  atype ob;
+
+  cout << ob[2];  // displays 2
+  cout << " ";
+
+  ob[2] = 25;  // [] appears on left
+
+  cout << ob[2];  // displays 25
+
+  ob[3] = 44; // generates runtime error, 3 out-of-range
+  return 0;
+}
+
+listing 28
+ob[3] = 44;
+
+listing 29
+int operator()(float f, char *p);
+
+listing 30
+O(99.57, "overloading");
+
+listing 31
+operator()(99.57, "overloading");
+
+listing 32
+// Overload ().
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int i, int j, int k) {x = i; y = j; z = k; }
+  three_d operator()(int a, int b, int c);
+  void show() ;
+};
+
+// Overload ().
+three_d three_d::operator()(int a, int b, int c)
+{
+  three_d temp;
+
+  temp.x = x + a;
+  temp.y = y + b;
+  temp.z = z + c;
+
+  return temp;
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d ob1(1, 2, 3), ob2;
+
+  ob2 = ob1(10, 11, 12); // invoke operator()
+
+  cout << "ob1: ";
+  ob1.show();
+
+  cout << "ob2: ";
+  ob2.show();
+
+  return 0;
+}
+
+listing 33
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class str_type {
+  char string[80];
+public:
+  str_type(char *str = "") { strcpy(string, str); }
+
+  str_type operator+(str_type str); // concatenate
+  str_type operator=(str_type str); // assign
+
+  // output the string
+  void show_str() { cout << string; }
+};
+
+listing 34
+// Concatenate two strings.
+str_type str_type::operator+(str_type str) {
+  str_type temp;
+
+  strcpy(temp.string, string);
+  strcat(temp.string, str.string);
+  return temp;
+}
+
+// Assign one string to another.
+str_type str_type::operator=(str_type str) {
+  strcpy(string, str.string);
+  return *this;
+}
+
+listing 35
+int main()
+{
+  str_type a("Hello "), b("There"), c;
+
+  c = a + b;
+
+  c.show_str();
+
+  return 0;
+}
+
+listing 36
+a = "this is currently wrong";
+
+listing 37
+class str_type {
+  char string[80];
+public:
+  str_type(char *str = "") { strcpy(string, str); }
+
+  str_type operator+(str_type str); // concatenate str_type objects
+  str_type operator+(char *str); /* concatenate str_type object 
+                                    with a null-terminated string */
+
+  str_type operator=(str_type str); /* assign one str_type object
+                                       to another */
+  char *operator=(char *str); /* assign null-terminated string
+                                 to str_type object */
+
+  void show_str() { cout << string; }
+};
+
+listing 38
+// Assign a null-terminated string to an str_type object.
+str_type str_type::operator=(char *str)
+{
+  str_type temp;
+
+  strcpy(string, str);
+  strcpy(temp.string, string);
+  return temp;
+}
+
+// Add a null-terminated string to an str_type object.
+str_type str_type::operator+(char *str)
+{
+  str_type temp;
+
+  strcpy(temp.string, string);
+  strcat(temp.string, str);
+  return temp;
+}
+
+listing 39
+str_type a, b, c;
+a = "hi there"; // assign a null-terminated string to an object
+
+c = a + " George"; /* concatenate an object with a
+                      null-terminated string */
+
+listing 40
+// Expanding the string type.
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class str_type {
+  char string[80];
+public:
+  str_type(char *str = "") { strcpy(string, str); }
+
+  str_type operator+(str_type str);
+  str_type operator+(char *str);
+
+  str_type operator=(str_type str);
+  str_type operator=(char *str);
+
+  void show_str() { cout << string; }
+} ;
+
+str_type str_type::operator+(str_type str) {
+  str_type temp;
+
+  strcpy(temp.string, string);
+  strcat(temp.string, str.string);
+  return temp;
+}
+
+str_type str_type::operator=(str_type str) {
+  strcpy(string, str.string);
+  return *this;
+}
+
+str_type str_type::operator=(char *str)
+{
+  str_type temp;
+
+  strcpy(string, str);
+  strcpy(temp.string, string);
+  return temp;
+}
+
+str_type str_type::operator+(char *str)
+{
+  str_type temp;
+
+  strcpy(temp.string, string);
+  strcat(temp.string, str);
+  return temp;
+}
+
+int main()
+{
+  str_type a("Hello "), b("There"), c;
+
+  c = a + b;
+
+  c.show_str();
+  cout << "\n";
+
+  a = "to program in because";
+  a.show_str();
+  cout << "\n";
+
+  b = c = "C++ is fun";
+
+  c = c+" "+a+" "+b;
+  c.show_str();
+
+  return 0;
+}
+
+

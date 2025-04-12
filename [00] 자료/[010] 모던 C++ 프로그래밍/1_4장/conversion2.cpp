@@ -1,0 +1,1 @@
+int main(){	float i = 100.12345; double j = 200.12345;	float count = static_cast<float>(j / i); }

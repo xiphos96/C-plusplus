@@ -1,0 +1,327 @@
+listing 1
+/* Program #1 - A first C++ program.
+
+   Enter this program, then compile and run it.
+*/
+
+#include <iostream>
+using namespace std;
+
+// main() is where program execution begins.
+int main()
+{
+  cout << "This is my first C++ program.";
+
+  return 0;
+}
+
+listing 2
+/* Program #1 - A first C++ program.
+
+   Enter this program, then compile and run it.
+*/
+
+listing 3
+#include <iostream>
+
+listing 4
+using namespace std;
+
+listing 5
+// main() is where program execution begins.
+
+listing 6
+int main()
+
+listing 7
+cout << "This is my first C++ program.";
+
+listing 8
+return 0;
+
+listing 9
+#include <iostream.h>
+
+listing 10
+using namespace std;
+
+listing 11
+#include <iostream>
+using namespace std;
+
+listing 12
+#include <iostream.h>
+
+listing 13
+// Program #2 - Using a variable
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x; // this declares a variable
+
+  x = 1023; // this assigns 1023 to x
+
+  cout << "This program prints the value of x: ";
+  cout << x; // This displays 1023
+
+  return 0;
+}
+
+listing 14
+int x;  // this declares a variable
+
+listing 15
+x = 1023; // this assigns 1023 to x
+
+listing 16
+cout << x; // This displays 1023
+
+listing 17
+// This program converts gallons to liters.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int gallons, liters;
+
+  cout << "Enter number of gallons: ";
+  cin >> gallons; // this inputs from the user
+
+  liters = gallons * 4; // convert to liters
+
+  cout << "Liters: " << liters; 
+
+  return 0;
+}
+
+listing 18
+cin >> gallons; // this inputs from the user
+
+listing 19
+cout << "Liters: " << liters;
+
+listing 20
+/* This program converts gallons to liters using
+   floating point numbers. */
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  double gallons, liters;
+
+  cout << "Enter number of gallons: ";
+  cin >> gallons; // this inputs from the user
+
+  liters = gallons * 3.7854; // convert to liters
+
+  cout << "Liters: " << liters; 
+
+  return 0;
+}
+
+listing 21
+/* This program contains two functions: main()
+   and myfunc().
+*/
+#include <iostream>
+using namespace std;
+
+void myfunc(); // myfunc's protoype
+
+int main()
+{
+  cout << "In main()";
+  myfunc(); // call myfunc()
+  cout << "Back in main()";
+
+  return 0;
+}
+
+void myfunc()
+{
+  cout << " Inside myfunc() ";
+}
+
+listing 22
+void myfunc(); // myfunc's prototype
+
+listing 23
+// Use the abs() function.
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  cout << abs(-10);
+
+  return 0;
+}
+
+listing 24
+void mul(int x, int y)
+{
+  cout << x * y << " ";
+}
+
+listing 25
+// A simple program that demonstrates mul(). 
+
+#include <iostream>
+using namespace std;
+
+void mul(int x, int y); // mul()'s prototype
+
+int main()
+{
+  mul(10, 20);
+  mul(5, 6);
+  mul(8, 9);
+
+  return 0;
+}
+
+void mul(int x, int y)
+{
+  cout << x * y << " ";
+}
+
+listing 26
+// Returning a value.
+
+#include <iostream>
+using namespace std;
+
+int mul(int x, int y); // mul()'s prototype
+
+int main()
+{
+  int answer;
+
+  answer = mul(10, 11); // assign return value
+  cout << "The answer is " <<  answer;
+
+  return 0;
+}
+
+// This function returns a value. 
+int mul(int x, int y)
+{
+  return x * y; // return product of x and y
+}
+
+listing 27
+// An old-style way to code mul().
+mul(int x, int y) // default to int return type
+{
+  return x * y; // return product of x and y
+}
+
+listing 28
+/* This program demonstrates the \n code, which
+   generates a new line.
+*/
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "one\n";
+  cout << "two\n";
+  cout << "three";
+  cout << "four";
+
+  return 0;
+}
+
+listing 29
+if(10 < 11) cout << "10 is less than 11";
+
+listing 30
+if(10==11) cout << "hello";
+
+listing 31
+// This program illustrates the if statement.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a, b;
+
+  cout << "Enter first number: ";
+  cin >> a;
+  cout << "Enter second number: ";
+  cin >> b;
+
+  if(a < b) cout << "First number is less than second.";
+
+  return 0;
+}
+
+listing 32
+// A program that illustrates the for loop.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int count;
+
+  for(count=1; count<=100; count=count+1) 
+    cout << count << " ";
+
+  return 0;
+}
+
+listing 33
+for(count=1; count<=100; count++)
+  cout << count << " ";
+
+listing 34
+if(x<10) {
+  cout << "too low, try again";
+  cin >> x;
+}
+
+listing 35
+// This program demonstrates a block of code.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a, b;
+
+  cout << "Enter first number: ";
+  cin >> a;
+  cout << "Enter second number: ";
+  cin >> b;
+
+  if(a < b) {
+    cout << "First number is less than second.\n";
+    cout << "Their difference is: " << b-a;
+  }
+
+  return 0;
+}
+
+listing 36
+x = y;
+y = y+1;
+mul(x, y);
+
+listing 37
+x = y;  y = y+1;  mul(x, y);
+
+

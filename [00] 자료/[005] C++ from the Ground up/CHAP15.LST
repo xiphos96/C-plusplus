@@ -1,0 +1,429 @@
+listing 1
+B_class *p;   // pointer to object of type B_class
+B_class B_ob; // object of type B_class
+D_class D_ob; // object of type D_class
+
+listing 2
+p = &B_ob; // p points to object of type B_class
+p = &D_ob; /* p points to object of type D_class,
+               which is an object derived from B_class. */
+
+listing 3
+// Using base pointers on derived class objects.
+#include <iostream>
+#include <cstring> // for older compilers, use <string.h>
+using namespace std;
+
+class B_class {
+  char author[80];
+public:
+  void put_author(char *s) { strcpy(author, s); }
+  void show_author() { cout << author << "\n"; }
+} ;
+
+class D_class : public B_class {
+  char title[80];
+public:
+  void put_title(char *num) {
+    strcpy(title, num);
+  }
+  void show_title() {
+    cout << "Title: ";
+    cout <<  title << "\n";
+  }
+};
+
+int main()
+{
+  B_class *p;
+  B_class B_ob;
+
+  D_class *dp;
+  D_class D_ob;
+
+  p = &B_ob;  // address of base
+
+  // Access B_class via pointer.
+  p->put_author("Tom Clancy");
+
+  // Access D_class via base pointer.
+  p = &D_ob;
+  p->put_author("William Shakespeare");
+
+  // Show that each author went into proper object.
+  B_ob.show_author();
+  D_ob.show_author();
+  cout << "\n";
+
+  /* Since put_title() and show_title() are not part
+     of the base class, they are not accessible via
+     the base pointer p and must be accessed either
+     directly, or, as shown here, through a pointer to the
+     derived type.
+  */
+  dp = &D_ob;
+  dp->put_title("The Tempest");
+  p->show_author(); // either p or dp can be used here.
+  dp->show_title( );
+
+  return 0;
+}
+
+listing 4
+((D_class *)p)->show_title();
+
+listing 5
+// A short example that uses virtual functions.
+#include <iostream>
+using namespace std;
+
+class base {
+public:
+  virtual void who() { // specify a virtual
+    cout << "Base\n";
+  }
+};
+
+class first_d : public base {
+public:
+  void who() { // redefine who() relative to first_d
+    cout << "First derivation\n";
+  }
+};
+
+class second_d : public base {
+public:
+  void who() { // redefine who() relative to second_d
+    cout << "Second derivation\n";
+  }
+};
+
+int main()
+{
+  base base_obj;
+  base *p;
+  first_d first_obj;
+  second_d second_obj;
+
+  p = &base_obj;
+  p->who();  // access base's who
+
+  p = &first_obj;
+  p->who(); // access first_d's who
+
+  p = &second_obj;
+  p->who();  // access second_d's who
+  
+  return 0;
+}
+
+listing 6
+first_obj.who();
+
+listing 7
+// Derive from first_d, not base.
+class second_d : public first_d {
+public:
+  void who() { // define who() relative to second_d
+    cout << "Second derivation\n";
+  }
+};
+
+listing 8
+#include <iostream>
+using namespace std;
+
+class base {
+public:
+  virtual void who() {
+    cout << "Base\n";
+  }
+};
+
+class first_d : public base {
+public:
+  void who() {
+    cout << "First derivation\n";
+  }
+};
+
+class second_d : public base {
+// who() not defined
+};
+
+int main()
+{
+  base base_obj;
+  base *p;
+  first_d first_obj;
+  second_d second_obj;
+
+  p = &base_obj;
+  p->who();  // access base's who()
+
+  p = &first_obj;
+  p->who(); // access first_d's who()
+
+  p = &second_obj;
+  p->who(); /* access base's who() because
+               second_d does not redefine it */
+
+  return 0;
+}
+
+listing 9
+#include <iostream>
+using namespace std;
+
+class base {
+public:
+  virtual void who() {
+    cout << "Base\n";
+  }
+};
+
+class first_d : public base {
+public:
+  void who() {
+    cout << "First derivation\n";
+  }
+};
+
+// second_d now inherited first_d -- not base.
+class second_d : public first_d {
+// who() not defined
+};
+
+int main()
+{
+  base base_obj;
+  base *p;
+  first_d first_obj;
+  second_d second_obj;
+
+  p = &base_obj;
+  p->who();  // access base's who()
+
+  p = &first_obj;
+  p->who(); // access first_d's who()
+
+  p = &second_obj;
+  p->who(); /* access first_d's who() because
+               second_d does not redefine it */
+
+  return 0;
+}
+
+listing 10
+#include <iostream>
+using namespace std;
+
+class figure {
+protected:
+  double x, y;
+public:
+  void set_dim(double i, double j) {
+    x = i;
+    y = j;
+  }
+  virtual void show_area() {
+    cout << "No area computation defined ";
+    cout << "for this class.\n";
+  }
+} ;
+
+class triangle : public figure {
+  public:
+    void show_area() {
+      cout << "Triangle with height ";
+      cout << x << " and base " << y;
+      cout << " has an area of ";
+      cout << x * 0.5 * y << ".\n";
+    }
+};
+
+class rectangle : public figure {
+  public:
+    void show_area() {
+      cout << "Rectangle with dimensions ";
+      cout << x << "x" << y;
+      cout << " has an area of ";
+      cout << x *  y << ".\n";
+    }
+};
+
+int main()
+{
+  figure *p; // create a pointer to base type
+
+  triangle t; // create objects of derived types
+  rectangle s;
+
+  p = &t;
+  p->set_dim(10.0, 5.0);
+  p->show_area();
+
+  p = &s;
+  p->set_dim(10.0, 5.0);
+  p->show_area();  
+  
+  return 0;
+}
+
+listing 11
+class circle : public figure {
+  public:
+    void show_area() {
+      cout << "Circle with radius ";
+      cout << x;
+      cout << " has an area of ";
+      cout <<  3.14 * x * x;
+    }
+};
+
+listing 12
+#include <iostream>
+using namespace std;
+
+class figure {
+protected:
+  double x, y;
+public:
+  void set_dim(double i, double j=0) {
+    x = i;
+    y = j;
+  }
+  virtual void show_area() {
+    cout << "No area computation defined ";
+    cout << "for this class.\n";
+  }
+} ;
+
+class triangle : public figure {
+  public:
+    void show_area() {
+      cout << "Triangle with height ";
+      cout << x << " and base " << y;
+      cout << " has an area of ";
+      cout << x * 0.5 * y << ".\n";
+    }
+};
+
+class rectangle : public figure {
+  public:
+    void show_area() {
+      cout << "Rectangle with dimensions ";
+      cout << x << "x" << y;
+      cout << " has an area of ";
+      cout << x *  y << ".\n";
+    }
+};
+
+class circle : public figure {
+  public:
+    void show_area() {
+      cout << "Circle with radius ";
+      cout << x;
+      cout << " has an area of ";
+      cout << 3.14 * x * x << ".\n";
+    }
+} ;
+  
+int main()
+{
+  figure *p; // create a pointer to base type
+
+  triangle t; // create objects of derived types
+  rectangle s;
+  circle c;
+
+  p = &t;
+  p->set_dim(10.0, 5.0);
+  p->show_area();
+
+  p = &s;
+  p->set_dim(10.0, 5.0);
+  p->show_area();  
+
+  p = &c;
+  p->set_dim(9.0);
+  p->show_area(); 
+
+  return 0;
+}
+
+listing 13
+class figure {
+  double x, y;
+public:
+  void set_dim(double i, double j=0) {
+    x = i;
+    y = j;
+  }
+  virtual void show_area() = 0; // pure
+};
+
+listing 14
+/* 
+   This program will not compile because the class
+   circle does not override show_area().
+*/
+#include <iostream>
+using namespace std;
+
+class figure {
+protected:
+  double x, y;
+public:
+  void set_dim(double i, double j) {
+    x = i;
+    y = j;
+  }
+  virtual void show_area() = 0; // pure
+} ;
+
+class triangle : public figure {
+  public:
+    void show_area() {
+      cout << "Triangle with height ";
+      cout << x << " and base " << y;
+      cout << " has an area of ";
+      cout << x * 0.5 * y << ".\n";
+    }
+};
+
+class rectangle : public figure {
+  public:
+    void show_area() {
+      cout << "Rectangle with dimensions ";
+      cout << x << "x" << y;
+      cout << " has an area of ";
+      cout << x *  y << ".\n";
+    }
+};
+
+class circle : public figure {
+// no definition of show_area() will cause an error
+};
+
+int main()
+{
+  figure *p; // create a pointer to base type
+
+  triangle t; // create objects of derived types
+  rectangle s;
+
+  circle c; // Illegal -- can't create!
+
+  p = &t;
+  p->set_dim(10.0, 5.0);
+  p->show_area();
+
+  p = &s;
+  p->set_dim(10.0, 5.0);
+  p->show_area();  
+
+  return 0;
+}
+
+

@@ -1,0 +1,746 @@
+listing 1
+struct inv_type {
+  char item[40]; // name of item
+  double cost;   // cost
+  double retail; // retail price
+  int on_hand;   // amount on hand
+  int lead_time; // number of days before resupply
+};
+
+listing 2
+inv_type inv_var;
+
+listing 3
+struct inv_type {
+  char item[40]; // name of item
+  double cost;   // cost
+  double retail; // retail price
+  int on_hand;   // amount on hand
+  int lead_time; // number of days before resupply
+} inv_varA, inv_varB, inv_varC;
+
+listing 4
+struct {
+  char item[40]; // name of item
+  double cost;   // cost
+  double retail; // retail price
+  int on_hand;   // amount on hand
+  int lead_time; // number of days before resupply
+} temp;
+
+listing 5
+inv_var.cost = 10.39;
+
+listing 6
+cout << inv_var.cost;
+
+listing 7
+gets(inv_var.item);
+
+listing 8
+int t;
+
+for(t=0; inv_var.item[t]; t++)
+  cout << inv_var.item[t];
+
+listing 9
+inv_type invtry[100];
+
+listing 10
+cout << invtry[2].on_hand;
+
+listing 11
+const int SIZE = 100;
+
+struct inv_type {
+  char item[40]; // name of item
+  double cost;   // cost
+  double retail; // retail price
+  int on_hand;   // amount on hand
+  int lead_time; // number of days before resupply
+} invtry[SIZE];
+
+listing 12
+// Initialize the inv_type_info array.
+void init_list()
+{
+  int t;
+
+  // a zero length name signifies empty
+  for(t=0; t<SIZE; t++) *invtry[t].item = '\0';
+}
+
+listing 13
+// Get a menu selection.
+int menu()
+{
+  char ch;
+
+  cout << '\n';
+  do {
+    cout << "(E)nter\n";
+    cout << "(D)isplay\n";
+    cout << "(U)pdate\n";
+    cout << "(Q)uit\n\n";
+    cout << "choose one: ";
+    cin >> ch;
+  } while(!strchr("eduq", tolower(ch)));
+  return tolower(ch);
+}
+
+listing 14
+// Enter items into the list.
+void enter()
+{
+  int i;
+
+  // find the first free structure
+  for(i=0; i<SIZE; i++)
+    if(!*invtry[i].item) break;
+
+  // i will equal SIZE if the list is full
+  if(i==SIZE) {
+    cout << "List full.\n";
+    return;
+  }
+
+  input(i);
+}
+
+// Input the information.
+void input(int i)
+{
+  // enter the information
+  cout << "Item: ";
+  cin >> invtry[i].item;
+
+  cout << "Cost: ";
+  cin >> invtry[i].cost;
+
+  cout << "Retail price: ";
+  cin >> invtry[i].retail;
+
+  cout << "On hand: ";
+  cin >> invtry[i].on_hand;
+
+  cout << "Lead time to resupply (in days): ";
+  cin >> invtry[i].lead_time;
+}
+
+listing 15
+// Modify an existing item.
+void update()
+{
+  int i;
+  char name[80];
+
+  cout << "Enter item: ";
+  cin >> name;
+
+  for(i=0; i<SIZE; i++)
+    if(!strcmp(name, invtry[i].item)) break;
+
+  if(i==SIZE) {
+    cout << "Item not found.\n";
+    return;
+  }
+
+  cout << "Enter new information.\n";
+  input(i);
+}
+
+listing 16
+// Display the list.
+void display()
+{
+  int t;
+
+  for(t=0; t<SIZE; t++) {
+    if(*invtry[t].item) {
+      cout << invtry[t].item << '\n';
+      cout << "Cost: $" << invtry[t].cost;
+      cout << "\nRetail: $";
+      cout << invtry[t].retail << '\n';
+      cout << "On hand: " << invtry[t].on_hand;
+      cout << "\nResupply time: ";
+      cout << invtry[t].lead_time << " days\n\n";
+    }
+  }
+}
+
+listing 17
+/* A simple inventory program that uses an array
+   of structures. */
+
+#include <iostream>
+#include <cctype>
+#include <cstring>
+#include <cstdlib>
+using namespace std;
+
+const int SIZE = 100;
+
+struct inv_type {
+  char item[40]; // name of item
+  double cost;   // cost
+  double retail; // retail price
+  int on_hand;   // amount on hand
+  int lead_time; // number of days before resupply
+}  invtry[SIZE];
+
+void enter(), init_list(), display();
+void update(), input(int i);
+int menu();
+
+int main()
+{
+  char choice;
+
+  init_list();
+
+  for(;;) {
+    choice = menu();
+    switch(choice) {
+      case 'e': enter();
+        break;
+      case 'd': display();
+        break;
+      case 'u': update();
+        break;
+      case 'q': return 0;
+    }
+  }
+}
+
+// Initialize the inv_type_info array.
+void init_list()
+{
+  int t;
+
+  // a zero length name signifies empty
+  for(t=0; t<SIZE; t++) *invtry[t].item = '\0';
+}
+
+// Get a menu selection.
+int menu()
+{
+  char ch;
+
+  cout << '\n';
+  do {
+    cout << "(E)nter\n";
+    cout << "(D)isplay\n";
+    cout << "(U)pdate\n";
+    cout << "(Q)uit\n\n";
+    cout << "choose one: ";
+    cin >> ch;
+  } while(!strchr("eduq", tolower(ch)));
+  return tolower(ch);
+}
+
+// Enter items into the list.
+void enter()
+{
+  int i;
+
+  // find the first free structure
+  for(i=0; i<SIZE; i++)
+    if(!*invtry[i].item) break;
+
+  // i will equal SIZE if the list is full
+  if(i==SIZE) {
+    cout << "List full.\n";
+    return;
+  }
+
+  input(i);
+}
+
+// Input the information.
+void input(int i)
+{
+  // enter the information
+  cout << "Item: ";
+  cin >> invtry[i].item;
+
+  cout << "Cost: ";
+  cin >> invtry[i].cost;
+
+  cout << "Retail price: ";
+  cin >> invtry[i].retail;
+
+  cout << "On hand: ";
+  cin >> invtry[i].on_hand;
+
+  cout << "Lead time to resupply (in days): ";
+  cin >> invtry[i].lead_time;
+}
+
+// Modify an existing item.
+void update()
+{
+  int i;
+  char name[80];
+
+  cout << "Enter item: ";
+  cin >> name;
+
+  for(i=0; i<SIZE; i++)
+    if(!strcmp(name, invtry[i].item)) break;
+
+  if(i==SIZE) {
+    cout << "Item not found.\n";
+    return;
+  }
+
+  cout << "Enter new information.\n";
+  input(i);
+}
+
+// Display the list.
+void display()
+{
+  int t;
+
+  for(t=0; t<SIZE; t++) {
+    if(*invtry[t].item) {
+      cout << invtry[t].item << '\n';
+      cout << "Cost: $" << invtry[t].cost;
+      cout << "\nRetail: $";
+      cout << invtry[t].retail << '\n';
+      cout << "On hand: " << invtry[t].on_hand;
+      cout << "\nResupply time: ";
+      cout << invtry[t].lead_time << " days\n\n";
+    }
+  }
+}
+
+listing 18
+// Pass a structure to a function.
+#include <iostream>
+using namespace std;
+
+// Define a structure type.
+struct sample {
+  int a;
+  char ch;
+} ;
+
+void f1(sample parm);
+
+int main()
+{
+  struct sample arg; // declare arg
+
+  arg.a = 1000;
+  arg.ch = 'X';
+
+  f1(arg);
+
+  return 0;
+}
+
+void f1(sample parm)
+{
+  cout << parm.a << " " << parm.ch;
+  cout << "\n";
+}
+
+listing 19
+// Demonstrate structure assignments.
+#include <iostream>
+using namespace std;
+
+struct stype {
+  int a, b;
+};
+
+int main()
+{
+  stype svar1, svar2;
+
+  svar1.a = svar1.b = 10;
+  svar2.a = svar2.b = 20;
+
+  cout << "Structures before assignment.\n";
+  cout << "svar1: " << svar1.a << ' ' << svar1.b;
+  cout << '\n';
+  cout << "svar2: " << svar2.a << ' ' << svar2.b;
+  cout << "\n\n";
+
+  svar2 = svar1; // assign structures
+
+  cout << "Structures after assignment.\n";
+  cout << "svar1: " << svar1.a << ' ' << svar1.b;
+  cout << '\n';
+  cout << "svar2: " << svar2.a << ' ' << svar2.b;
+
+  return 0;
+}
+
+listing 20
+struct stype1 {
+  int a, b;
+};
+
+struct stype2 {
+  int a, b;
+};
+
+stype1 svar1;
+stype2 svar2;
+
+svar2 = svar1; // Error - type mismatch
+
+listing 21
+inv_type *inv_pointer;
+
+listing 22
+struct bal {
+  float balance;
+  char name[80];
+} person;
+
+bal *p; // declare a structure pointer
+
+listing 23
+p = &person;
+
+listing 24
+p->balance
+
+listing 25
+struct tm {
+  int tm_sec;   // seconds, 0-61 
+  int tm_min;   // minutes, 0-59 
+  int tm_hour;  // hours, 0-23 
+  int tm_mday;  // day of the month, 1-31 
+  int tm_mon;   // months since Jan, 0-11 
+  int tm_year;  // years from 1900 
+  int tm_wday;  // days since Sunday, 0-6 
+  int tm_yday;  // days since Jan 1, 0-365 
+  int tm_isdst; // Daylight Saving Time indicator 
+};
+
+listing 26
+// This program displays the current system time.
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+  struct tm *ptr;
+  time_t lt;
+
+  lt = time('\0');
+
+  ptr = localtime(&lt);
+
+  cout << ptr->tm_hour << ':' << ptr->tm_min;
+  cout << ':' << ptr->tm_sec;
+
+  return 0;
+}
+
+listing 27
+// This program displays the current system time.
+
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+  struct tm *ptr;
+  time_t lt;
+
+  lt = time('\0');
+
+  ptr = localtime(&lt);
+  cout << asctime(ptr);
+
+  return 0;
+}
+
+listing 28
+// Demonstrate a reference to a structure.
+#include <iostream>
+using namespace std;
+
+struct mystruct {
+  int a;
+  int b;
+};
+
+mystruct &f(mystruct &var);
+
+int main()
+{
+  mystruct x, y;
+  x.a = 10; x.b = 20;
+
+  cout << "Original x.a and x.b: ";
+  cout << x.a << ' ' << x.b << '\n';
+
+  y = f(x);
+
+  cout << "Modified x.a and x.b: ";
+  cout << x.a << ' ' << x.b << '\n';
+  cout << "Modified y.a and y.b: ";
+  cout << y.a << ' ' << y.b << '\n';
+
+  return 0;
+}
+
+// Receive and return a reference to a structure.
+mystruct &f(mystruct &var)
+{
+  var.a = var.a * var.a;
+  var.b = var.b / var.b;
+  return var;
+}
+
+listing 29
+struct stype {
+  int nums[10][10]; // 10 x 10 array of ints
+  float b;
+} var;
+
+listing 30
+var.nums[3][7]
+
+listing 31
+struct addr {
+  char name[40];
+  char street[40];
+  char city[40];
+  char zip[10];
+}
+
+struct emp {
+  addr address;
+  float wage;
+} worker;
+
+listing 32
+worker.address.zip = 98765;
+
+listing 33
+struct mystruct {
+  int a;
+  char str[80];
+  mystruct *sptr; // pointer to mystruct objects
+};
+
+listing 34
+struct C_struct {
+ int a;
+ int b;
+}
+
+// declare a C_struct variable
+struct C_struct svar:
+
+listing 35
+struct status_type {
+  unsigned delta_cts: 1;
+  unsigned delta_dsr: 1;
+  unsigned tr_edge:   1;
+  unsigned delta_rec: 1;
+  unsigned cts:       1;
+  unsigned dsr:       1;
+  unsigned ring:      1;
+  unsigned rec_line:  1;
+} status;
+
+listing 36
+status = get_port_status();
+
+if(status.cts) cout << "clear to send";
+if(status.dsr) cout << "data ready";
+
+listing 37
+status.ring = 0;
+
+listing 38
+struct status_type {
+  unsigned : 4;
+  unsigned cts: 1;
+  unsigned dsr: 1;
+} status;
+
+listing 39
+struct emp {
+  struct addr address;
+  float pay;
+  unsigned lay_off: 1; // lay off or active
+  unsigned hourly: 1: // hourly pay or wage
+  unsigned deductions: 3: // IRS deductions
+};
+
+listing 40
+union utype {
+  short int i;
+  char ch;
+} ;
+
+listing 41
+utype u_var;
+
+listing 42
+u_var.ch = 'A';
+
+listing 43
+  // ...
+  func1(&u_var); // pass func1() a pointer to u_var 
+  // ...
+}
+
+void func1(utype *un)
+{
+  un->i = 10; /* Assign 10 to u_var using
+                 a pointer. */
+}
+
+listing 44
+// Use a union to exchange the bytes within a short integer.
+#include <iostream>
+using namespace std;
+
+void disp_binary(unsigned u);
+
+union swap_bytes {
+  short int num;
+  char ch[2];
+};
+
+int main()
+{
+  swap_bytes sb;
+  char temp;
+
+  sb.num = 15;  // binary: 0000 0000 0000 1111
+
+
+  cout << "Original bytes:  ";
+  disp_binary(sb.ch[1]);
+  cout << "  ";
+  disp_binary(sb.ch[0]);
+  cout << "\n\n";
+
+
+  // exchange the bytes
+  temp = sb.ch[0];
+  sb.ch[0] = sb.ch[1];
+  sb.ch[1] = temp;
+
+  cout << "Exchanged bytes: ";
+  disp_binary(sb.ch[1]);
+  cout << "  ";
+  disp_binary(sb.ch[0]);
+  cout << "\n\n";
+
+  return 0;
+}
+
+// Display the bits within a byte.
+void disp_binary(unsigned u)
+{
+  register int t;
+
+  for(t=128; t>0; t=t/2)
+    if(u & t) cout << "1 ";
+    else cout << "0 ";
+}
+
+listing 45
+// Display the ASCII code in binary for characters.
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+// a bit field that will be decoded
+struct byte {
+  unsigned a : 1;
+  unsigned b : 1;
+  unsigned c : 1;
+  unsigned d : 1;
+  unsigned e : 1;
+  unsigned f : 1;
+  unsigned g : 1;
+  unsigned h : 1;
+};
+
+union bits {
+  char ch;
+  struct byte bit;
+} ascii ;
+
+void disp_bits(bits b);
+
+int main()
+{
+  do {
+    cin >> ascii.ch;
+    cout << ": ";
+    disp_bits(ascii);
+  } while(ascii.ch!='q'); // quit if q typed
+
+  return 0;
+}
+
+// Display the bit pattern for each character.
+void disp_bits(bits b)
+{
+  if(b.bit.h) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.g) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.f) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.e) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.d) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.c) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.b) cout << "1 ";
+    else cout << "0 ";
+  if(b.bit.a) cout << "1 ";
+    else cout << "0 ";
+  cout << "\n";
+}
+
+listing 46
+// Demonstrate an anonymous union.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // this is an anonymous union
+  union {
+    short int count;
+    char ch[2];
+  };
+
+  // Here, refer to union members directly
+  ch[0] = 'X';
+  ch[1] = 'Y';
+  cout << "union as chars: " << ch[0] << ch[1] << '\n';
+  cout << "union as integer: " << count << '\n';
+
+  return 0;
+}
+
+listing 47
+union x {
+  char ch;
+  int i;
+ double f;
+} u_var;
+
+

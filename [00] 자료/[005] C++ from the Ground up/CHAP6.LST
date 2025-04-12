@@ -1,0 +1,473 @@
+listing 1
+int *p;
+
+listing 2
+float *p;
+
+listing 3
+int *ip; // pointer to integers
+
+double *dp; // pointer to doubles
+
+listing 4
+balptr = &balance;
+
+listing 5
+value = *balptr;
+
+listing 6
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int balance;
+  int *balptr;
+  int value;
+
+  balance = 3200;
+  balptr = &balance;
+  value = *balptr;
+  cout << "balance is: " << value << '\n';
+
+  return 0;
+}
+
+listing 7
+int *p;
+double f;
+// ...
+p = &f; // ERROR
+
+listing 8
+int *p ;
+double f;
+// ...
+p = (int *) &f; // Now technically OK
+
+listing 9
+// This program will not work right.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  double x, y;
+  int *p; 
+
+  x = 123.23;
+  p = (int *) &x; // use cast to assign double * to int *
+
+  y = *p; // What will this do?
+  cout << y; // What will this print?
+
+  return 0;
+}
+
+listing 10
+*p = 101;
+
+listing 11
+(*p)++;
+
+listing 12
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int *p, num;
+
+  p = &num;
+
+  *p = 100;
+  cout << num << ' ';
+  (*p)++;
+  cout << num << ' ';
+  (*p)--;
+  cout << num << '\n';
+
+  return 0;
+}
+
+listing 13
+p1++;
+
+listing 14
+p1--;
+
+listing 15
+p1 = p1 + 9;
+
+listing 16
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int *i, j[10];
+  double *f, g[10];
+  int x;
+
+  i = j; 
+  f = g; 
+
+  for(x=0; x<10; x++) 
+    cout << i+x << ' ' << f+x << '\n';    
+
+  return 0;
+}
+
+listing 17
+char str[80];
+char *p1;
+
+p1 = str;
+
+listing 18
+str[4]
+
+listing 20
+// Tokenizing program: pointer version.
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+  char str[80];
+  char token[80];
+  char *p, *q;
+
+  cout << "Enter a sentence: ";
+  gets(str);
+
+  p = str;
+
+  // Read a token at a time from the string.
+  while(*p) {
+    q = token;  // set q pointing to start of token
+
+    /* Read characters until either a space or the
+       null terminator is encountered. */
+    while(*p!=' ' && *p) {
+      *q = *p;
+       q++; p++;
+    }
+    if(*p) p++; // advance past the space
+    *q = '\0'; // null terminate the token
+    cout << token << '\n';
+  }
+
+  return 0;
+}
+
+listing 21
+// Tokenizing program: array-indexing version.
+#include <iostream>
+#include <cstdio>
+using namespace std;
+
+int main()
+{
+  char str[80];
+  char token[80];
+  int i, j;
+
+  cout << "Enter a sentence: ";
+  gets(str);
+
+  // Read a token at a time from the string. 
+  for(i=0; ; i++) {
+    /* Read characters until either a space or the
+       null terminator is encountered. */
+    for(j=0; str[i]!=' ' && str[i]; j++, i++)
+      token[j] = str[i];
+
+    token[j] = '\0'; // null terminate the token
+    cout << token << '\n';
+    if(!str[i]) break;
+  }
+
+  return 0;
+}
+
+listing 22
+// Indexing a pointer like an array.
+
+#include <iostream>
+#include <cctype>
+using namespace std;
+
+int main()
+{
+  char str[20] = "hello tom";
+  char *p;
+  int i;
+
+  p = str;
+
+  // index a pointer
+  for(i=0; p[i]; i++) p[i] = toupper(p[i]);
+  cout << p; // display the string
+
+  return 0;
+}
+
+listing 23
+int num[10];
+int i;
+
+for(i=0; i<10; i++) {
+  *num = i; // this is OK
+  num++; // ERROR -- cannot modify num
+}
+
+listing 24
+*(num+3) = 100; // This is OK because num is not changed
+
+listing 25
+cout << strlen("C++ Compiler");
+
+listing 26
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char *s;
+
+  s = "Pointers are fun to use.\n";
+
+  cout << s;
+
+  return 0;
+}
+
+listing 27
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int num[10];
+  int *start, *end;
+
+  start = num;
+  end = &num[9];
+
+  while(start <= end) {
+    cout << "Enter a number: ";
+    cin >> *start;
+    start++;
+  }
+  start = num;  /* reset the starting pointer */
+  while(start <= end) {
+    cout << *start << ' ';
+    start++;
+  }
+
+  return 0; 
+}
+
+listing 28
+int *pi[10];
+
+listing 29
+int var;
+
+pi[2] = &var;
+
+listing 30
+*pi[2]
+
+listing 31
+char *fortunes[] = {
+  "Soon, you will come into some money.\n",
+  "A new love will enter your life.\n",
+  "You will live long and prosper.\n",
+  "Now is a good time to invest for the future.\n",
+  "A close friend will ask for a favor.\n"
+};
+
+listing 32
+cout << fortunes[1];
+
+listing 33
+#include <iostream>
+#include <cstdlib>
+#include <conio.h>
+using namespace std;
+
+char *fortunes[] = {
+  "Soon, you will come into some money.\n",
+  "A new love will enter your life.\n",
+  "You will live long and prosper.\n",
+  "Now is a good time to invest for the future.\n",
+  "A close friend will ask for a favor.\n"
+};
+
+int main()
+{
+  int chance;
+
+  cout << "To see your fortune, press a key: ";
+
+  // randomize the random number generator 
+  while(!kbhit()) rand();
+
+  cout << '\n';
+
+  chance = rand();
+  chance = chance % 5;
+  cout << fortunes[chance];
+
+  return 0;
+}
+
+listing 34
+// A simple C++ keyword synopsis program.
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+char *keyword[][2] = {
+  "for", "for(initialization; condition; increment)",
+  "if", "if(condition) ... else ...",
+  "switch", "switch(value) { case-list }",
+  "while", "while(condition) ...",
+  // add the rest of the C++ keywords here
+  "", ""  // terminate the list with nulls 
+};
+
+int main()
+{
+  char str[80];
+  int i;
+
+  cout << "Enter keyword: ";
+  cin >> str;
+
+  // display syntax
+  for(i=0; *keyword[i][0]; i++) 
+    if(!strcmp(keyword[i][0], str))
+      cout << keyword[i][1];
+
+  return 0;
+}
+
+listing 35
+float *p = 0; // p is now a null pointer
+
+listing 36
+if(p) // succeeds if p is not null
+
+if(!p) // succeeds if p is null
+
+listing 37
+int **balance;
+
+listing 38
+// Multiple indirection.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x, *p, **q;
+
+  x = 10;
+  p = &x;
+  q = &p;
+
+  cout << **q; // prints the value of x
+
+  return 0;
+}
+
+listing 39
+// This program is wrong.
+int main(){
+  int x, *p;
+
+  x = 10;
+  *p = x; // where does p point?
+
+  return 0;
+}
+
+listing 40
+char s[80];
+char y[80];
+char *p1, *p2;
+
+p1 = s;
+p2 = y;
+if(p1 < p2) . . .
+
+listing 41
+int first[10];
+int second[10];
+
+int *p, t;
+
+p = first;
+for(t=0; t<20; ++t) {
+  *p = t;
+  p++;
+}
+
+listing 42
+// This program is wrong.
+
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  char s[80];
+  char *p1;
+
+  p1 = s;
+
+  do {
+    cout << "Enter a string: ";
+    gets(p1); // read a string
+    // print the ASCII values of each character
+    while(*p1) cout << (int) *p1++ << ' ';
+    cout << '\n';
+  } while(strcmp(s, "done"));
+
+  return 0;
+}
+
+listing 43
+// This program is correct.
+
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  char s[80];
+  char *p1;
+
+  do {
+    p1 = s; // reset p1 each time through the loop
+
+    cout << "Enter a string: ";
+    gets(p1); // read a string 
+    // print the ASCII values of each character
+    while(*p1) cout << (int) *p1++ << ' ';
+    cout << '\n';
+  } while(strcmp(s, "done"));
+  
+  return 0;
+}
+
+

@@ -1,0 +1,716 @@
+listing 1
+class three_d {
+public:
+  int x, y, z; // 3-D coordinates
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+};
+
+listing 2
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+listing 3
+// Demonstrate a custom inserter.
+#include <iostream>
+using namespace std;
+
+class three_d {
+public:
+  int x, y, z; // 3-D coordinates
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+} ;
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(3, 4, 5), c(5, 6, 7);
+
+  cout << a << b << c;
+
+  return 0;
+}
+
+listing 4
+ostream &operator<<(ostream &stream, class_type obj)
+{
+  // class specific code goes here
+  return stream;  // return the stream
+}
+
+listing 5
+// Limited version - don't use.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  cout << obj.x << ", ";
+  cout << obj.y << ", ";
+  cout << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+listing 6
+// Use a friend to overload <<.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates - now private
+public:
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+  friend ostream &operator<<(ostream &stream, three_d obj);
+} ;
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(3, 4, 5), c(5, 6, 7);
+
+  cout << a << b << c;
+
+  return 0;
+}
+
+listing 7
+// Get three-dimensional values - three_d extractor.
+istream &operator>>(istream &stream, three_d &obj)
+{
+  cout << "Enter X,Y,Z values: ";
+  stream >> obj.x >> obj.y >> obj.z;
+  return stream;
+}
+
+listing 8
+istream &operator>>(istream &stream, object_type &obj)
+{
+  // put your extractor code here
+  return stream;
+}
+
+listing 9
+// Demonstrate a custom extractor.
+#include <iostream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+  friend ostream &operator<<(ostream &stream, three_d obj);
+  friend istream &operator>>(istream &stream, three_d &obj);
+} ;
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream; // return the stream
+}
+
+// Get three dimensional values - three_d extractor.
+istream &operator>>(istream &stream, three_d &obj)
+{
+  cout << "Enter X,Y,Z values: ";
+  stream >> obj.x >> obj.y >> obj.z;
+  return stream;
+}
+
+int main()
+{
+  three_d a(1, 2, 3);
+
+  cout << a;
+
+  cin >> a;
+  cout << a;
+
+  return 0;
+}
+
+listing 10
+struct my_struct {
+  int count;
+  char s[80];
+  double balance;
+} cust;
+
+listing 11
+stream.setf(ios::showbase);
+
+listing 12
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout.setf(ios::showpos);
+  cout.setf(ios::scientific);
+  cout << 123 << " " << 123.23 << " ";
+
+  return 0;
+}
+
+listing 13
+cout.setf(ios::scientific | ios::showpos);
+
+listing 14
+#include <iostream>
+using namespace std;
+
+void showflags(ios::fmtflags f);
+
+int main()
+{
+  ios::fmtflags f;
+
+  f = cout.flags();
+
+  showflags(f);
+  cout.setf(ios::showpos);
+  cout.setf(ios::scientific);
+
+  f = cout.flags();
+  showflags(f);
+
+  cout.unsetf(ios::scientific);
+
+  f = cout.flags();
+  showflags(f);
+
+  return 0;
+}
+
+void showflags(ios::fmtflags f)
+{
+  long i;
+
+  for(i=0x4000; i; i = i >> 1)
+    if(i & f) cout << "1 ";
+    else cout << "0 ";
+
+  cout << "\n";
+}
+
+listing 15
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout.setf(ios::showpos);
+  cout.setf(ios::scientific);
+  cout << 123 << " " << 123.23 << "\n";
+
+  cout.precision(2); // two digits after decimal point
+  cout.width(10);    // in a field of 10 characters
+  cout << 123 << " ";
+  cout.width(10);    // set width to 10
+  cout << 123.23 << "\n";
+
+  cout.fill('#');  // fill using #
+  cout.width(10);  // in a field of 10 characters
+  cout << 123 << " ";
+  cout.width(10);  // set width to 10
+  cout << 123.23;
+
+  return 0;
+}
+
+listing 16
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  cout << setprecision(2) << 1000.243 << endl;
+  cout << setw(20) << "Hello there.";
+
+  return 0;
+}
+
+listing 17
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+  cout << setiosflags(ios::showpos);
+  cout << setiosflags(ios::scientific);
+  cout << 123 << " " << 123.23;
+
+  return 0;
+}
+
+listing 18
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char s[80];
+
+  cin >> ws >> s;
+  cout << s;
+
+  return 0;
+}
+
+listing 19
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+ostream &setup(ostream &stream)
+{
+  stream.setf(ios::left);
+  stream << setw(10) << setfill('$');
+  return stream;
+}
+
+int main()
+{
+  cout << 10 << " " << setup << 10;
+
+  return 0;
+}
+
+listing 20
+istream &manip_name(istream &stream)
+{
+  // your code here
+
+  return stream;
+}
+
+listing 21
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+istream &prompt(istream &stream)
+{
+  cin >> hex;
+  cout << "Enter number using hex format: ";
+
+  return stream;
+}
+
+int main()
+{
+  int i;
+
+  cin >> prompt >> i;
+  cout << i;
+
+  return 0;
+}
+
+listing 22
+ifstream in;  // input
+ofstream out; // output
+fstream both; // input and output
+
+listing 23
+ofstream out;
+out.open("test");
+
+listing 24
+if(!mystream) {
+  cout << "Cannot open file.\n";
+  // handle error
+}
+
+listing 25
+if(!mystream.is_open()) {
+  cout << "File is not open.\n";
+  // ...
+
+listing 26
+ifstream mystream("myfile"); // open file for input
+
+listing 27
+mystream.close();
+
+listing 28
+// Write to file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  ofstream out("test");
+  if(!out) {
+    cout << "Cannot open file.\n";
+    return 1;
+   }
+
+  out << 10 << " " << 123.23 << "\n";
+  out << "This is a short text file.";
+
+  out.close();
+
+  return 0;
+}
+
+listing 29
+// Read from file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  char ch;
+  int i;
+  float f;
+  char str[80];
+
+  ifstream in("test");
+  if(!in) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  in >> i;
+  in >> f;
+  in >> ch;
+  in >> str;
+
+  cout << i << " " << f << " " << ch << "\n";
+  cout << str;
+
+  in.close();
+  return 0;
+}
+
+listing 30
+// Display a file using get().
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  char ch;
+
+  if(argc!=2) {
+    cout << "Usage: PR <filename>\n";
+    return 1;
+  }
+
+  ifstream in(argv[1], ios::in | ios::binary);
+  if(!in) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  while(in) { // in will be false when eof is reached
+    in.get(ch);
+    if(in) cout << ch;
+  }
+
+  in.close();
+
+  return 0;
+}
+
+listing 31
+while(in.get(ch))
+  cout << ch;
+
+listing 32
+// Use put() to write to a file.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  char *p = "hello there";
+
+  ofstream out("test", ios::out | ios::binary);
+  if(!out) {
+    cout << "Cannot open file.\n";
+    return 1;
+   }
+
+  while(*p) out.put(*p++);
+
+  out.close();
+
+  return 0;
+}
+
+listing 33
+// Use read() and write().
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  int n[5] = {1, 2, 3, 4, 5};
+  register int i;
+
+  ofstream out("test", ios::out | ios::binary);
+  if(!out) {
+    cout << "Cannot open file.\n";
+    return 1;
+   }
+
+  out.write((char *) &n, sizeof n);
+
+  out.close();
+
+  for(i=0; i<5; i++) // clear array
+    n[i] = 0;
+
+  ifstream in("test", ios::in | ios::binary);
+  if(!in) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  in.read((char *) &n, sizeof n);
+
+  for(i=0; i<5; i++) // show values read from file
+    cout << n[i] << " ";
+
+  in.close();
+
+  return 0;
+}
+
+listing 34
+// Detect end-of-file using eof().
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  char ch;
+
+  if(argc!=2) {
+    cout << "Usage: PR <filename>\n";
+    return 1;
+  }
+
+  ifstream in(argv[1], ios::in | ios::binary);
+  if(!in) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  while(!in.eof()) { // use eof()
+    in.get(ch);
+    if(!in.eof()) cout << ch;
+  }
+
+  in.close();
+
+  return 0;
+}
+
+listing 35
+// Compare files.
+#include <iostream> 
+#include <fstream> 
+using namespace std; 
+ 
+int main(int argc, char *argv[]) 
+{ 
+  register int i; 
+ 
+  unsigned char buf1[1024], buf2[1024]; 
+ 
+  if(argc!=3) { 
+    cout << "Usage: compfiles <file1> <file2>\n"; 
+    return 1; 
+  } 
+ 
+  ifstream f1(argv[1], ios::in | ios::binary); 
+  if(!f1) { 
+    cout << "Cannot open first file.\n"; 
+    return 1; 
+  } 
+  ifstream f2(argv[2], ios::in | ios::binary); 
+  if(!f2) { 
+    cout << "Cannot open second file.\n"; 
+    return 1; 
+   } 
+ 
+  cout << "Comparing files...\n"; 
+ 
+  do { 
+    f1.read((char *) buf1, sizeof buf1); 
+    f2.read((char *) buf2, sizeof buf2); 
+
+    if(f1.gcount() != f2.gcount()) {
+      cout << "Files are of differing sizes.\n";
+      f1.close(); 
+      f2.close(); 
+      return 0;
+    }
+
+    // compare contents of buffers 
+    for(i=0; i<f1.gcount(); i++) 
+      if(buf1[i] != buf2[i]) { 
+        cout << "Files differ.\n"; 
+        f1.close(); 
+        f2.close(); 
+        return 0; 
+      } 
+ 
+  } while(!f1.eof() && !f2.eof()); 
+ 
+  cout << "Files are the same.\n"; 
+ 
+  f1.close(); 
+  f2.close(); 
+ 
+  return 0; 
+}
+
+listing 36
+// Use getline() to read a string that contains spaces.
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main()
+{
+  char str[80];
+
+  cout << "Enter your name: ";
+  cin.get(str, 79);
+
+  cout << str << '\n';
+
+  return 0;
+}
+
+listing 37
+// Demonstrate random access.
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  if(argc!=3) {
+    cout << "Usage: CHANGE <filename> <byte>\n";
+    return 1;
+  }
+
+  fstream out(argv[1], ios::in | ios::out | ios::binary);
+  if(!out) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  out.seekp(atoi(argv[2]), ios::beg);
+
+  out.put('X');
+  out.close();
+
+  return 0;
+}
+
+listing 38
+// Display a file from a given starting point.
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  char ch;
+
+  if(argc!=3) {
+    cout << "Usage: NAME <filename> <starting location>\n";
+    return 1;
+  }
+
+  ifstream in(argv[1], ios::in | ios::binary);
+  if(!in) {
+    cout << "Cannot open file.\n";
+    return 1;
+  }
+
+  in.seekg(atoi(argv[2]), ios::beg);
+
+  while(in.get(ch))
+    cout << ch;
+
+  return 0;
+}
+
+listing 39
+/* Use overloaded inserter to write three_d
+   objects to a file. */
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates -- now private
+public:
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+  friend ostream &operator<<(ostream &stream, three_d obj);
+};
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+int main()
+{
+  three_d a(1, 2, 3), b(3, 4, 5), c(5, 6, 7);
+  ofstream out("threed");
+
+  if(!out) {
+    cout << "Cannot open file.";
+    return 1;
+  }
+
+  out << a << b << c;
+
+  out.close();
+
+  return 0;
+}
+
+

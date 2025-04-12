@@ -1,0 +1,647 @@
+listing 1
+const double version =  3.2;
+
+listing 2
+#include <iostream>
+using namespace std;
+
+void code(const char *str);
+ 
+int main()
+{
+  code("this is a test");
+
+  return 0;
+}
+
+/* Use of const ensures str cannot modify the
+   argument to which it points. */
+void code(const char *str)
+{
+  while(*str) {
+    cout << (char) (*str+1);
+    str++;
+  }
+}
+
+listing 3
+// This is wrong.
+void code(const char *str)
+{
+  while(*str) {
+    *str = *str + 1; // Error, can't modify the argument
+    cout << (char) *str;
+    str++;
+  }
+}
+
+listing 4
+// const references cannot be modified.
+#include <iostream>
+using namespace std;
+
+void f(const int &i);
+
+int main()
+{
+  int k = 10;
+
+  f(k);
+  return 0;
+}
+
+// Use a const reference parameter.
+void f(const int &i)
+{
+  i = 100; // Error, can't modify a const reference.
+  cout <<  i;
+}
+
+listing 5
+#include <iostream>
+using namespace std;
+
+const int size = 10;
+
+int main()
+{
+  int A1[size], A2[size], A3[size];
+
+  // ...
+}
+
+listing 6
+int clock, timer;
+// ... 
+timer = clock;                             // line A
+// ... do something
+cout << "Elapsed type is " << clock-timer; // line B
+
+listing 7
+volatile int clock;
+
+listing 8
+const volatile unsigned char *port;
+
+listing 9
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  extern int first, last; // use global vars
+
+  cout << first << " " << last << "\n";
+
+  return 0;
+}
+
+// global definition of first and last 
+int first = 10, last = 20;
+
+listing 10
+static int count;
+
+listing 11
+static int count = 200;
+
+listing 12
+/* Compute a running average of numbers entered by 
+   the user.
+*/
+#include <iostream>
+using namespace std;
+
+int r_avg(int i);
+
+int main()
+{
+  int num;
+
+  do {
+    cout << "Enter numbers (-1 to quit): ";
+    cin >> num;
+    if(num != -1) cout << "Running average is: " << r_avg(num);
+    cout << '\n';
+  } while(num > -1);
+
+  return 0;
+}
+
+// Compute a running average.
+int r_avg(int i)
+{
+  static int sum=0, count=0;
+
+  sum = sum + i;
+
+  count++;
+
+  return sum / count;
+}
+
+listing 13
+// ---------------------- First File ----------------------
+
+#include <iostream>
+using namespace std;
+
+int r_avg(int i);
+void reset();
+
+int main()
+{
+  int num;
+
+  do {
+    cout << "Enter numbers (-1 to quit, -2 to reset): ";
+    cin >> num;
+    if(num==-2) {
+      reset();
+      continue;
+    }
+    cout << "Running average is: " << r_avg(num);
+    cout << '\n';
+  } while(num != -1);
+
+  return 0;
+}
+
+// ---------------------- Second File ----------------------
+
+static int sum=0, count=0;
+
+int r_avg(int i)
+{
+  sum = sum + i;
+
+  count++;
+
+  return sum / count;
+}
+
+void reset()
+{
+  sum = 0;
+  count = 0;
+}
+
+listing 14
+int signed_pwr(register int m, register int e)
+{
+  register int temp;
+  int sign;
+
+  if(m < 0) sign = -1;
+  else sign = 1;
+
+  temp = 1;
+  for( ;e ;e--) temp = temp * m;
+
+  return temp * sign;
+}
+
+listing 15
+/* This program shows the difference a register variable
+   can make to the speed of program execution.
+*/
+
+#include <iostream>
+#include <ctime> 
+using namespace std;
+
+unsigned int i; // non-register 
+unsigned int delay;
+
+int main()
+{
+  register unsigned int j;
+  long start, end;
+
+  start = clock();
+  for(delay=0; delay<50; delay++)
+    for(i=0; i<6400000; i++);
+  end = clock();
+  cout << "Number of clock ticks for non-register loop: ";
+  cout << end-start << '\n';
+
+  start = clock();
+  for(delay=0; delay<50; delay++)
+    for(j=0; j<6400000; j++) ;
+  end = clock();
+  cout << "Number of clock ticks for register loop: ";
+  cout << end-start << '\n';
+
+  return 0;
+}
+
+listing 16
+enum apple {Jonathan, Golden_Del, Red_Del, Winesap,
+            Cortland, McIntosh} red, yellow;
+
+listing 17
+apple fruit;
+
+listing 18
+enum apple fruit;
+
+listing 19
+fruit = Winesap;
+if(fruit==Red_Del) cout << "Red Delicious\n";
+
+listing 20
+cout << Jonathan << ' ' << Cortland;
+
+listing 21
+fruit = 1; // Error
+
+listing 22
+fruit = (apple) 1; // now OK, but probably poor style
+
+listing 23
+enum apple {Jonathan, Golden_Del, Red_Del, Winesap=10,
+             Cortland, McIntosh};
+
+listing 24
+// This will not print "McIntosh" on the screen.
+fruit = McIntosh;
+cout << fruit;
+
+listing 25
+switch(fruit) {
+  case Jonathan: cout << "Jonathan";
+    break;
+  case Golden_Del: cout << "Golden Delicious";
+    break;
+  case Red_Del: cout << "Red Delicious";
+    break;
+  case Winesap: cout << "Winesap";
+    break;
+  case Cortland: cout << "Cortland";
+    break;
+  case McIntosh: cout << "McIntosh";
+    break;
+}
+
+listing 26
+#include <iostream>
+using namespace std;
+
+enum  apple {Jonathan, Golden_Del, Red_Del, Winesap,
+             Cortland, McIntosh};
+
+// Array of strings that correspond to the apple enumeration.
+char name[][20] = {
+  "Jonathan",
+  "Golden Delicious",
+  "Red Delicious",
+  "Winesap",
+  "Cortland",
+  "McIntosh"
+};
+
+int main()
+{
+  apple fruit;
+
+  fruit = Jonathan;
+  cout << name[fruit] << '\n';
+
+  fruit = Winesap;
+  cout << name[fruit] << '\n';
+
+  fruit = McIntosh;
+  cout << name[fruit] << '\n';
+
+  return 0;
+}
+
+listing 27
+typedef float balance;
+
+listing 28
+balance over_due;
+
+listing 29
+// Uppercase letters.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char ch;
+
+  do {
+    cin >> ch;
+
+    // This statement turns off the 6th bit. 
+    ch = ch & 223; // ch is now uppercase
+
+    cout << ch;
+  } while(ch!='Q');
+
+  return 0;
+}
+
+listing 30
+if(status & 8) cout << "bit 4 is on";
+
+listing 31
+// Display the bits within a byte.
+void disp_binary(unsigned u)
+{
+  register int t;
+
+  for(t=128; t>0; t = t/2)
+    if(u & t) cout << "1 ";
+    else cout << "0 ";
+  cout << "\n";
+}
+
+listing 32
+// Lowercase letters.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char ch;
+
+  do {
+    cin >> ch;
+
+    /* This lowercases the letter by turning
+       on bit 6.
+    */
+    ch = ch | 32;
+
+    cout << ch;
+  } while(ch != 'q');
+
+  return 0;
+}
+
+listing 33
+#include <iostream>
+using namespace std;
+
+void disp_binary(unsigned u);
+
+int main()
+{
+  unsigned u;
+
+  cout << "Enter a number between 0 and 255: ";
+  cin >> u;
+
+  cout << "Here's the number in binary: ";
+  disp_binary(u);
+
+  cout << "Here's the complement of the number: ";
+  disp_binary(~u);
+
+  return 0;
+}
+
+// Display the bits within a byte.
+void disp_binary(unsigned u)
+{
+  register int t;
+
+  for(t=128; t>0; t = t/2)
+    if(u & t) cout << "1 ";
+    else cout << "0 ";
+  cout << "\n";
+}
+
+listing 34
+// Example of bitshifting. 
+
+#include <iostream>
+using namespace std;
+
+void disp_binary(unsigned u);
+
+int main()
+{
+  int i=1, t;
+
+  for(t=0; t<8; t++) {
+    disp_binary(i);
+    i = i << 1;
+  }
+
+  cout << "\n";
+
+  for(t=0; t<8; t++) {
+    i = i >> 1;
+    disp_binary(i);
+  }
+
+  return 0;
+}
+
+// Display the bits within a byte.
+void disp_binary(unsigned u)
+{
+  register int t;
+
+  for(t=128; t>0; t=t/2)
+    if(u & t) cout << "1 ";
+    else cout << "0 ";
+  cout << "\n";
+}
+
+listing 35
+while(something) {
+  x = count > 0 ? 0 : 1;
+  // ...
+}
+
+listing 36
+while(something) {
+  if(count > 0) x = 0;
+  else x = 1;
+  // ...
+}
+
+listing 37
+/* This program uses the ? operator to prevent
+   a division by zero. */
+
+#include <iostream>
+using namespace std;
+
+int div_zero();
+
+int main()
+{
+  int i, j, result;
+
+  cout << "Enter dividend and divisor: ";
+  cin >> i >> j;
+
+  // This statement prevents a divide by zero error.
+  result = j ? i/j : div_zero();
+
+  cout << "Result: " << result;
+
+  return 0;
+}
+
+int div_zero()
+{
+  cout << "Cannot divide by zero.\n";
+  return 0;
+}
+
+listing 38
+x = x+10;
+
+listing 39
+x += 10;
+
+listing 40
+x = x-100;
+
+listing 41
+x -= 100;
+
+listing 42
+var = (count=19, incr=10, count+1);
+
+listing 43
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i, j;
+
+  j = 10;
+
+  i = (j++, j+100, 999+j);
+
+  cout << i;
+
+  return 0;
+}
+
+listing 44
+count = incr = index = 10;
+
+listing 45
+// Demonstrate sizeof.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char ch;
+  int i;
+
+  cout << sizeof ch << ' '; // size of char
+  cout << sizeof i << ' ';  // size of int
+  cout << sizeof (float) << ' '; // size of float
+  cout << sizeof (double) << ' '; // size of double
+
+  return 0;
+}
+
+listing 46
+int nums[4];
+
+cout << sizeof nums; // displays 16
+
+listing 47
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int *p;  
+
+  p = new int; // allocate memory for int
+
+  *p = 20; // assign that memory the value 20
+  cout << *p; // prove that it works by displaying value
+
+  delete p; // free the memory
+
+  return 0;
+}
+
+listing 48
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int *p;
+
+  p = new int (99);  // initialize with 99
+
+  cout << *p; // displays 99
+
+  delete p;
+
+  return 0;
+}
+
+listing 49
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  double *p;
+  int i;
+
+  p = new double [10]; // get a 10-element array
+
+  // assign the values 100 through 109
+  for(i=0; i<10; i++) p[i] = 100.00 + i;
+
+  // display the contents of the array
+  for(i=0; i<10; i++)  cout << p[i] << " ";
+
+  delete [] p; // delete the entire array
+
+  return 0;
+}
+
+listing 50
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int *i;
+  double *j;
+
+  i = (int *) malloc(sizeof(int));
+  if(!i) {
+    cout << "Allocation Failure.\n";
+    return 1;
+  }
+
+  j = (double *) malloc(sizeof(double));
+  if(!j) {
+    cout << "Allocation Failure.\n";
+    return 1;
+  }
+
+  *i= 10;
+  *j = 100.123;
+
+  cout << *i << ' ' << *j;
+
+  // free the memory
+  free(i);
+  free(j);
+
+  return 0;
+}
+
+

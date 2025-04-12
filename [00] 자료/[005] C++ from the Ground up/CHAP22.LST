@@ -1,0 +1,252 @@
+listing 1
+#define UP 1
+#define DOWN 0
+
+listing 2
+cout << UP << ' ' << DOWN << ' ' << UP + UP;
+
+listing 3
+#define ONE   1
+#define TWO   ONE+ONE
+#define THREE ONE+TWO
+
+listing 4
+#define GETFILE "Enter File Name"
+
+.
+.
+.
+
+cout << GETFILE;
+
+listing 5
+cout << "Enter File Name";
+
+listing 6
+#define GETFILE "Enter File Name"
+.
+.
+.
+cout << "GETFILE is a macro name\n";
+
+listing 7
+#define LONG_STRING "this is a very long \
+string that is used as an example"
+
+listing 8
+#define MAX_SIZE 100
+// ...
+float balance[MAX_SIZE];
+double indexMAX_SIZE;
+int num_emp[MAX_SIZE]; 
+
+listing 9
+// Use a function-like macro.
+#include <iostream>
+using namespace std;
+
+#define MIN(a,b)  (((a)<(b)) ? a : b)
+
+int main()
+{
+  int x, y;
+
+  x = 10;
+  y = 20;
+  cout << "The minimum is " << MIN(x, y);
+
+  return 0;
+}
+
+listing 10
+cout << "The minimum is: " << ((x)<(y)) ? x : y);
+
+listing 11
+// This program will give the wrong answer.
+#include <iostream>
+using namespace std;
+
+#define EVEN(a) a%2==0 ? 1 : 0
+
+int main()
+{
+  if(EVEN(9+1)) cout << "is even";
+  else cout << "is odd";
+
+  return 0;
+}
+
+listing 12
+9+1%2==0 ? 1 : 0
+
+listing 13
+// This program is now fixed.
+#include <iostream>
+using namespace std;
+
+#define EVEN(a) (a)%2==0 ? 1 : 0
+
+int main()
+{
+  if(EVEN(9+1)) cout << "is even";
+  else cout << "is odd";
+
+  return 0;
+}
+
+listing 14
+#include <vector>
+
+listing 15
+#include <sample.h>
+#include "sample.h"
+
+listing 16
+// A simple #if example.
+#include <iostream>
+using namespace std;
+
+#define MAX 100
+int main()
+{
+#if MAX>10
+  cout << "Extra memory required.\n";
+#endif
+
+  // ...
+  return 0;
+}
+
+listing 17
+// A simple #if/#else example.
+#include <iostream>
+using namespace std;
+
+#define MAX 6
+int main()
+{
+#if MAX>10
+  cout << "Extra memory required.\n");
+#else
+  cout << "Current memory OK.\n";
+#endif
+
+  // ...
+
+  return 0;
+}
+
+listing 18
+#define JOHN 0
+#define BOB 1
+#define TOM 2
+
+#define COMPILED_BY JOHN
+
+#if COMPILED_BY == JOHN
+  char who[] = "John";
+#elif COMPILED_BY == BOB
+  char who[] = "Bob";
+#else
+  char who[] = "Tom";
+#endif
+
+listing 19
+#if COMPILED_BY == BOB
+   #if DEBUG == FULL
+      int port = 198;
+   #elif DEBUG == PARTIAL
+      int port = 200;
+   #endif
+#else
+   cout << "Bob must compile for debug output.\n";
+#endif
+
+listing 20
+#include <iostream>
+using namespace std;
+
+#define TOM
+
+int main()
+{
+#ifdef TOM
+  cout << "Programmer is Tom.\n";
+#else
+  cout << "Programmer is unknown.\n";
+#endif
+#ifndef RALPH
+  cout << "RALPH not defined.\n";
+#endif
+  return 0;
+}
+
+listing 21
+#define TIMEOUT 100
+#define WAIT 0
+
+// ...
+
+#undef TIMEOUT
+#undef WAIT
+
+listing 22
+#if defined MYFILE
+
+listing 24
+#if !defined DEBUG
+  cout << "Final version!\n";
+#endif
+
+listing 25
+#include <iostream>
+using namespace std;
+
+#line 200            // set line counter to 200
+int main()           // now this is line 200
+{                    // this is line 201
+  cout <<  __LINE__; // prints 202
+
+  return 0;
+}
+
+listing 26
+#include <iostream>
+using namespace std;
+
+#define mkstr(s)  # s
+
+int main()
+{
+  cout << mkstr(I like C++);
+
+  return 0;
+}
+
+listing 27
+cout << mkstr(I like C++);
+
+listing 28
+cout << "I like C++";
+
+listing 29
+#include <iostream>
+using namespace std;
+
+#define concat(a, b)  a ## b
+
+int main()
+{
+  int xy = 10;
+
+  cout << concat(x, y);
+
+  return 0;
+}
+
+listing 30
+cout << concat(x, y);
+
+listing 31
+cout << xy;
+

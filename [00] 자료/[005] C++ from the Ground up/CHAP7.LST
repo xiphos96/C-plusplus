@@ -1,0 +1,753 @@
+listing 1
+#include <iostream>
+using namespace std;
+
+void f1();
+
+int main()
+{
+  char str[]="this is str in main()";
+
+  cout << str << '\n';
+  f1();
+  cout << str << '\n';
+
+  return 0;
+}
+
+void f1()
+{
+  char str[80];
+
+  cout << "Enter something: ";
+  cin >> str;
+  cout << str << '\n';
+}
+
+listing 2
+auto char ch;
+
+listing 3
+/* This program illustrates how variables can be
+   local to a block.
+*/
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  int choice;
+
+  cout << "(1) add numbers or ";
+  cout << "(2) concatenate strings?: ";
+
+  cin >> choice;
+  if(choice == 1) {
+    int a, b;  /* activate two integer vars */
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << "Sum is " << a+b << '\n';
+  }
+  else {
+    char s1[80], s2[80];  /* activate two strings */
+    cout << "Enter two strings: ";
+    cin >> s1;
+    cin >> s2;
+    strcat(s1, s2);
+    cout << "Concatenation is " << s1 << '\n';
+  }
+
+  return 0;
+}
+
+listing 4
+/* This program is incorrect. */
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+  int choice;
+
+  cout << "(1) add numbers or ";
+  cout << "(2) concatenate strings?: ";
+
+  cin >> choice;
+  if(choice == 1) {
+    int a, b;  /* activate two integer vars */
+    cout << "Enter two numbers: ";
+    cin >> a >> b;
+    cout << "Sum is " << a+b << '\n';
+  }
+  else {
+    char s1[80], s2[80];  /* activate two strings */
+    cout << "Enter two strings: ";
+    cin >> s1;
+    cin >> s2;
+    strcat(s1, s2);
+    cout << "Concatenation is " << s1 << '\n';
+  }
+
+  a = 10; // *** Error *** -- a not known here!
+
+  return 0;
+}
+
+listing 5
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i, j;
+
+  i = 10;
+  j = 100;
+
+  if(j > 0) {
+    int i; // this i is separate from outer i
+    
+    i = j / 2;
+    cout << "inner i: " << i << '\n';
+  }
+
+  cout << "outer i: " << i << '\n';
+
+  return 0;
+}
+
+listing 6
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "Enter a number: ";
+  int a; // declare one variable
+  cin >> a;
+
+  cout << "Enter a second number: ";
+  int b; // declare another variable
+  cin >> b;
+
+  cout << "Product: " << a*b << '\n';
+
+  return 0;
+}
+
+listing 7
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  // i is local to for
+  for(int i = 0; i<10; i++) {
+    cout << i << " ";
+    cout << "squared is " << i * i << "\n";
+  }
+
+  // i = 10; // *** Error *** -- i not known here!
+
+  return 0;
+}
+
+listing 8
+if(int x = 20) {
+  cout << "This is x: ";
+  cout << x;
+}
+
+listing 9
+// A simple addition drill program.
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void drill();
+
+int count;  // count and num_right are global
+int num_right;
+
+int main()
+{
+  cout << "How many practice problems: ";
+  cin >> count;
+
+  num_right = 0;
+  do {
+    drill();
+    count--;
+  } while(count);
+  cout << "You got " << num_right << " right.\n";
+
+  return 0;
+}
+
+void drill()
+{
+  int count;  /* This count is local and unrelated to
+                 the global one.
+              */
+  int a, b, ans;
+
+  // Generate two numbers between 0 and 99.
+  a = rand() % 100;  
+  b = rand() % 100;
+
+  // The user gets three tries to get it right.
+  for(count=0; count<3; count++) {
+    cout << "What is " << a << " + " << b << "? ";
+    cin >> ans;
+    if(ans==a+b) {
+      cout << "Right\n";
+      num_right++;
+      return;
+    }
+  }  
+  cout << "You've used up all your tries.\n";
+  cout << "The answer is " << a+b << '\n';
+}
+
+listing 10
+// Pass a pointer to a function.
+#include <iostream>
+using namespace std;
+
+void f(int *j);
+
+int main()
+{
+  int i;
+  int *p;
+
+  p = &i; // p now points to i
+
+  f(p);
+
+  cout << i;  // i is now 100
+
+  return 0;
+}
+   
+void f(int *j)
+{
+  *j = 100; // var pointed to by j is assigned 100
+}
+
+listing 11
+// Pass a pointer to a function -- revised version.
+#include <iostream>
+using namespace std;
+
+void f(int *j);
+
+int main()
+{
+  int i;
+
+  f(&i);
+
+  cout << i;
+
+  return 0;
+}
+   
+void f(int *j)
+{
+  *j = 100; // var pointed to by j is assigned 100
+}
+
+listing 12
+#include <iostream>
+using namespace std;
+
+void display(int num[10]);
+
+int main()
+{
+  int t[10],i;
+
+  for(i=0; i<10; ++i) t[i]=i;
+
+  display(t); // pass array t to a function
+
+  return 0;
+}
+
+// Print some numbers. 
+void display(int num[10])
+{
+  int i;
+
+  for(i=0; i<10; i++) cout << num[i] << ' ';
+}
+
+listing 13
+void display(int num[])
+{
+  int i;
+
+  for(i=0; i<10; i++) cout << num[i] << ' ';
+}
+
+listing 14
+void display(int *num)
+{
+  int i;
+
+  for(i=0; i<10; i++) cout << num[i] << ' ';
+}
+
+listing 15
+#include <iostream>
+using namespace std;
+
+void display(int num);
+
+int main()
+{
+  int t[10],i;
+
+  for(i=0; i<10; ++i) t[i]=i;
+  for(i=0; i<10; i++) display(t[i]);
+
+  return 0;
+}
+
+// Print some numbers. 
+void display(int num)
+{
+  cout << num << ' ';
+}
+
+listing 16
+#include <iostream>
+using namespace std;
+
+void cube(int *n, int num);
+
+int main()
+{
+  int i, nums[10];
+
+  for(i=0; i<10; i++) nums[i] = i+1;
+  cout << "Original contents: ";
+  for(i=0; i<10; i++) cout << nums[i] << ' ';
+  cout << '\n';
+
+  cube(nums, 10); // compute cubes
+
+  cout << "Altered contents: ";
+  for(i=0; i<10; i++) cout << nums[i] << ' ';
+
+  return 0;
+}
+
+void cube(int *n, int num)
+{
+  while(num) {
+    *n = *n * *n * *n;
+    num--;
+    n++;
+  }
+}
+
+listing 17
+// Pass a string to a function.
+#include <iostream>
+#include <cstring>
+#include <cctype>
+using namespace std;
+
+void stringupper(char *str);
+
+int main()
+{
+  char str[80];
+
+  strcpy(str, "this is a test");
+
+  stringupper(str);
+  cout << str; // display uppercase string
+  return 0;
+}
+   
+void stringupper(char *str)
+{
+  while(*str) {
+    *str = toupper(*str); // uppercase one char
+    str++; // move on to next char
+  }
+}
+
+listing 18
+// A custom version of strlen().
+#include <iostream>
+using namespace std;
+
+int mystrlen(char *str);
+
+int main()
+{
+  cout << "Length of Hello There is: ";
+  cout << mystrlen("Hello There");
+
+  return 0;
+}
+
+// A custom version of strlen().
+int mystrlen(char *str)
+{
+  int i;
+
+  for(i=0; str[i]; i++) ; // find the end of the string
+
+  return i;
+}
+
+listing 19
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  if(argc!=2) {
+    cout << "You forgot to type your name.\n";
+    return 1;
+  }
+  cout << "Hello " << argv[1] << '\n';
+
+  return 0;
+}
+
+listing 20
+/* The program prints all command line arguments it is
+   called with one character at a time. */
+#include <iostream>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+  int t, i;
+
+  for(t=0; t<argc; ++t) {
+    i = 0;
+    while(argv[t][i]) {
+      cout << argv[t][i];
+      ++i;
+    }
+    cout << ' ';
+  }
+
+  return 0;
+}
+
+listing 21
+/* This program displays the sum of the two numeric
+   command line arguments.
+*/
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main(int argc, char *argv[])
+{
+
+  double a, b;
+
+  if(argc!=3) {
+    cout << "Usage: add num num\n";
+    return 1;
+  }
+
+  a = atof(argv[1]);
+  b = atof(argv[2]);
+
+  cout << a + b;
+
+  return 0;
+}
+
+listing 22
+// Demonstrate atoi(), atol(), and atof().
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int i;
+  long j;
+  double k;
+
+  i = atoi("100");
+  j = atol("100000");
+  k = atof("-0.123");
+
+  cout << i << ' ' << j << ' ' << k;
+  cout << '\n';
+
+  return 0;
+}
+
+listing 23
+void power(int base, int exp)
+{
+  int i;
+
+  if(exp<0) return; /* Can't do negative exponents,
+                       so return to calling routine
+                       and bypass the rest of the 
+                       function. */
+
+  i = 1;
+
+  for( ; exp; exp--) i = base * i;
+  cout << "The answer is: " << i;
+}
+
+listing 24
+void f()
+{
+  // ...
+
+  switch(c) {
+    case 'a': return;
+    case 'b': // ...
+    case 'c': return;
+  }
+  if(count<100) return;
+  // ...
+}
+
+listing 25
+x = power(y);
+
+if(max(x, y)) > 100) cout << "greater";
+
+switch(abs(x)) {
+
+listing 26
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int i;
+
+  i = abs(-10);     // line 1
+  cout << abs(-23); // line 2
+  abs(100);         // line 3
+
+  return 0;
+}
+
+listing 27
+#include <iostream>
+using namespace std;
+
+int find_substr(char *sub, char *str);
+
+int main()
+{
+  int index;
+
+  index = find_substr("three", "one two three four");
+
+  cout << "Index of three is " << index; // index is 8
+
+  return 0;
+}
+
+// Return index of substring or -1 if not found.
+int find_substr(char *sub, char *str)
+{
+  int t;
+  char *p, *p2;
+
+  for(t=0; str[t]; t++) {
+    p = &str[t]; // reset pointers 
+    p2 = sub;
+    while(*p2 && *p2==*p) { // check for substring
+      p++;
+      p2++;
+    } 
+
+    /* If at end of p2 (i.e., substring), then
+       a match has been found. */
+    if(!*p2) return t; // return index of match
+  }
+  return -1; // no match found
+}
+
+listing 28
+#include <iostream>
+using namespace std;
+
+void print_vertical(char *str); 
+
+int main(int argc, char *argv[])
+{
+  if(argc==2) print_vertical(argv[1]);
+
+  return 0;
+}
+
+void print_vertical(char *str)
+{
+  while(*str) 
+    cout << *str++ << '\n';
+}
+
+listing 29
+x = print_vertical("hello"); // Error
+
+listing 30
+// Rework find_substr() to return a pointer.
+#include <iostream>
+using namespace std;
+
+char *find_substr(char *sub, char *str);
+
+int main()
+{
+  char *substr;
+
+  substr = find_substr("three", "one two three four");
+
+  cout << "substring found: " << substr;
+
+  return 0;
+}
+
+// Return pointer to substring or null if not found.
+char *find_substr(char *sub, char *str)
+{
+  int t;
+  char *p, *p2, *start;
+
+  for(t=0; str[t]; t++) {
+    p = &str[t]; // reset pointers 
+    start = p; 
+    p2 = sub;    
+    while(*p2 && *p2==*p) { // check for substring
+      p++;
+      p2++;
+    } 
+
+    /* If at end of p2 (i.e., substring), then
+       a match has been found. */
+    if(!*p2)
+      return start; // return pointer to beginning of substring
+  }
+  return 0; // no match found
+}
+
+listing 31
+/* This program uses a function prototype to
+   enforce strong type checking.
+*/
+
+void sqr_it(int *i); // prototype
+
+int main()
+{
+  int x;
+
+  x = 10;  
+  sqr_it(x); // *** Error *** -- type mismatch!
+
+  return 0;
+}
+
+void sqr_it(int *i)
+{
+  *i = *i * *i; 
+}
+
+listing 32
+float f(int a, int b, char ch)
+{ ...
+
+listing 33
+float f(a, b, ch)
+int a, b;
+char ch;
+{ ...
+
+listing 34
+#include <iostream>
+using namespace std;
+
+int factr(int n);
+int fact(int n);
+
+int main()
+{
+  // use recursive version
+  cout << "4 factorial is " << factr(4);
+  cout << '\n';
+
+  // use iterative version
+  cout << "4 factorial is " << fact(4);
+  cout << '\n';
+
+  return 0;
+}
+
+// Recursive version.
+int factr(int n) 
+{
+  int answer;
+
+  if(n==1) return(1);
+  answer = factr(n-1)*n;
+  return(answer);
+}
+
+// Iterative version.
+int fact(int n)
+{
+  int t, answer;
+
+  answer = 1;
+  for(t=1; t<=n; t++) answer = answer*(t);
+  return(answer);
+}
+
+listing 35
+// Print a string backwards using recursion.
+#include <iostream>
+using namespace std;
+
+void reverse(char *s);
+
+int main()
+{
+  char str[] = "this is a test";
+
+  reverse(str);
+
+  return 0;
+}
+
+// Print string backwards.
+void reverse(char *s)
+{
+  if(*s) 
+    reverse(s+1); 
+  else
+    return;
+
+  cout << *s;
+}
+
+

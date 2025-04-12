@@ -1,0 +1,1 @@
+int main(){	double d = 1212;	void* p = &d;	double* dp = static_cast<double*><p>;  }

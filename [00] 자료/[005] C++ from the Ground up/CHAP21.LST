@@ -1,0 +1,880 @@
+listing 1
+vector<int> iv;           // create zero-length int vector
+vector<char> cv(5);       // create 5-element char vector
+vector<char> cv(5,  'x'); // initialize a 5-element char vector 
+vector<int> iv2(iv);      // create int vector from an int vector
+
+listing 2
+// Vector basics.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  vector<int> v; // create zero-length vector
+  unsigned int i;
+
+  // display original size of v
+  cout << "Size = " << v.size() << endl;
+
+  /* put values onto end of vector --
+     vector will grow as needed */
+  for(i=0; i<10; i++) v.push_back(i);
+
+  // display current size of v
+  cout << "Current contents:\n";
+  cout << "Size now = " << v.size() << endl;
+
+  // display contents of vector
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl;
+
+  /* put more values onto end of vector --
+     again, vector will grow as needed */
+  for(i=0; i<10; i++) v.push_back(i+10);
+
+  // display current size of v
+  cout << "Size now = " << v.size() << endl;
+
+  // display contents of vector
+  cout << "Current contents:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl;
+
+  // change contents of vector
+  for(i=0; i<v.size(); i++) v[i] = v[i] + v[i];
+
+  // display contents of vector
+  cout << "Contents doubled:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl;
+
+  return 0;
+}
+
+listing 3
+// Access a vector using an iterator.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  vector<char> v; // create zero-length vector
+  int i;
+
+  // put values into a vector
+  for(i=0; i<10; i++) v.push_back('A' + i);
+
+  // can access vector contents using subscripting
+  for(i=0; i<10; i++) cout << v[i] << " ";
+  cout << endl;
+
+  // access via iterator
+  vector<char>::iterator p = v.begin();
+  while(p != v.end()) {
+    cout << *p << " ";
+    p++;
+  }
+
+  return 0;
+}
+
+listing 4
+// Demonstrate insert and erase.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  vector<char> v;
+  unsigned int i;
+
+  for(i=0; i<10; i++) v.push_back('A' + i);
+
+  // display original contents of vector
+  cout << "Size = " << v.size() << endl;
+  cout << "Original contents:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl << endl;
+
+  vector<char>::iterator p = v.begin();
+  p += 2; // point to 3rd element
+
+  // insert 10 X's into v
+  v.insert(p, 10, 'X');
+
+  // display contents after insertion
+  cout << "Size after insert = " << v.size() << endl;
+  cout << "Contents after insert:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl << endl;
+
+  // remove those elements
+  p = v.begin();
+  p += 2; // point to 3rd element
+  v.erase(p, p+10); // remove next 10 elements
+
+  // display contents after deletion
+  cout << "Size after erase = " << v.size() << endl;
+  cout << "Contents after erase:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl;
+
+  return 0;
+}
+
+
+listing 5
+// Store a class object in a vector. 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class three_d {
+  int x, y, z; 
+public:
+  three_d() { x = y = z = 0; }
+  three_d(int a, int b, int c) { x = a; y = b; z = c; }
+
+  three_d &operator+(int a) {
+    x += a;
+    y += a;
+    z += a;
+    return *this;
+  }
+
+  friend ostream &operator<<(ostream &stream, three_d obj);
+  friend bool operator<(three_d a, three_d b);
+  friend bool operator==(three_d a, three_d b);
+} ;
+
+// Display X, Y, Z coordinates - three_d inserter.
+ostream &operator<<(ostream &stream, three_d obj)
+{
+  stream << obj.x << ", ";
+  stream << obj.y << ", ";
+  stream << obj.z << "\n";
+  return stream;  // return the stream
+}
+
+bool operator<(three_d a, three_d b)
+{
+  return (a.x + a.y + a.z) < (b.x + b.y + b.z);
+}
+
+bool operator==(three_d a, three_d b)
+{
+  return (a.x + a.y + a.z) == (b.x + b.y + b.z);
+}
+
+int main()
+{
+  vector<three_d> v;
+  unsigned int i;
+
+  // add objects to a vector
+  for(i=0; i<10; i++)
+    v.push_back(three_d(i, i+2, i-3));
+
+  // display contents of vector
+  for(i=0; i<v.size(); i++)
+    cout << v[i];
+
+  cout << endl;
+
+  // modify objects in a vector
+  for(i=0; i<v.size(); i++)
+    v[i] = v[i] + 10;
+
+  // display modified vector
+  for(i=0; i<v.size(); i++)
+    cout << v[i];
+
+  return 0;
+}
+
+listing 6
+// Insert one vector into another.
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+  vector<char> v, v2;
+  unsigned int i;
+
+  for(i=0; i<10; i++) v.push_back('A' + i);
+
+  // display original contents of vector
+  cout << "Original contents:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl << endl;
+
+  // initialize second vector
+  char str[] = "-STL Power-";
+  for(i = 0; str[i]; i++) v2.push_back(str[i]);
+
+  /* get iterators to the middle of v and
+     the start and end of v2 */
+  vector<char>::iterator p = v.begin()+5;
+  vector<char>::iterator p2start = v2.begin();
+  vector<char>::iterator p2end = v2.end();  
+
+  // insert v2 into v
+  v.insert(p, p2start, p2end);
+
+  // display result
+  cout << "Contents of v after insertion:\n";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+
+  return 0;
+}
+
+listing 7
+// List basics.
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main()
+{
+  list<char> lst; // create an empty list
+  int i;
+
+  for(i=0; i<10; i++) lst.push_back('A'+i);
+
+  cout << "Size = " << lst.size() << endl;
+
+  cout << "Contents: ";
+  list<char>::iterator p = lst.begin();
+  while(p != lst.end()) {
+    cout << *p;
+    p++;
+  }
+
+  return 0;
+}
+
+listing 8
+list<char>::iterator p = lst.begin();
+while(p != lst.end()) {
+  cout << *p;
+  p++;
+}
+
+listing 9
+// Elements can be put on the front or end of a list.
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main()
+{
+  list<char> lst;
+  list<char> revlst;
+  int i;
+
+  for(i=0; i<10; i++) lst.push_back('A'+i);
+
+  cout << "Size of lst = " << lst.size() << endl;
+  cout << "Original contents: ";
+
+  list<char>::iterator p;
+  
+  /* Remove elements from lst and put them
+     into revlst in reverse order. */
+  while(!lst.empty()) {
+    p = lst.begin();
+    cout << *p;
+    lst.pop_front();
+    revlst.push_front(*p);
+  }
+  cout << endl << endl;
+  
+  cout << "Size of revlst = ";
+  cout << revlst.size() << endl;
+  cout << "Reversed contents: ";
+  p = revlst.begin();
+  while(p != revlst.end()) {
+    cout << *p;
+    p++;
+  }
+    
+  return 0;
+}
+
+listing 10
+// Sort a list.
+#include <iostream>
+#include <list>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  list<int> lst;
+  int i;
+
+  // create a list of random integers
+  for(i=0; i<10; i++)
+    lst.push_back(rand());
+
+  cout << "Original contents:\n";
+  list<int>::iterator p = lst.begin();
+  while(p != lst.end()) {
+    cout << *p << " ";
+    p++;
+  }
+  cout << endl << endl;
+
+  // sort the list
+  lst.sort();
+
+  cout << "Sorted contents:\n";
+  p = lst.begin();
+  while(p != lst.end()) {
+    cout << *p << " ";
+    p++;
+  }
+  
+  return 0;
+}
+
+listing 11
+// Merge two lists.
+#include <iostream>
+#include <list>
+using namespace std;
+
+int main()
+{
+  list<char> lst1, lst2;
+  int i;
+
+  for(i=0; i<10; i+=2) lst1.push_back('A'+i);
+  for(i=1; i<11; i+=2) lst2.push_back('A'+i);
+
+  cout << "Contents of lst1: ";
+  list<char>::iterator p = lst1.begin();
+  while(p != lst1.end()) {
+    cout << *p;
+    p++;
+  }
+  cout << endl << endl;
+
+  cout << "Contents of lst2: ";
+  p = lst2.begin();
+  while(p != lst2.end()) {
+    cout << *p;
+    p++;
+  }
+  cout << endl << endl;
+
+  // now, merge the two lists
+  lst1.merge(lst2);
+  if(lst2.empty())
+    cout << "lst2 is now empty\n";
+
+  cout << "Contents of lst1 after merge:\n";
+  p = lst1.begin();
+  while(p != lst1.end()) {
+    cout << *p;
+    p++;
+  }
+
+  return 0;
+}
+
+listing 12
+// Store class objects in a list.
+#include <iostream>
+#include <list>
+#include <cstring>
+using namespace std;
+
+class myclass {
+  int a, b;
+  int sum;
+public:
+  myclass() { a = b = 0; }
+  myclass(int i, int j) {
+    a = i;
+    b = j;
+    sum = a + b;
+  }
+  int getsum() { return sum; }
+
+  friend bool operator<(const myclass &o1,
+                        const myclass &o2);
+  friend bool operator>(const myclass &o1,
+                        const myclass &o2);
+  friend bool operator==(const myclass &o1,
+                        const myclass &o2);
+  friend bool operator!=(const myclass &o1,
+                        const myclass &o2);
+};
+
+bool operator<(const myclass &o1, const myclass &o2)
+{
+  return o1.sum < o2.sum;
+}
+
+bool operator>(const myclass &o1, const myclass &o2)
+{
+  return o1.sum > o2.sum;
+}
+
+bool operator==(const myclass &o1, const myclass &o2)
+{
+  return o1.sum == o2.sum;
+}
+
+bool operator!=(const myclass &o1, const myclass &o2)
+{
+  return o1.sum != o2.sum;
+}
+
+int main()
+{
+  int i;
+
+  // create first list
+  list<myclass> lst1;
+  for(i=0; i<10; i++) lst1.push_back(myclass(i, i));
+
+  cout << "First list: ";
+  list<myclass>::iterator p = lst1.begin();
+  while(p != lst1.end()) {
+    cout << p->getsum() << " ";
+    p++;
+  }
+  cout << endl;
+
+  // create a second list
+  list<myclass> lst2;
+  for(i=0; i<10; i++) lst2.push_back(myclass(i*2, i*3));
+
+  cout << "Second list: ";
+  p = lst2.begin();
+  while(p != lst2.end()) {
+    cout << p->getsum() << " ";
+    p++;
+  }
+  cout << endl;
+
+  // now, merget lst1 and lst2
+  lst1.merge(lst2);
+
+  // display merged list
+  cout << "Merged list: ";
+  p = lst1.begin();
+  while(p != lst1.end()) {
+    cout << p->getsum() << " ";
+    p++;
+  }
+
+  return 0;
+}
+
+
+listing 13
+// A simple map demonstration.
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main()
+{
+  map<char, int> m;
+  int i;
+
+  // put pairs into map
+  for(i=0; i<10; i++) {
+    m.insert(pair<char, int>('A'+i, i));
+  }
+
+  char ch;
+  cout << "Enter key: ";
+  cin >> ch;
+
+  map<char, int>::iterator p;
+  
+  // find value given key
+  p = m.find(ch);
+  if(p != m.end()) 
+    cout << p->second;
+  else
+    cout << "Key not in map.\n";
+
+  return 0;
+}
+
+listing 14
+m.insert(make_pair((char)('A'+i), i));
+
+listing 15
+// Use a map to create a dictionary.
+#include <iostream>
+#include <map>
+#include <cstring>
+using namespace std;
+
+class word {
+  char str[20];
+public:
+  word() { strcpy(str, ""); }
+  word(char *s) { strcpy(str, s); }
+  char *get() { return str; }
+
+};
+
+// must define less than relative to word objects
+bool operator<(word a, word b)
+{
+   return strcmp(a.get(), b.get()) < 0;
+}
+
+class meaning {
+  char str[80];
+public:
+  meaning() { strcmp(str, ""); }
+  meaning(char *s) { strcpy(str, s); }
+  char *get() { return str; }
+};
+
+
+int main()
+{
+  map<word, meaning> dictionary;
+
+ // put words and meanings into map
+  dictionary.insert(pair<word, meaning>(word("house"),
+                    meaning("A place of dwelling.")));
+  dictionary.insert(pair<word, meaning>(word("keyboard"),
+                    meaning("An input device.")));
+  dictionary.insert(pair<word, meaning>(word("programming"),
+             meaning("The act of writing a program.")));
+  dictionary.insert(pair<word, meaning>(word("STL"),
+                    meaning("Standard Template Library")));
+
+  // given a word, find meaning
+  char str[80];
+  cout << "Enter word: ";
+  cin >> str;
+
+  map<word, meaning>::iterator p;
+  
+  p = dictionary.find(word(str));
+  if(p != dictionary.end()) 
+    cout << "Definition: " <<  p->second.get();
+  else
+    cout << "Word not in dictionary.\n";
+
+  return 0;
+}
+
+listing 16
+// Demonstrate count and count_if.
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <cctype>
+using namespace std;
+
+/* This is a unary predicate that determines 
+   if character is isvowel. */
+bool isvowel(char ch) 
+{
+  ch = tolower(ch);
+  if(ch=='a' || ch=='e' || ch=='i'
+     || ch=='o' || ch=='u' || ch=='y') return true;
+
+  return false;
+}
+
+int main()
+{
+  char str[] = "STL programming is powerful.";
+  vector<char> v;
+  unsigned int i;
+
+  for(i=0; str[i]; i++) v.push_back(str[i]);
+
+  cout << "Sequence: ";
+  for(i=0; i<v.size(); i++) cout << v[i];
+  cout << endl;
+
+  int n;
+  n = count(v.begin(), v.end(), 'p');
+  cout << n << " characters are p\n";
+
+  n = count_if(v.begin(), v.end(), isvowel);
+  cout << n << " characters are vowels.\n";
+
+  return 0;
+}
+
+listing 17
+// Demonstrate remove_copy and replace_copy.
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+  char str[] = "This is a test.";
+  vector<char> v, v2(20); 
+  unsigned int i;
+
+  for(i=0; str[i]; i++) v.push_back(str[i]);
+
+  // **** demonstrate remove_copy ****
+
+  cout << "Input sequence: ";
+  for(i=0; i<v.size(); i++) cout << v[i];
+  cout << endl;
+
+  // Remove all i's
+  remove_copy(v.begin(), v.end(), v2.begin(), 'i');
+
+  cout << "Result after removing i's: ";
+  for(i=0; i<v2.size(); i++) cout << v2[i];
+  cout << endl << endl;
+
+  // **** now, demonstrate replace_copy ****
+
+  cout << "Input sequence: ";
+  for(i=0; i<v.size(); i++) cout << v[i];
+  cout << endl;
+
+  // Remove replace s's with X's
+  replace_copy(v.begin(), v.end(), v2.begin(), 's', 'X');
+
+  cout << "Result after repacing s's with X's: ";
+  for(i=0; i<v2.size(); i++) cout << v2[i];
+  cout << endl << endl;
+
+  return 0;
+}
+
+
+listing 18
+// Demonstrate reverse.
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+  vector<int> v;
+  unsigned int i;
+
+  for(i=0; i<10; i++) v.push_back(i);
+
+  cout << "Initial: ";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+  cout << endl;
+
+  reverse(v.begin(), v.end());
+
+  cout << "Reversed: ";
+  for(i=0; i<v.size(); i++) cout << v[i] << " ";
+
+  return 0;
+}
+
+listing 19
+// An example of the transform algorithm.
+#include <iostream>
+#include <list>
+#include <algorithm>
+using namespace std;
+
+// A simple transformation function.
+int xform(int i) {
+  return i * i; // square original value
+}
+
+int main()
+{
+  list<int> xl;
+  int i;
+
+  // put values into list
+  for(i=0; i<10; i++) xl.push_back(i);
+
+  cout << "Original contents of xl: ";
+  list<int>::iterator p = xl.begin();
+  while(p != xl.end()) {
+    cout << *p << " ";
+    p++;
+  }
+
+  cout << endl;
+ 
+  // transform xl
+  p = transform(xl.begin(), xl.end(), xl.begin(), xform);
+
+  cout << "Transformed contents of xl: ";
+  p = xl.begin();
+  while(p != xl.end()) {
+    cout << *p << " ";
+    p++;
+  }
+
+  return 0;
+}
+
+listing 20
+char s1[80], s2[80], s3[80];
+
+s1 = "one"; // can't do
+s2 = "two"; // can't do 
+s3 = s1 + s2; // error, not allowed
+
+listing 21
+strcpy(s1, "one");
+strcpy(s2, "two");
+strcpy(s3, s1);
+strcat(s3, s2);
+
+listing 22
+// A short string demonstration.
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  string str1("The string class gives ");
+  string str2("C++ high-powered string handling.");
+  string str3;
+
+  // assign a string
+  str3 = str1; 
+  cout << str1 << "\n" << str3 << "\n";
+
+  // concatenate two strings
+  str3 = str1 + str2; 
+  cout << str3 << "\n";
+
+  // compare strings
+  if(str3 > str1) cout << "str3 > str1\n";
+  if(str3 == str1+str2)
+    cout << "str3 == str1+str2\n";
+
+  /* A string object can also be 
+     assigned a normal string. */
+  str1 = "This is a null-terminated string.\n";
+  cout << str1;
+
+  // create a string object using another string object
+  string str4(str1);
+  cout << str4;
+
+  // input a string
+  cout << "Enter a string: ";
+  cin >> str4;
+  cout << str4;
+
+  return 0;
+}
+
+listing 23
+// Demonstrate insert(), erase(), and replace().
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  string str1("This is a test");
+  string str2("ABCDEFG");
+
+  cout << "Initial strings:\n";
+  cout << "str1: " << str1 << endl;
+  cout << "str2: " << str2 << "\n\n";
+
+  // demonstrate insert()
+  cout << "Insert str2 into str1:\n";
+  str1.insert(5, str2);
+  cout << str1 << "\n\n";
+
+  // demonstrate erase()
+  cout << "Remove 7 characters from str1:\n";
+  str1.erase(5, 7);
+  cout << str1 <<"\n\n";
+
+  // demonstrate replace 
+  cout << "Replace 2 characters in str1 with str2:\n";
+  str1.replace(5, 2, str2);
+  cout << str1 << endl;
+  
+  return 0;
+}
+
+listing 24
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  int i;
+  string s1 =
+    "The string class makes string handling easy.";
+  string s2;
+
+   i = s1.find("class");
+   if(i!=string::npos) {
+     cout << "Match found at " << i << endl;
+     cout << "Remaining string is: ";
+     s2.assign(s1, i, s1.size());
+     cout << s2;
+  }
+
+  return 0;
+}
+
+listing 25
+// Use a map of strings to create a dictionary.
+#include <iostream>
+#include <map>
+#include <string>
+using namespace std;
+
+int main()
+{
+  map<string, string> dictionary;
+
+  dictionary.insert(pair<string, string>("house",
+                    "A place of dwelling."));
+  dictionary.insert(pair<string, string>("keyboard",
+                    "An input device."));
+  dictionary.insert(pair<string, string>("programming",
+                    "The act of writing a program."));
+  dictionary.insert(pair<string, string>("STL",
+                    "Standard Template Library"));
+
+  string s;
+  cout << "Enter word: ";
+  cin >> s;
+
+  map<string, string>::iterator p;
+  
+  p = dictionary.find(s);
+  if(p != dictionary.end()) 
+    cout << "Definition: " << p->second;
+  else
+    cout << "Word not in dictionary.\n";
+
+  return 0;
+}
+
+

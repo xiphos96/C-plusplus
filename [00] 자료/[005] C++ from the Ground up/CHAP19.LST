@@ -1,0 +1,557 @@
+listing 1
+// A simple example that uses typeid.
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+class myclass {
+  // ...
+};
+
+int main()
+{
+  int i, j;
+  float f;
+  myclass ob;
+
+  cout << "The type of i is: " << typeid(i).name();
+  cout << endl;
+  cout << "The type of f is: " << typeid(f).name();
+  cout << endl;
+  cout << "The type of ob is: " << typeid(ob).name();
+  cout << "\n\n";
+
+  if(typeid(i) == typeid(j))
+    cout << "The types of i and j are the same\n";
+
+  if(typeid(i) != typeid(f))
+    cout << "The types of i and f are not the same\n";
+
+  return 0;
+}
+
+
+listing 2
+// An example that uses typeid on a polymorphic class heirarchy.
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+class Base {
+  virtual void f() {}; // make Base polymorphic
+  // ...
+};
+
+class Derived1: public Base {
+  // ...
+};
+
+class Derived2: public Base {
+  // ...
+};
+
+int main()
+{
+  Base *p, baseob;
+  Derived1 ob1;
+  Derived2 ob2;
+
+  p = &baseob;
+  cout << "p is pointing to an object of type ";
+  cout << typeid(*p).name() << endl;
+
+  p = &ob1;
+  cout << "p is pointing to an object of type ";
+  cout << typeid(*p).name() << endl;
+
+  p = &ob2;
+  cout << "p is pointing to an object of type ";
+  cout << typeid(*p).name() << endl;
+
+  return 0;
+}
+
+listing 3
+// Use a reference with typeid.
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+class Base {
+  virtual void f() {}; // make Base polymorphic
+  // ...
+};
+
+class Derived1: public Base {
+  // ...
+};
+
+class Derived2: public Base {
+  // ...
+};
+
+// Demonstrate typeid with a reference parameter.
+void WhatType(Base &ob)
+{
+  cout << "ob is referencing an object of type ";
+  cout << typeid(ob).name() << endl;
+}
+
+
+int main()
+{
+  int i;
+  Base baseob;
+  Derived1 ob1;
+  Derived2 ob2;
+
+  WhatType(baseob);
+  WhatType(ob1);
+  WhatType(ob2);
+
+  return 0;
+}
+
+listing 4
+cout << typeid(int).name();
+
+listing 5
+// Demonstrating run-time type id.
+#include <iostream>
+using namespace std;
+
+class figure {
+protected:
+  double x, y;
+public:
+  figure(double i, double j) {
+    x = i;
+    y = j;
+  }
+  virtual double area() = 0;
+} ;
+
+class triangle : public figure {
+  public:
+    triangle(double i, double j) : figure(i, j) {}
+    double area() {
+      return x * 0.5 * y;
+    }
+};
+
+class rectangle : public figure {
+  public:
+    rectangle(double i, double j) : figure(i, j) {}
+    double area() {
+      return x * y;
+    }
+};
+
+class circle : public figure {
+  public:
+    circle(double i, double j=0) : figure(i, j) {}
+    double area() {
+      return 3.14 * x * x;
+    }
+} ;
+
+// A factory for objects derived from figure.
+figure *factory()
+{
+  switch(rand() % 3 ) {
+    case 0: return new circle(10.0);
+    case 1: return new triangle(10.1, 5.3);
+    case 2: return new rectangle(4.3, 5.7);
+  }
+  return 0; 
+}
+  
+int main()
+{
+  figure *p; // pointer to base class
+  int i;
+
+  int t=0, r=0, c=0;
+
+  // generate and count objects
+  for(i=0; i<10; i++) {
+    p = factory(); // generate an object
+
+    cout << "Object is " << typeid(*p).name();
+    cout << ".  ";
+
+    // count it
+    if(typeid(*p) == typeid(triangle)) t++;
+    if(typeid(*p) == typeid(rectangle)) r++;
+    if(typeid(*p) == typeid(circle)) c++;
+
+    // display its area
+    cout << "Area is " << p->area() << endl;
+  }
+
+  cout << endl;
+  cout << "Objects generated:\n";
+  cout << "  Triangles: " << t << endl;
+  cout << "  Rectangles: " << r << endl;
+  cout << "  Circles: " << c << endl;
+
+  return 0;
+}
+
+listing 6
+// Using typeid with templates.
+#include <iostream>
+using namespace std;
+
+template <class T> class myclass {
+  T a;
+public:
+  myclass(T i) { a = i; }
+  // ...
+};
+
+int main()
+{
+  myclass<int> o1(10), o2(9);
+  myclass<double> o3(7.2);
+
+  cout << "Type of o1 is ";
+  cout << typeid(o1).name() << endl;
+
+  cout << "Type of o2 is ";
+  cout << typeid(o2).name() << endl;
+
+  cout << "Type of o3 is ";
+  cout << typeid(o3).name() << endl;
+
+  cout << endl;
+
+  if(typeid(o1) == typeid(o2)) 
+    cout << "o1 and o2 are the same type\n";
+ 
+  if(typeid(o1) == typeid(o3))
+    cout << "Error\n";
+  else
+    cout << "o1 and o3 are different types\n";
+
+  return 0;
+}
+
+listing 7
+// Template version of the figure heirarchy.
+#include <iostream>
+using namespace std;
+
+template <class T> class figure {
+protected:
+  T x, y;
+public:
+  figure(T i, T j) {
+    x = i;
+    y = j;
+  }
+  virtual T area() = 0;
+} ;
+
+template <class T> class triangle : public figure<T> {
+  public:
+    triangle(T i, T j) : figure<T>(i, j) {}
+    T area() {
+      return x * 0.5 * y;
+    }
+};
+
+template <class T> class rectangle : public figure<T> {
+  public:
+    rectangle(T i, T j) : figure<T>(i, j) {}
+    T area() {
+      return x * y;
+    }
+};
+
+template <class T> class circle : public figure<T> {
+  public:
+    circle(T i, T j=0) : figure<T>(i, j) {}
+    T area() {
+      return 3.14 * x * x;
+    }
+} ;
+
+// A factory for objects derived from figure.
+figure<double> *generator()
+{
+  switch(rand() % 3 ) {
+    case 0: return new circle<double>(10.0);
+    case 1: return new triangle<double>(10.1, 5.3);
+    case 2: return new rectangle<double>(4.3, 5.7);
+  }
+  return 0; 
+}
+  
+int main()
+{
+  figure<double> *p; 
+  int i;
+  int t=0, c=0, r=0;
+
+  // generate and count objects
+  for(i=0; i<10; i++) {
+    p = generator();
+
+    cout << "Object is " << typeid(*p).name();
+    cout << ".  ";
+
+    // count it
+    if(typeid(*p) == typeid(triangle<double>)) t++;
+    if(typeid(*p) == typeid(rectangle<double>)) r++;
+    if(typeid(*p) == typeid(circle<double>)) c++;
+
+    cout << "Area is " << p->area() << endl;
+  }
+
+  cout << endl;
+  cout << "Objects generated:\n";
+  cout << "  Triangles: " << t << endl;
+  cout << "  Rectangles: " << r << endl;
+  cout << "  Circles: " << c << endl;
+
+  return 0;
+}
+
+
+listing 8
+Base *bp, b_ob;
+Derived *dp, d_ob;
+
+bp = &d_ob; // base pointer points to Derived object
+dp = dynamic_cast<Derived *> (bp); // cast to derived pointer OK
+if(dp) cout << "Cast OK";
+
+listing 9
+bp = &b_ob; // base pointer points to Base object
+dp = dynamic_cast<Derived *> (bp); // error
+if(!dp) cout << "Cast Fails";
+
+listing 10
+// Demonstrate dynamic_cast.
+#include <iostream>
+using namespace std;
+
+class Base {
+public:
+  virtual void f() { cout << "Inside Base\n"; } 
+  // ...
+};
+
+class Derived : public Base {
+public:
+  void f() { cout << "Inside Derived\n"; }
+};
+
+int main()
+{
+  Base *bp, b_ob;
+  Derived *dp, d_ob;
+
+  dp = dynamic_cast<Derived *> (&d_ob);
+  if(dp) {
+    cout << "Cast from Derived * to Derived * OK.\n";
+    dp->f();
+  } else
+    cout << "Error\n";
+
+  cout << endl;
+
+  bp = dynamic_cast<Base *> (&d_ob);
+  if(bp) {
+    cout << "Cast from Derived * to Base * OK.\n";
+    bp->f();
+  } else 
+    cout << "Error\n"; 
+
+  cout << endl;
+
+  bp = dynamic_cast<Base *> (&b_ob);
+  if(bp) {
+    cout << "Cast from Base * to Base * OK.\n";
+    bp->f();
+  } else 
+    cout << "Error\n"; 
+
+  cout << endl;
+
+  dp = dynamic_cast<Derived *> (&b_ob);
+  if(dp) 
+    cout << "Error\n";
+  else
+    cout << "Cast from Base * to Derived * not OK.\n";
+
+  cout << endl;
+
+  bp = &d_ob; // bp points to Derived object
+  dp = dynamic_cast<Derived *> (bp);
+  if(dp) {
+    cout << "Casting bp to a Derived * OK\n" <<
+      "because bp is really pointing\n" <<
+      "to a Derived object.\n";
+    dp->f();
+  } else 
+    cout << "Error\n";
+
+  cout << endl;
+
+  bp = &b_ob; // bp points to Base object
+  dp = dynamic_cast<Derived *> (bp);
+  if(dp)
+    cout << "Error";
+  else {
+    cout << "Now casting bp to a Derived *\n" <<
+      "is not OK because bp is really \n" <<
+      "pointing to a Base object.\n";
+  }  
+  
+  cout << endl;
+
+  dp = &d_ob; // dp points to Derived object
+  bp = dynamic_cast<Base *> (dp);
+  if(bp) {
+    cout << "Casting dp to a Base * is OK.\n";
+    bp->f();
+  } else
+    cout << "Error\n";  
+  
+  return 0;
+}
+
+listing 11
+Base *bp;
+Derived *dp;
+// ...
+if(typeid(*bp) == typeid(Derived)) dp = (Derived *) bp;
+
+listing 12
+dp = dynamic_cast<Derived *> (bp);
+
+listing 13
+// Use dynamic_cast to replace typeid.
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+class Base {
+public:
+  virtual void f() {} 
+};
+
+class Derived : public Base {
+public:
+  void derivedOnly() {
+    cout << "Is a Derived Object\n";
+  }
+};
+
+int main()
+{
+  Base *bp, b_ob;
+  Derived *dp, d_ob;
+
+  // ************************************
+  // use typeid
+  // ************************************
+  bp = &b_ob;
+  if(typeid(*bp) == typeid(Derived)) {
+    dp = (Derived *) bp;
+    dp->derivedOnly();
+  }
+  else 
+    cout << "Cast from Base to Derived failed.\n";
+
+  bp = &d_ob;
+  if(typeid(*bp) == typeid(Derived)) {
+    dp = (Derived *) bp;
+    dp->derivedOnly();
+  }
+  else
+    cout << "Error, cast should work!\n";
+
+  // ************************************
+  // use dynamic_cast
+  // ************************************
+  bp = &b_ob;
+  dp = dynamic_cast<Derived *> (bp);
+  if(dp) dp->derivedOnly();
+  else 
+    cout << "Cast from Base to Derived failed.\n";
+
+  bp = &d_ob; 
+  dp = dynamic_cast<Derived *> (bp);
+  if(dp) dp->derivedOnly();
+  else
+    cout << "Error, cast should work!\n";
+
+  return 0;
+}
+
+listing 14
+// Demonstrate const_cast.
+#include <iostream>
+using namespace std;
+
+void f(const int *p)
+{
+  int *v;
+
+  // cast away const-ness.
+  v = const_cast<int *> (p);
+
+  *v = 100; // now, modify object through v
+}
+
+int main()
+{
+  int x = 99;
+
+  cout << "x before call: " << x << endl;
+  f(&x);
+  cout << "x after call: " << x << endl;
+
+  return 0;
+}
+
+listing 15
+// Use static_cast.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  float f;
+
+  f = 199.22F;
+
+  i = static_cast<int> (f);
+
+  cout << i;
+
+  return 0;
+}
+
+listing 16
+// An example that uses reinterpret_cast.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+  char *p = "This is a string";
+
+  i = reinterpret_cast<int> (p); // cast pointer to integer
+
+  cout << i;
+
+  return 0;
+}
+
+

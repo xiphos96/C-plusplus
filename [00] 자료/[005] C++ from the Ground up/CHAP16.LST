@@ -1,0 +1,551 @@
+listing 1
+// Function template example.
+#include <iostream>
+using namespace std;
+
+// This is a function template.
+template <class X> void swapargs(X &a, X &b)
+{
+  X temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+}
+
+int main()
+{
+  int i=10, j=20;
+  double x=10.1, y=23.3;
+  char a='x', b='z';
+
+  cout << "Original i, j: " << i << ' ' << j << '\n';
+  cout << "Original x, y: " << x << ' ' << y << '\n';
+  cout << "Original a, b: " << a << ' ' << b << '\n';
+
+  swapargs(i, j); // swap integers
+  swapargs(x, y); // swap floats
+  swapargs(a, b); // swap chars
+
+  cout << "Swapped i, j: " << i << ' ' << j << '\n';
+  cout << "Swapped x, y: " << x << ' ' << y << '\n';
+  cout << "Swapped a, b: " << a << ' ' << b << '\n';
+
+  return 0;
+}
+
+listing 2
+template <class X> void swapargs(X &a, X &b)
+
+listing 3
+template <class X>
+void swapargs(X &a, X &b)
+{
+  X temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+}
+
+listing 4
+// This will not compile.
+template <class X>
+int i; // this is an error
+void swapargs(X &a, X &b)
+{
+  X temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+}
+
+listing 5
+#include <iostream>
+using namespace std;
+
+template <class type1, class type2>
+void myfunc(type1 x, type2 y)
+{
+  cout << x << ' ' << y << '\n';
+}
+
+int main()
+{
+  myfunc(10, "hi");
+
+  myfunc(0.23, 10L);
+
+  return 0;
+}
+
+listing 6
+// Overriding a template function.
+#include <iostream>
+using namespace std;
+
+template <class X> void swapargs(X &a, X &b)
+{
+  X temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+  cout << "Inside template swapargs.\n";
+}
+
+// This overrides the generic version of swapargs() for ints.
+void swapargs(int &a, int &b)
+{
+  int temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+  cout << "Inside swapargs int specialization.\n";
+}
+
+int main()
+{
+  int i=10, j=20;
+  double x=10.1, y=23.3;
+  char a='x', b='z';
+
+  cout << "Original i, j: " << i << ' ' << j << '\n';
+  cout << "Original x, y: " << x << ' ' << y << '\n';
+  cout << "Original a, b: " << a << ' ' << b << '\n';
+
+  swapargs(i, j); // calls explicitly overloaded swapargs()
+  swapargs(x, y); // calls generic swapargs()
+  swapargs(a, b); // calls generic swapargs()
+
+  cout << "Swapped i, j: " << i << ' ' << j << '\n';
+  cout << "Swapped x, y: " << x << ' ' << y << '\n';
+  cout << "Swapped a, b: " << a << ' ' << b << '\n';
+
+  return 0;
+}
+
+
+listing 7
+// Use new-style specialization syntax.
+template<> void swapargs<int>(int &a, int &b)
+{
+  int temp;
+
+  temp = a;
+  a = b;
+  b = temp;
+  cout << "Inside swapargs int specialization.\n";
+
+}
+
+listing 8
+// Overload a function template declaration.
+#include <iostream>
+using namespace std;
+
+// First version of f() template.
+template <class X> void f(X a)
+{
+  cout << "Inside f(X a)\n";
+}
+
+// Second version of f() template.
+template <class X, class Y> void f(X a, Y b)
+{
+  cout << "Inside f(X a, Y b)\n";
+}
+
+int main()
+{
+  f(10);     // calls f(X)
+  f(10, 20); // calls f(X, Y)
+
+  return 0;
+}
+
+
+listing 9
+// Using standard parameters in a template function.
+#include <iostream>
+using namespace std;
+
+// Display data specified number of times.
+template<class X> void repeat(X data, int times)
+{
+  do {
+    cout << data << "\n";
+    times--;
+  } while(times);
+}
+
+int main()
+{
+  repeat("This is a test", 3);
+  repeat(100, 5);
+  repeat(99.0/2, 4);
+
+  return 0;
+}
+
+listing 10
+void outdata(int i)
+{
+  cout << i;
+}
+
+void outdata(double d)
+{
+  cout << d * 3.1416;
+}
+
+listing 11
+// A generic version of myabs().
+#include <iostream>
+using namespace std;
+
+template <class X> X myabs(X val)
+{
+  return val < 0 ? -val : val;
+}
+
+int main()
+{
+  cout << myabs(-10) << '\n';    // integer abs
+
+  cout << myabs(-10.0) << '\n';  // double abs
+
+  cout << myabs(-10L) << '\n';   // long abs
+
+  cout << myabs(-10.0F) << '\n'; // float abs
+
+  return 0;
+}
+
+listing 12
+// Demonstrate a generic queue class.
+#include <iostream>
+using namespace std;
+
+const int SIZE=100;
+
+// This creates the generic class queue.
+template <class QType> class queue {
+  QType q[SIZE];
+  int sloc, rloc;
+public:
+  queue() { sloc = rloc = 0; }
+  void qput(QType i);
+  QType qget();
+};
+
+// Put an object into the queue.
+template <class QType> void queue<QType>::qput(QType i)
+{
+  if(sloc==SIZE) {
+    cout << "Queue is full.\n";
+    return;
+  }
+  sloc++;
+  q[sloc] = i;
+}
+
+// Get an object from the queue.
+template <class QType> QType queue<QType>::qget()
+{
+  if(rloc == sloc) {
+    cout << "Queue Underflow.\n";
+    return 0;
+  }
+  rloc++;
+  return q[rloc];
+}
+
+int main()
+{
+  queue<int> a, b;  // create two integer queues
+
+  a.qput(10);
+  b.qput(19);
+
+  a.qput(20);
+  b.qput(1);
+
+  cout << a.qget() << " ";
+  cout << a.qget() << " ";
+  cout << b.qget() << " ";
+  cout << b.qget() << "\n";
+
+  queue<double> c, d;  // create two double queues
+
+  c.qput(10.12);
+  d.qput(19.99);
+
+  c.qput(-20.0);
+  d.qput(0.986);
+
+  cout << c.qget() << " ";
+  cout << c.qget() << " ";
+  cout << d.qget() << " ";
+  cout << d.qget() << "\n";
+
+  return 0;
+}
+
+listing 13
+queue<int> a, b;
+queue<double> c, d;
+
+listing 14
+queue<char *> chrptrQ;
+
+listing 15
+struct addr {
+  char name[40];
+  char street[40];
+  char city[30];
+  char state[3];
+  char zip[12];
+};
+
+listing 16
+queue<addr> obj;
+
+listing 17
+/* This example uses two generic data types in a
+   class definition.
+*/
+#include <iostream>
+using namespace std;
+
+template <class Type1, class Type2> class myclass
+{
+  Type1 i;
+  Type2 j;
+public:
+  myclass(Type1 a, Type2 b) { i = a; j = b; }
+  void show() { cout << i << ' ' << j << '\n'; }
+};
+
+int main()
+{
+  myclass<int, double> ob1(10, 0.23);
+  myclass<char, char *> ob2('X', "This is a test");
+
+  ob1.show(); // show int, double
+  ob2.show(); // show char, char *
+
+  return 0;
+}
+
+listing 18
+// A generic safe array example.
+#include <iostream>
+#include <cstdlib> // for older compilers, use <stdlib.h>
+using namespace std;
+
+const int SIZE = 10;
+
+template <class AType> class atype {
+  AType a[SIZE];
+public:
+  atype() {
+    register int i;
+    for(i=0; i<SIZE; i++) a[i] = i;
+  }
+  AType &operator[](int i);
+};
+
+// Provide range checking for atype.
+template <class AType> AType &atype<AType>::operator[](int i)
+{
+  if(i<0 || i> SIZE-1) {
+    cout << "\nIndex value of ";
+    cout << i << " is out-of-bounds.\n";
+    exit(1);
+  }
+  return a[i];
+}
+
+int main()
+{
+  atype<int> intob; // integer array
+  atype<double> doubleob; // double array
+
+  int i;
+
+  cout << "Integer array: ";
+  for(i=0; i<SIZE; i++) intob[i] = i;
+  for(i=0; i<SIZE; i++) cout << intob[i] << "  ";
+  cout << '\n';
+
+  cout << "Double array: ";
+  for(i=0; i<SIZE; i++) doubleob[i] = (double) i/3;
+  for(i=0; i<SIZE; i++) cout << doubleob[i] << "  ";
+  cout << '\n';
+
+  intob[12] = 100; // generates runtime error
+
+  return 0;
+}
+
+listing 19
+// Demonstrate non-type template arguments.
+#include <iostream>
+#include <cstdlib> // for older compilers, use <stdlib.h>
+using namespace std;
+
+// Here, int size is a non-type agument.
+template <class AType, int size> class atype {
+  AType a[size]; // length of array is passed in size
+public:
+  atype() {
+    register int i;
+    for(i=0; i<size; i++) a[i] = i;
+  }
+  AType &operator[](int i);
+};
+
+// Provide range checking for atype.
+template <class AType, int size> 
+AType &atype<AType, size>::operator[](int i)
+{
+  if(i<0 || i> size-1) {
+    cout << "\nIndex value of ";
+    cout << i << " is out-of-bounds.\n";
+    exit(1);
+  }
+  return a[i];
+}
+
+int main()
+{
+  atype<int, 10> intob;       // integer array of size 10
+  atype<double, 15> doubleob; // double array of size 15
+
+  int i;
+
+  cout << "Integer array: ";
+  for(i=0; i<10; i++) intob[i] = i;
+  for(i=0; i<10; i++) cout << intob[i] << "  ";
+  cout << '\n';
+
+  cout << "Double array: ";
+  for(i=0; i<15; i++) doubleob[i] = (double) i/3;
+  for(i=0; i<15; i++) cout << doubleob[i] << "  ";
+  cout << '\n';
+
+  intob[12] = 100; // generates runtime error
+
+  return 0;
+}
+
+listing 20
+size = 10; // Error 
+
+listing 21
+template <class X=int> class myclass { //...
+
+listing 22
+// Demonstrate default template arguments.
+#include <iostream>
+#include <cstdlib> // for older compilers, use <stdlib.h>
+using namespace std;
+
+// Here, AType defaults to int and size defaults to 10. 
+template <class AType=int, int size=10> class atype {
+  AType a[size]; // size of array is passed in size
+public:
+  atype() {
+    register int i;
+    for(i=0; i<size; i++) a[i] = i;
+  }
+  AType &operator[](int i);
+};
+
+// Provide range checking for atype.
+template <class AType, int size> 
+AType &atype<AType, size>::operator[](int i)
+{
+  if(i<0 || i> size-1) {
+    cout << "\nIndex value of ";
+    cout << i << " is out-of-bounds.\n";
+    exit(1);
+  }
+  return a[i];
+}
+
+int main()
+{
+  atype<int, 100> intarray;  // integer array, size 100
+  atype<double> doublearray; // double array, default size
+  atype<> defarray;          // default to int array of size 10
+
+  int i;
+
+  cout << "int array: ";
+  for(i=0; i<100; i++) intarray[i] = i;
+  for(i=0; i<100; i++) cout << intarray[i] << "  ";
+  cout << '\n';
+
+  cout << "double array: ";
+  for(i=0; i<10; i++) doublearray[i] = (double) i/3;
+  for(i=0; i<10; i++) cout << doublearray[i] << "  ";
+  cout << '\n';
+
+  cout << "defarray array: ";
+  for(i=0; i<10; i++) defarray[i] = i;
+  for(i=0; i<10; i++) cout << defarray[i] << "  ";
+  cout << '\n';  
+
+  return 0;
+}
+
+
+listing 23
+template <class AType=int, int size=10> class atype {
+
+listing 24
+// Demonstrate class specialization.
+#include <iostream>
+using namespace std;
+
+template <class T> class myclass {
+  T x;
+public:
+  myclass(T a) { 
+    cout << "Inside generic myclass\n";
+    x = a;
+  }
+  T getx() { return x; }
+};
+
+// Explicit specialization for int.
+template <> class myclass<int> {
+  int x;
+public:
+  myclass(int a) { 
+    cout << "Inside myclass<int> specialization\n";
+    x = a * a;
+  }
+  int getx() { return x; }
+};
+
+int main()
+{
+  myclass<double> d(10.1);
+  cout << "double: " << d.getx() << "\n\n";
+
+  myclass<int> i(5);
+  cout << "int: " << i.getx() << "\n";
+
+  return 0;
+}
+
+listing 25
+template <> class myclass<int> {
+
+
+

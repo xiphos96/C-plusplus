@@ -1,0 +1,292 @@
+listing 1
+int i, j, k;
+
+char ch, chr;
+
+float f, balance;
+
+double d;
+
+listing 2
+#include <iostream>
+using namespace std;
+
+void func();
+
+int main()
+{
+  int x; // local to main()
+
+  x = 10;
+  func(); 
+  cout << "\n";
+  cout << x; // displays 10
+
+  return 0;
+}
+
+void func()
+{
+  int x; // local to func()
+
+  x = -199;
+  cout << x; // displays -199
+}
+
+listing 3
+int func1(int first, int last, char ch)
+{
+  .
+  .
+  .
+}
+
+listing 4
+#include <iostream>
+using namespace std;
+
+void func1();
+void func2();
+
+int count; // this is a global variable 
+
+int main()
+{
+  int i; // this is a local variable 
+
+  for(i=0; i<10; i++) {
+    count = i * 2;
+    func1();
+  }
+
+  return 0;
+}
+
+void func1()
+{
+  cout << "count: " << count; // access global count
+  cout << '\n'; // output a newline
+  func2();
+}
+
+void func2()
+{
+  int count; // this is a local variable
+
+  for(count=0; count<3; count++) cout << '.';
+}
+
+listing 5
+#include <iostream>
+using namespace std;
+
+/* This program shows the difference between 
+   signed and unsigned integers.
+*/
+int main()
+{
+  short int i; // a signed short integer
+  short unsigned int j; // an unsigned short integer
+
+  j = 60000;
+  i = j;
+  cout << i << " " << j;
+
+  return 0;
+}
+
+listing 6
+unsigned x;
+unsigned int y;
+
+listing 7
+// This program prints the alphabet in reverse order.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char letter;
+
+  for(letter = 'Z'; letter >= 'A'; letter--)
+    cout << letter;
+
+  return 0;
+}
+
+listing 8
+ch = 'Z';
+
+listing 9
+wchar_t wc;
+wc = L'A';
+
+listing 10
+hex = 0xFF; // 255 in decimal
+oct = 011; // 9 in decimal
+
+listing 11
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "\n\\\b";
+
+  return 0;
+}
+
+listing 12
+char ch = 'a';
+int first = 0;
+float balance = 123.23F;
+
+listing 13
+// An example that uses variable initialization. 
+
+#include <iostream> 
+using namespace std; 
+ 
+void total(int x); 
+
+int main() 
+{ 
+  cout << "Computing summation of 5.\n";
+  total(5); 
+
+  cout << "\nComputing summation of 6.\n";
+  total(6); 
+ 
+  return 0; 
+} 
+ 
+void total(int x) 
+{ 
+  int sum=0; // initialize sum 
+  int i, count; 
+ 
+  for(i=1; i<=x; i++) { 
+    sum = sum + i; 
+    for(count=0; count<10; count++) cout << '.'; 
+    cout << "The current sum is " << sum << '\n'; 
+  } 
+}
+
+listing 14
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x, y;
+
+  x = 10;
+  y = 3;
+  cout << x/y; // will display 3
+  cout << "\n";
+  cout << x%y; /* will display 1, the remainder of
+                  the integer division */
+  cout << "\n";
+
+  x = 1;
+  y = 2;
+  cout << x/y << " " << x%y; // will display 0 1
+
+  return 0;
+}
+
+listing 15
+x = x+1;
+
+listing 16
+++x;
+
+listing 17
+x = x-1;
+
+listing 18
+--x;
+
+listing 19
+x = x+1; 
+
+listing 20
+++x; // prefix form
+
+listing 21
+x++; // postfix form
+
+listing 22
+x = 10;
+y = ++x;
+
+listing 23
+x = 10;
+y = x++;
+
+listing 24
+bool xor(bool a, bool b)
+{
+  return (a || b) && !(a && b);
+}
+
+listing 25
+// This program demonstrates the xor() function.
+#include <iostream>
+using namespace std;
+
+bool xor(bool a, bool b);
+
+int main()
+{
+  bool p, q;
+
+  cout << "Enter P (0 or 1): ";
+  cin >> p;
+  cout << "Enter Q (0 or 1): ";
+  cin >> q;
+
+  cout << "P AND Q: " << (p && q) << '\n';
+  cout << "P OR Q: " << (p || q) << '\n';
+  cout << "P XOR Q: " << xor(p, q) << '\n'; 
+
+  return 0;
+}
+
+bool xor(bool a, bool b)
+{
+  return (a || b) && !(a && b);
+}
+
+listing 26
+var>15 || !(10<count) && 3<=item
+
+listing 28
+(float) x / 2
+
+listing 29
+#include <iostream>
+using namespace std;
+
+int main() // print i and i/2 with fractions
+{
+  int i;
+
+  for(i=1; i<=100; ++i )
+    cout << i << "/ 2 is: " << (float) i / 2 << '\n';
+
+  return 0;
+}
+
+listing 30
+x=10/y*(127/x);
+
+x = 10 / y * (127/x);
+
+listing 31
+x = y/3-34*temp+127;
+
+x = (y/3) - (34*temp) + 127;
+
+

@@ -1,0 +1,566 @@
+listing 1
+// A simple exception handling example.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "start\n";
+
+  try { // start a try block
+    cout << "Inside try block\n";
+    throw 99; // throw an error
+    cout << "This will not execute";
+  }
+  catch (int i) { // catch an error
+    cout << "Caught an exception -- value is: ";
+    cout << i << "\n";
+  }
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 2
+// This example will not work.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "start\n";
+
+  try { // start a try block
+    cout << "Inside try block\n";
+    throw 99; // throw an error
+    cout << "This will not execute";
+  }
+  catch (double i) { // won't work for an int exception
+    cout << "Caught an exception -- value is: ";
+    cout << i << "\n";
+  }
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 3
+/* Throwing an exception from a function called 
+   from within a try block.
+*/
+#include <iostream>
+using namespace std;
+
+void Xtest(int test)
+{
+  cout << "Inside Xtest, test is: " << test << "\n";
+  if(test) throw test;
+}
+
+int main()
+{
+  cout << "start\n";
+
+  try { // start a try block
+    cout << "Inside try block\n";
+    Xtest(0);
+    Xtest(1);
+    Xtest(2);
+  }
+  catch (int i) { // catch an error
+    cout << "Caught an exception -- value is: ";
+    cout << i << "\n";
+  }
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 4
+#include <iostream>
+using namespace std;
+
+// A try/catch is reset each time a function is entered.
+void Xhandler(int test)
+{
+  try{
+    if(test) throw test;
+  }
+  catch(int i) {
+    cout << "Caught One!  Ex. #: " << i << '\n';
+  }
+}
+
+int main()
+{
+  cout << "start\n";
+
+  Xhandler(1);
+  Xhandler(2);
+  Xhandler(0);
+  Xhandler(3);
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 5
+// Use an exception class.
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+class MyException {
+public:
+  char str_what[80];
+
+  MyException() { *str_what = 0; }
+
+  MyException(char *s) {
+    strcpy(str_what, s);
+  }
+};
+
+int main()
+{
+  int a, b;
+
+  try {
+    cout << "Enter numerator and denominator: ";
+    cin >> a >> b;
+    if(!b)
+      throw MyException("Cannot divide by zero!"); 
+    else
+      cout << "Quotient is " << a/b << "\n";
+  }
+  catch (MyException e) { // catch an error
+    cout << e.str_what << "\n";
+  }
+
+  return 0;
+}
+
+listing 6
+#include <iostream>
+using namespace std;
+
+// Different types of exceptions can be caught.
+void Xhandler(int test)
+{
+  try{
+    if(test) throw test;
+    else throw "Value is zero";
+  }
+  catch(int i) {
+    cout << "Caught One!  Ex. #: " << i << '\n';
+  }
+  catch(char *str) {
+    cout << "Caught a string: ";
+    cout << str << '\n';
+  }
+}
+
+int main()
+{
+  cout << "start\n";
+
+  Xhandler(1);
+  Xhandler(2);
+  Xhandler(0);
+  Xhandler(3);
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 7
+// Catching derived classes.
+#include <iostream>
+using namespace std;
+
+class B {
+};
+
+class D: public B {
+};
+
+int main()
+{
+  D derived;
+
+  try {
+    throw derived;
+  }
+  catch(B b) {
+    cout << "Caught a base class.\n";
+  }
+  catch(D d) {
+    cout << "This won't execute.\n";
+  }
+
+  return 0;
+}
+
+listing 8
+// This example catches all exceptions.
+#include <iostream>
+using namespace std;
+
+void Xhandler(int test)
+{
+  try{
+    if(test==0) throw test; // throw int
+    if(test==1) throw 'a'; // throw char
+    if(test==2) throw 123.23; // throw double
+  }
+  catch(...) { // catch all exceptions
+    cout << "Caught One!\n";
+  }
+}
+
+int main()
+{
+  cout << "start\n";
+
+  Xhandler(0);
+  Xhandler(1);
+  Xhandler(2);
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 9
+// This example uses catch(...) as a default.
+#include <iostream>
+using namespace std;
+
+void Xhandler(int test)
+{
+  try{
+    if(test==0) throw test;   // throw int
+    if(test==1) throw 'a';    // throw char
+    if(test==2) throw 123.23; // throw double
+  }
+  catch(int i) { // catch an int exception
+    cout << "Caught " << i << '\n';
+  }
+  catch(...) { // catch all other exceptions
+    cout << "Caught One!\n";
+  }
+}
+
+int main()
+{
+  cout << "start\n";
+
+  Xhandler(0);
+  Xhandler(1);
+  Xhandler(2);
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 10
+// Restricting function throw types.
+#include <iostream>
+using namespace std;
+
+// This function can only throw ints, chars, and doubles.
+void Xhandler(int test) throw(int, char, double)
+{
+  if(test==0) throw test;   // throw int
+  if(test==1) throw 'a';    // throw char
+  if(test==2) throw 123.23; // throw double
+}
+
+int main()
+{
+  cout << "start\n";
+
+  try{
+    Xhandler(0); // also, try passing 1 and 2 to Xhandler()
+  }
+  catch(int i) {
+    cout << "Caught int\n";
+  }
+  catch(char c) {
+    cout << "Caught char\n";
+  }
+  catch(double d) {
+    cout << "Caught double\n";
+  }
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 11
+// This function can throw NO exceptions!
+void Xhandler(int test) throw()
+{
+  /* The following statements no longer work.  Instead,
+     they will cause an abnormal program termination. */
+  if(test==0) throw test;
+  if(test==1) throw 'a';
+  if(test==2) throw 123.23;
+}
+
+listing 12
+// Example of "rethrowing" an exception.
+#include <iostream>
+using namespace std;
+
+void Xhandler()
+{
+  try {
+    throw "hello"; // throw a char *
+  }
+  catch(char *) { // catch a char *
+    cout << "Caught char * inside Xhandler\n";
+    throw ; // rethrow char * out of function
+  }
+}
+
+int main()
+{
+  cout << "start\n";
+
+  try{
+    Xhandler();
+  }
+  catch(char *) {
+    cout << "Caught char * inside main\n";
+  }
+
+  cout << "end";
+
+  return 0;
+}
+
+listing 13
+// Handle exceptions thrown by new.
+#include <iostream>
+#include <new>
+using namespace std;
+
+int main()
+{
+  int *p, i;
+
+   try { 
+     p = new int[32]; // allocate memory for 32-element int array
+   } catch (bad_alloc xa) {
+     cout << "Allocation failure.\n";
+     return 1;
+  }
+
+  for(i=0; i<32; i++) p[i] = i;
+
+  for(i=0; i<32; i++) cout << p[i] << " ";
+
+  delete [] p; // free the memory
+
+  return 0;
+}
+
+listing 14
+// Demonstrate nothrow version of new.
+#include <iostream>
+#include <new>
+using namespace std;
+
+int main()
+{
+  int *p, i;
+
+   p = new(nothrow) int[32]; // use nothrow option 
+   if(!p) {
+    cout << "Allocation failure.\n";
+    return 1;
+  }
+
+  for(i=0; i<32; i++) p[i] = i;
+
+  for(i=0; i<32; i++) cout << p[i] << " ";
+
+  delete [] p; // free the memory
+
+  return 0;
+}
+
+listing 15
+// Allocate an object.
+void *operator new(size_t size)
+{
+  /* Perform allocation.  Throw bad_alloc on failure.
+     Constructor called automatically. */
+  return pointer_to_memory;
+}
+
+// Delete an object.
+void operator delete(void *p)
+{
+  /* Free memory pointed to by p.
+     Destructor called automatically. */
+}
+
+listing 16
+// Allocate an array of objects.
+void *operator new[](size_t size)
+{
+  /* Perform allocation. Throw bad_alloc exception on failure.
+      Each constructor called automatically. */
+  return pointer_to_memory;
+}
+
+// Delete an array of objects.
+void operator delete[](void *p)
+{
+  /* Free memory pointed to by p.
+     Destructor for each element automatically called. */
+}
+
+listing 17
+// Demonstrate overloaded new and delete.
+#include <iostream>
+#include <new>
+#include <cstdlib>
+using namespace std;
+
+class three_d {
+  int x, y, z; // 3-D coordinates
+public:
+  three_d() {
+    x = y = z = 0;
+    cout << "Constructing 0, 0, 0\n";
+  }
+  three_d(int i, int j, int k) {
+    x = i; y = j; z = k;
+    cout << "Constructing " << i << ", ";
+    cout << j << ", " << k;
+    cout << '\n';
+  }
+  ~three_d( ) { cout << "Destructing\n"; }
+  void *operator new(size_t size);
+  void *operator new[](size_t size);
+  void operator delete(void *p);
+  void operator delete[](void *p);
+  void show() ;
+};
+
+// new overloaded relative to three_d.
+void *three_d::operator new(size_t size)
+{
+  void *p;
+
+  cout << "Allocating three_d object.\n";
+  p = malloc(size);
+
+  // throw an exception on failure
+  if(!p) {
+    bad_alloc ba;
+    throw ba;
+  }
+  return p;
+}
+// new overloaded relative to arrays of three_d.
+void *three_d::operator new[](size_t size)
+{
+  void *p;
+
+  cout << "Allocating array of three_d objects.\n";
+
+  // throw an exception on failure
+  p = malloc(size);
+  if(!p) {
+    bad_alloc ba;
+    throw ba;
+  }
+  return p;
+}
+
+// delete overloaded relative to three_d.
+void three_d::operator delete(void *p)
+{
+  cout << "Deleting three_d object.\n";
+  free(p);
+}
+
+// delete overloaded relative to arrays of three_d.
+void three_d::operator delete[](void *p)
+{
+  cout << "Deleting array of three_d objects.\n";
+  free(p);
+}
+
+// Show X, Y, Z coordinates.
+void three_d::show()
+{
+  cout << x << ", ";
+  cout << y << ", ";
+  cout << z << "\n";
+}
+
+int main()
+{
+  three_d *p1, *p2;
+
+  try {
+    p1 = new three_d[3]; // allocate array
+    p2 = new three_d(5, 6, 7); // allocate object
+  } catch (bad_alloc ba) {
+    cout << "Allocation error.\n";
+    return 1;
+  }
+
+  p1[1].show();
+  p2->show();
+
+  delete [] p1; // delete array
+  delete p2;    // delete object
+
+  return 0;
+}
+
+listing 18
+int *f = new int; // uses default new
+
+listing 19
+// Nothrow version of new. 
+void *operator new(size_t size, const nothrow_t &n) 
+{ 
+  // Perform allocation.   
+  if(success) return pointer_to_memory; 
+  else return 0; 
+} 
+ 
+// Nothrow version of new for arrays. 
+void *operator new[](size_t size, const nothrow_t &n) 
+{ 
+  // Perform allocation.   
+  if(success) return pointer_to_memory; 
+  else return 0; 
+} 
+ 
+// Nothrow version of delete. 
+void operator delete(void *p, const nothrow_t &n) 
+{ 
+  // free memory 
+} 
+ 
+// Nothrow version of delete for arrays. 
+void operator delete[](void *p, const nothrow_t &n) 
+{ 
+  // free memory 
+}
+

@@ -1,0 +1,1 @@
+using namespace std;int main(){	using salary = double; // double형에 salary라는 별칭 선언	using point = int; // int형에 point라는 별칭 선언	// sangwon 변수를 salary형으로 선언하고 값 할당	salary sangwon = 125.20;	// peter 변수를 salary형으로 선언하고 값 할당	salary peter = 100.12;}

@@ -1,0 +1,540 @@
+listing 1
+// Magic Number program.
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int magic;  // magic number
+  int guess;  // user's guess
+
+  magic = rand(); // get a random number
+  
+  cout << "Enter your guess: ";
+  cin >> guess;
+
+  if(guess == magic) cout << "** Right **";
+
+  return 0;
+}
+
+listing 2
+// Magic Number program: 1st improvement.
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int magic;  // magic number
+  int guess;  // user's guess
+
+  magic = rand(); // get a random number
+  
+  cout << "Enter your guess: ";
+  cin >> guess;
+
+  if(guess == magic) cout << "** Right **";
+  else cout << "...Sorry, you're wrong.";
+
+  return 0;
+}
+
+listing 3
+// Divide the first number by the second.
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a, b;
+
+  cout << "Enter two numbers: ";
+  cin >> a >> b;
+
+  if(b) cout << a/b << '\n';
+  else cout << "Cannot divide by zero.\n";
+
+  return 0;
+}
+
+listing 4
+if(b == 0) cout << a/b << '\n';
+
+listing 5
+if(i) {
+  if(j) statement1;
+  if(k) statement2; // this if
+  else statement3; // is associated with this else
+}
+else statement4; // associated with if(i)
+
+listing 6
+// Magic Number program: 2nd improvement.
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int magic;  // magic number
+  int guess;  // user's guess 
+
+  magic = rand(); // get a random number
+  
+  cout << "Enter your guess: ";
+  cin >> guess;
+
+  if (guess == magic) {
+    cout << "** Right **\n";
+    cout << magic << " is the magic number.\n";
+  }
+  else {
+    cout << "...Sorry, you're wrong.";
+    if(guess > magic) cout <<" Your guess is too high.\n";
+    else cout << " Your guess is too low.\n";
+  }
+
+  return 0;
+}
+
+listing 7
+// Demonstrate an if-else-if ladder.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x;
+
+  for(x=0; x<6; x++) {
+    if(x==1) cout << "x is one\n";
+    else if(x==2) cout << "x is two\n";
+    else if(x==3) cout << "x is three\n";
+    else if(x==4) cout << "x is four\n";
+    else cout << "x is not between 1 and 4\n";
+  }
+
+  return 0;
+}
+
+listing 8
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+  int num;
+  double sq_root;
+
+  for(num=1; num < 100; num++) {
+    sq_root = sqrt((double) num);
+    cout << num << " " << sq_root << '\n';
+  }
+
+  return 0;
+}
+
+listing 9
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+
+  for(i=100; i >= -100; i = i-5) cout << i << ' ';
+
+  return 0;
+}
+
+listing 10
+for(count=10; count < 5; count++)
+  cout << count; // this statement will not execute
+
+listing 11
+for(x=0, y=10; x<=10; ++x, --y) 
+  cout << x << ' ' << y << '\n';
+
+listing 12
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+  int i;
+
+  // print numbers until a key is pressed
+  for(i=0; !kbhit(); i++) cout << i << ' ';
+
+  return 0;
+}
+
+listing 13
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x;
+
+  for(x=0; x != 123; ) {
+    cout << "Enter a number: ";
+    cin >> x;
+  }
+
+  return 0;
+}
+
+listing 14
+cout << "Enter tab position: ";
+cin >> x;
+
+for( ; x < tablimit; x++) cout << ' ';
+
+listing 15
+for(;;)
+{
+  //...
+}
+
+listing 16
+for(x=0; x<1000; x++) ;
+
+listing 17
+// Demonstrate the switch using a simple "help" program.
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int choice;
+
+  cout << "Help on:\n\n";
+  cout << "1. for\n";
+  cout << "2. if\n";
+  cout << "3. switch\n\n";
+  
+  cout << "Enter choice (1-3): ";
+  cin >> choice;
+  cout << "\n";
+
+  switch(choice) {
+    case 1: 
+      cout << "for is C++'s most versatile loop.\n";
+      break;
+    case 2: 
+      cout << "if is C++'s conditional branch statement.\n";
+      break;
+    case 3:
+      cout << "switch is C++'s multi-way branch statement.\n";
+      break;
+    default: 
+      cout << "You must enter a number between 1 and 3.\n";
+  }
+
+  return 0;
+}
+
+listing 18
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i;
+
+  for(i=0; i<5; i++) {
+    switch(i) {
+      case 0: cout << "less than 1\n";
+      case 1: cout << "less than 2\n";
+      case 2: cout << "less than 3\n";
+      case 3: cout << "less than 4\n";
+      case 4: cout << "less than 5\n";
+    }
+    cout << '\n';
+  }
+
+  return 0;
+}
+
+listing 19
+switch(i) {
+  case 1:
+  case 2:
+  case 3: do_something();
+    break;
+  case 4: do_something_else();
+    break;
+
+listing 20
+switch(ch1) {
+  case 'A': cout << "This A is part of outer switch";
+    switch(ch2) {
+      case 'A': 
+        cout << "This A is part of inner switch";
+        break;
+      case 'B': // ...
+    }
+    break;
+  case 'B': // ...
+
+listing 21
+/* This program displays all printable characters,
+   including the extended character set, if one exists.
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  unsigned char ch;
+
+  ch = 32;
+  while(ch) {
+    cout << ch;
+    ch++;
+  }
+
+  return 0;
+}
+
+listing 22
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int len;
+
+  cout << "Enter length (1 to 79): ";
+  cin >> len;
+
+  while(len>0 && len<80)  {
+    cout << '.';
+    len--;
+  }
+
+  return 0;
+}
+
+listing 23
+while(rand() != 100) ;
+
+listing 24
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int num;
+
+  do {
+    cout << "Enter a number (100 to stop): ";
+    cin >> num;
+  } while(num != 100);
+
+  return 0;
+}
+
+listing 25
+// Magic Number program: 3rd improvement. 
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+int main()
+{
+  int magic; // magic number
+  int guess; // user's guess
+
+  magic = rand(); // get a random number
+  
+  do {
+    cout << "Enter your guess: ";
+    cin >> guess;
+    if(guess == magic) {
+      cout << "** Right ** ";
+      cout << magic << " is the magic number.\n";
+    }
+    else {
+      cout << "...Sorry, you're wrong.";
+      if(guess > magic)
+         cout << " Your guess is too high.\n";
+      else cout << " Your guess is too low.\n";
+    }
+  } while(guess != magic);
+
+  return 0;
+}
+
+listing 26
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int x;
+
+  for(x=0; x<=100; x++) {
+    if(x%2) continue;
+    cout << x << ' ';
+  }
+
+  return 0;
+}
+
+listing 27
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int t;
+
+  // Loops from 0 to 9, not to 100!
+  for(t=0; t<100; t++) {
+    if(t==10) break;
+    cout << t << ' ';
+  }
+
+  return 0;
+}
+
+listing 28
+for(i=0; i<1000; i++) {
+  // do something
+  if(kbhit()) break;
+}
+
+listing 29
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int t, count; 
+
+  for(t=0; t<100; t++) {
+    count = 1;
+    for(;;) {
+      cout << count << ' ';
+      count++;
+      if(count==10) break;
+    } 
+    cout << '\n';
+  }
+
+  return 0;
+}
+
+listing 30
+/* This program finds the prime numbers from  
+   2 to 1000.
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i, j;
+
+  for(i=2; i<1000; i++) {
+    for(j=2; j <= (i/j); j++)
+      if(!(i%j)) break; // if factor found, not prime
+    if(j > (i/j)) cout << i << " is prime\n";
+  }
+
+  return 0;
+}
+
+listing 31
+x = 1;
+  loop1:
+    x++;
+    if(x < 100) goto loop1;
+
+listing 32
+for(...) {
+  for(...) {
+    while(...) {
+      if(...) goto stop;
+      .
+      .
+      .
+    }
+  }
+}
+stop:
+  cout << "Error in program.\n";
+
+listing 33
+// Magic Number program: Final improvement.
+
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+
+void play(int m);
+
+int main()
+{    
+  int option;
+  int magic;
+
+  magic = rand();
+
+  do {
+    cout << "1. Get a new magic number\n";
+    cout << "2. Play\n";
+    cout << "3. Quit\n";
+    do {
+      cout << "Enter your choice: ";
+      cin >> option;
+    } while(option<1 || option>3);
+
+    switch(option) {
+      case  1:
+        magic = rand();
+        break;
+      case 2:
+        play(magic);
+        break;
+      case 3:
+        cout << "Goodbye\n";
+        break;
+    }
+  } while(option!=3);
+
+  return 0;
+}
+
+// Play the game.
+void play(int m)
+{
+  int t, x;
+
+  for(t=0; t<100; t++) {
+    cout << "Guess the number: ";
+    cin >> x;
+    if(x==m) {
+      cout << "** Right **\n";
+      return;
+    }
+    else
+      if(x<m) cout << "Too low.\n";
+      else cout << "Too high.\n";    
+  }
+  cout << "You've used up all your guesses. Try again.\n";
+}
+
+
