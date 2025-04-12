@@ -1,5 +1,0 @@
-//$$Root$$.rc RC Script for $$Root$$ application
-
-SPLASH		BITMAP		".\\res\\Splash.bmp"
-
-

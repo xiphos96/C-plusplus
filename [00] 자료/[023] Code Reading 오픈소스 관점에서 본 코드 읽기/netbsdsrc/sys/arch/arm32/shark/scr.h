@@ -1,1 +1,0 @@
-#define	NSCR	1

@@ -1,3 +1,0 @@
-DLL Version : 1.31.
-Build	    : 0923
-Status      : Release

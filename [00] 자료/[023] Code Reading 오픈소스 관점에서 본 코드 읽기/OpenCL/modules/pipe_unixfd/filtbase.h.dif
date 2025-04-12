@@ -1,4 +1,0 @@
-98a99,101
-> int operator<<(int, Pipe&);
-> int operator>>(int, Pipe&);
-> 
