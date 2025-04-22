@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CGMPAddDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BTN_ADD, &CGMPAddDlg::OnBnClickedBtnAdd)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +154,18 @@ HCURSOR CGMPAddDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CGMPAddDlg::OnBnClickedBtnAdd()
+{
+	UpdateData(TRUE);
+
+	// GMP 변수 선언
+	mpz_t gmpNum1, gmpNum2, gmpAddResult, gmpMulResult;
+
+	CString strNum1, strNum2;
+
+	GetDlgItem(IDC_EDT_NUMBER1)->GetWindowText(strNum1);
+	GetDlgItem(IDC_EDT_NUMBER2)->GetWindowText(strNum2);
+
+	UpdateData(FALSE);
+}

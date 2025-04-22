@@ -3,7 +3,7 @@
 //
 
 #pragma once
-
+#include "../Files/Include/gmp.h"
 
 // CGMPAddDlg 대화 상자
 class CGMPAddDlg : public CDialogEx
@@ -31,4 +31,6 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedBtnAdd();
 };

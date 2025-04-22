@@ -9,14 +9,14 @@
 #define IDD_GMPADD_DIALOG               102
 #define IDR_MAINFRAME                   128
 #define ID_STATIC_NUMBER1               1000
-#define ID_EDTC_NUMBER1                 1001
-#define ID_EDTC_NUMBER2                 1002
+#define IDC_EDT_NUMBER1                 1001
+#define ID_EDT_NUMBER2                  1002
+#define IDC_EDT_NUMBER2                 1002
 #define IDC_BTN_ADD                     1003
 #define IDC_BTN_MULTI                   1004
 #define IDC_BTN_ADDMULTI                1005
 #define IDC_EDT_ADD_RESULT              1006
 #define ID_STATIC_ADD_RESULT            1007
-#define IDC_EDIT3                       1008
 #define IDC_EDT_MUL_RESULT              1008
 #define ID_STATIC_MUL_RESULT            1009
 
