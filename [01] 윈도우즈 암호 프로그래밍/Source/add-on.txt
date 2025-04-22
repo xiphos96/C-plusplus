@@ -1,0 +1,1 @@
+../Files/Library/mpir.lib;../Files/Library/libeay32.lib;../Files/Library/ssleay32.lib;%(AdditionalModuleDependencies);%(AdditionalDependencies)
