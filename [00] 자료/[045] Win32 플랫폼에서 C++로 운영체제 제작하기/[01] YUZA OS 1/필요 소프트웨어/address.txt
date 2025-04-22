@@ -1,0 +1,26 @@
+VSNASM : https://github.com/ShiftMediaProject/VSNASM
+
+Virtual BOX : https://www.virtualbox.org/wiki/Downloads
+
+ImDisk : https://sourceforge.net/projects/imdisk-toolkit/
+
+DLL Export Viewer : https://www.nirsoft.net/utils/dll_export_viewer.html
+
+CMake-GUI : https://cmake.org/
+
+QEMU : https://www.qemu.org/
+	   https://qemu.weilnetz.de/w64/
+	   
+	   
+	   
+	   
+PEExplorerV2 : https://github.com/zodiacon/PEExplorerV2
+
+HxD : https://mh-nexus.de/en/downloads.php?product=HxD20
+
+DJGPP : https://github.com/pdpdds/allegro4_dos/releases/tag/v1.0
+
+
+
+
+YUZA OS : https://github.com/pdpdds/yuzaos

@@ -1,0 +1,3 @@
+In this example there is only 
+one instance of the set type,
+set_type1. stkim.
