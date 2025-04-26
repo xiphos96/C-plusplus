@@ -1,22 +1,40 @@
-﻿  pch.cpp
-  GMPAdd.cpp
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\Files\Include\gmp.h(1591,23): error C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
+﻿  GMPAdd.cpp
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
   (소스 파일 '/GMPAdd.cpp'을(를) 컴파일하는 중)
   
   GMPAddDlg.cpp
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\Files\Include\gmp.h(1591,23): error C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
   (소스 파일 '/GMPAddDlg.cpp'을(를) 컴파일하는 중)
   
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\GMPAddDlg.cpp(163,17): warning C4101: 'gmpNum2' :참조되지 않은 지역 변수입니다.
-  (소스 파일 '/GMPAddDlg.cpp'을(를) 컴파일하는 중)
-  
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\GMPAddDlg.cpp(163,40): warning C4101: 'gmpMulResult' :참조되지 않은 지역 변수입니다.
-  (소스 파일 '/GMPAddDlg.cpp'을(를) 컴파일하는 중)
-  
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\GMPAddDlg.cpp(163,8): warning C4101: 'gmpNum1' :참조되지 않은 지역 변수입니다.
-  (소스 파일 '/GMPAddDlg.cpp'을(를) 컴파일하는 중)
-  
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\GMPAddDlg.cpp(163,26): warning C4101: 'gmpAddResult' :참조되지 않은 지역 변수입니다.
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\GMPAddDlg.cpp(307,7): warning C4101: 'strAddResult' :참조되지 않은 지역 변수입니다.
   (소스 파일 '/GMPAddDlg.cpp'을(를) 컴파일하는 중)
   
   코드를 생성하고 있습니다...
+  GMPAdd.vcxproj -> D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[01] GMPAdd\GMPAdd\x64\Debug\GMPAdd.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
+  Set-Content : 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\GMPAdd\x64\Debug\vcpkg.applocal.log' 경로의 일부를 찾을 수 없
+  습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:12 문자:5
+  +     Set-Content -Path $copiedFilesLog -Value "" -Encoding UTF8
+  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\WINDOWS\Syst...kg.applocal.log:String) [Set-Content], DirectoryNotFo 
+     undException
+      + FullyQualifiedErrorId : GetContentWriterDirectoryNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+   
+  Split-Path : 'Path' 매개 변수가 null이므로 인수를 해당 매개 변수에 바인딩할 수 없습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:76 문자:39
+  +     $baseTargetBinaryDir = Split-Path $baseBinaryPath -parent
+  +                                       ~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
+  Split-Path : 'Path' 매개 변수가 null이므로 인수를 해당 매개 변수에 바인딩할 수 없습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:94 문자:35
+  +     $targetBinaryDir = Split-Path $targetBinaryPath -parent
+  +                                   ~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   

@@ -10,7 +10,6 @@
 #define IDR_MAINFRAME                   128
 #define ID_STATIC_NUMBER1               1000
 #define IDC_EDT_NUMBER1                 1001
-#define ID_EDT_NUMBER2                  1002
 #define IDC_EDT_NUMBER2                 1002
 #define IDC_BTN_ADD                     1003
 #define IDC_BTN_MULTI                   1004
@@ -19,6 +18,8 @@
 #define ID_STATIC_ADD_RESULT            1007
 #define IDC_EDT_MUL_RESULT              1008
 #define ID_STATIC_MUL_RESULT            1009
+#define IDC_BUTTON1                     1010
+#define IDC_BTN_CLEAR                   1010
 
 // Next default values for new objects
 // 
@@ -26,7 +27,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        130
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1008
+#define _APS_NEXT_CONTROL_VALUE         1011
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
