@@ -33,7 +33,7 @@
     <ClInclude Include="pch.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="GMPProcess.h">
+    <ClInclude Include="GMPProcess.hpp">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

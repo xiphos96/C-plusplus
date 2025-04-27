@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "GMPProcess.h"
+#include "GMPProcess.hpp"
 
 bool CGMPProcess::InitInstance()
 {

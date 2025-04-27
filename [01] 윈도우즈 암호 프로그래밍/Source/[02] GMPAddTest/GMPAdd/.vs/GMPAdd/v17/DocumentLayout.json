@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPProcess.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +30,25 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "GMPAddDlg.h",
               "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h",
               "RelativeDocumentMoniker": "GMPAddDlg.h",
               "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h",
               "RelativeToolTip": "GMPAddDlg.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T03:38:56.745Z"
+              "WhenOpened": "2025-04-27T03:38:56.745Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GMPProcess.h",
-              "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.h",
-              "RelativeDocumentMoniker": "GMPProcess.h",
-              "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.h",
-              "RelativeToolTip": "GMPProcess.h",
+              "DocumentIndex": 3,
+              "Title": "GMPProcess.hpp",
+              "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.hpp",
+              "RelativeDocumentMoniker": "GMPProcess.hpp",
+              "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.hpp",
+              "RelativeToolTip": "GMPProcess.hpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-27T03:38:38.337Z",
@@ -55,13 +56,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GMPAddDlg.cpp",
               "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp",
               "RelativeDocumentMoniker": "GMPAddDlg.cpp",
               "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp",
               "RelativeToolTip": "GMPAddDlg.cpp",
-              "ViewState": "AgIAALAAAAAAAAAAAAAAAMwAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAAAMwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-26T00:45:31.117Z",
               "EditorCaption": ""
@@ -74,7 +75,7 @@
               "RelativeDocumentMoniker": "GMPProcess.cpp",
               "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.cpp",
               "RelativeToolTip": "GMPProcess.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-27T04:07:41.268Z",
               "EditorCaption": ""

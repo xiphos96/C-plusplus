@@ -4,7 +4,7 @@
 
 #pragma once
 #include "../Files/Include/gmp.h"
-#include "GMPProcess.h"
+#include "GMPProcess.hpp"
 
 // CGMPAddDlg 대화 상자
 class CGMPAddDlg : public CDialogEx
