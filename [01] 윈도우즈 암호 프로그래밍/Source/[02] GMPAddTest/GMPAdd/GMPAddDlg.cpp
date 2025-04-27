@@ -163,18 +163,14 @@ void CGMPAddDlg::OnBnClickedBtnAdd()
 	GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(_T(""));
 	GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(_T(""));
 
-	UpdateData(TRUE);
-
 	CString strNum1, strNum2;
-
 	GetDlgItem(IDC_EDT_NUMBER1)->GetWindowText(strNum1);
 	GetDlgItem(IDC_EDT_NUMBER2)->GetWindowText(strNum2);
-	CString strAddResult = GMPProcess.CalcAdd(strNum1, strNum2);
-	
-	GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(strAddResult);
 
-
-	UpdateData(FALSE);
+	if (GMPProcess.CalcAdd(strNum1, strNum2) == true)
+	{
+		GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(GMPProcess.GetResult());
+	}
 }
 
 void CGMPAddDlg::OnBnClickedBtnAddmulti()
@@ -182,64 +178,19 @@ void CGMPAddDlg::OnBnClickedBtnAddmulti()
 	GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(_T(""));
 	GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(_T(""));
 
-	UpdateData(TRUE);
-
-	// GMP 변수 선언
-	mpz_t gmpNum1, gmpNum2, gmpAddResult, gmpMulResult;
-
 	CString strNum1, strNum2;
-
 	GetDlgItem(IDC_EDT_NUMBER1)->GetWindowText(strNum1);
 	GetDlgItem(IDC_EDT_NUMBER2)->GetWindowText(strNum2);
 
-	// CString을 const char* 변환
-	CStringA strA = CStringA(strNum1);
-	CStringA strB = CStringA(strNum2);
+	if (GMPProcess.CalcAdd(strNum1, strNum2) == true)
+	{
+		GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(GMPProcess.GetResult());
+	}
 
-	int iStrLength1 = strA.GetLength() + 1;
-	int iStrLength2 = strB.GetLength() + 1;
-
-	char* chArray1 = strA.GetBuffer();
-	char* chArray2 = strB.GetBuffer();
-
-
-	// 결과값 저장 메모리
-	char strAddResult[1024];
-	char strMulResult[1024];
-	mpz_init(gmpNum1);
-	mpz_init(gmpNum2);
-	mpz_init(gmpAddResult);
-	mpz_init(gmpMulResult);
-
-	// sz1, sz2를 10진수 변환
-	mpz_init_set_str(gmpNum1, chArray1, 10);
-	mpz_init_set_str(gmpNum2, chArray2, 10);
-
-	// Add 연산
-	mpz_add(gmpAddResult, gmpNum1, gmpNum2);
-
-	// Multiple 연산
-	mpz_mul(gmpMulResult, gmpNum1, gmpNum2);
-
-	// 10진수 결과를 저장
-	mpz_get_str(strAddResult, 10, gmpAddResult);
-	mpz_get_str(strMulResult, 10, gmpMulResult);
-
-	// 출력 변환
-	CString strAddReulConv(strAddResult);
-	CString strMulReulConv(strMulResult);
-
-	GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(strAddReulConv);
-	GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(strMulReulConv);
-
-	// gmp 변수 해제
-	mpz_clear(gmpNum1);
-	mpz_clear(gmpNum2);
-	mpz_clear(gmpAddResult);
-	mpz_clear(gmpMulResult);
-
-
-	UpdateData(FALSE);
+	if (GMPProcess.CalcMul(strNum1, strNum2) == true)
+	{
+		GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(GMPProcess.GetResult());
+	}
 }
 
 void CGMPAddDlg::OnBnClickedBtnMulti()
@@ -247,55 +198,14 @@ void CGMPAddDlg::OnBnClickedBtnMulti()
 	GetDlgItem(IDC_EDT_ADD_RESULT)->SetWindowTextW(_T(""));
 	GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(_T(""));
 
-	UpdateData(TRUE);
-
-	// GMP 변수 선언
-	mpz_t gmpNum1, gmpNum2, gmpMulResult;
-
 	CString strNum1, strNum2;
-
 	GetDlgItem(IDC_EDT_NUMBER1)->GetWindowText(strNum1);
 	GetDlgItem(IDC_EDT_NUMBER2)->GetWindowText(strNum2);
 
-	// CString을 const char* 변환
-	CStringA strA = CStringA(strNum1);
-	CStringA strB = CStringA(strNum2);
-
-	int iStrLength1 = strA.GetLength() + 1;
-	int iStrLength2 = strB.GetLength() + 1;
-
-	char* chArray1 = strA.GetBuffer();
-	char* chArray2 = strB.GetBuffer();
-
-
-	// 결과값 저장 메모리
-	char strAddResult[1024];
-	char strMulResult[1024];
-	mpz_init(gmpNum1);
-	mpz_init(gmpNum2);
-	mpz_init(gmpMulResult);
-
-	// sz1, sz2를 10진수 변환
-	mpz_init_set_str(gmpNum1, chArray1, 10);
-	mpz_init_set_str(gmpNum2, chArray2, 10);
-
-	// Multiple 연산
-	mpz_mul(gmpMulResult, gmpNum1, gmpNum2);
-
-	// 10진수 결과를 저장
-	mpz_get_str(strMulResult, 10, gmpMulResult);
-
-	// 출력 변환
-	CString strMulReulConv(strMulResult);
-	GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(strMulReulConv);
-
-	// gmp 변수 해제
-	mpz_clear(gmpNum1);
-	mpz_clear(gmpNum2);
-	mpz_clear(gmpMulResult);
-
-
-	UpdateData(FALSE);
+	if (GMPProcess.CalcMul(strNum1, strNum2) == true)
+	{
+		GetDlgItem(IDC_EDT_MUL_RESULT)->SetWindowTextW(GMPProcess.GetResult());
+	}	
 }
 
 void CGMPAddDlg::OnBnClickedBtnClear()

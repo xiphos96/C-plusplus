@@ -8,4 +8,7 @@ del /s /q /f *.pdb
 del /s /q /f *.ipdb
 del /s /q /f *.exe
 del /s /q /f *.ipch
+del /s /q /f *.vsidx
 del /s /q /f Browse.VC.*
+
+copy ".\GMPAdd\GMPProcess.*" "../[00] WorkClass/"

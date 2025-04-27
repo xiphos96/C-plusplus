@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPProcess.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPProcess.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{627A93A4-43BD-5F89-4EB0-029E7FC01CA1}|GMPAdd.vcxproj|solutionrelative:GMPAddDlg.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GMPAddDlg.h",
               "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.h",
               "RelativeDocumentMoniker": "GMPAddDlg.h",
@@ -34,8 +38,7 @@
               "RelativeToolTip": "GMPAddDlg.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-04-27T03:38:56.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-27T03:38:56.745Z"
             },
             {
               "$type": "Document",
@@ -45,22 +48,35 @@
               "RelativeDocumentMoniker": "GMPProcess.h",
               "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.h",
               "RelativeToolTip": "GMPProcess.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-04-27T03:38:38.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GMPAddDlg.cpp",
               "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp",
               "RelativeDocumentMoniker": "GMPAddDlg.cpp",
               "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPAddDlg.cpp",
               "RelativeToolTip": "GMPAddDlg.cpp",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAAAK8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAALAAAAAAAAAAAAAAAMwAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-26T00:45:31.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GMPProcess.cpp",
+              "DocumentMoniker": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.cpp",
+              "RelativeDocumentMoniker": "GMPProcess.cpp",
+              "ToolTip": "D:\\Work\\[01] GIT\\Github xiphos96\\[04] C\u002B\u002B\\[01] \uC708\uB3C4\uC6B0\uC988 \uC554\uD638 \uD504\uB85C\uADF8\uB798\uBC0D\\Source\\[02] GMPAddTest\\GMPAdd\\GMPProcess.cpp",
+              "RelativeToolTip": "GMPProcess.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-04-27T04:07:41.268Z",
               "EditorCaption": ""
             }
           ]

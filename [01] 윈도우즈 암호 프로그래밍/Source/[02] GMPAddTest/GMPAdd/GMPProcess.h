@@ -8,8 +8,11 @@ class CGMPProcess
 		bool InitInstance();
 		bool ExitInstance();
 
-		CString CalcAdd(CString paraNum1, CString paraNum2);
-	private:
+		bool CalcAdd(CString paraNum1, CString paraNum2);
+		bool CalcMul(CString paraNum1, CString paraNum2);
+		CString GetResult();
 
+	private:
+		CString m_strCalcResult;
 	protected:
 };
