@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Scene">
+      <UniqueIdentifier>{b669e2c7-9a81-4ad7-b420-ae7a295f92e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\KRRLib">
+      <UniqueIdentifier>{79b33bb2-bcd7-461e-9a8d-0c7a6259127f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\SnakeGame">
+      <UniqueIdentifier>{7ec0358a-3933-4121-b470-e9d6681084e8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Game.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\han2unicode.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\IState.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Point2D.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\StateMachine.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\TextFieldFactory.h">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Stage02Scene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Stage01Scene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\PvPStageScene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ISnakeSingleScene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\IntroScene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\GameOverScene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Wall.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SnakeGameObject.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Snake.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SnakeMap.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\SDLSingleton.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\ItemManager.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\IScene.h">
+      <Filter>소스 파일\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Class\Common.h">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Game.cpp">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Point2D.cpp">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\TextFieldFactory.cpp">
+      <Filter>소스 파일\KRRLib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Stage02Scene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Stage01Scene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\PvPStageScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ISnakeSingleScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\IntroScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\GameOverScene.cpp">
+      <Filter>소스 파일\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Wall.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Snake.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\SnakeMap.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\snake_SDL.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\SDLSingleton.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\ItemManager.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Class\Common.cpp">
+      <Filter>소스 파일\SnakeGame</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Class\ReadMe.txt">
+      <Filter>소스 파일\KRRLib</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
