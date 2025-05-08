@@ -1,0 +1,38 @@
+﻿  byte_string.cpp
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\Files\Include\crylib\byte_string.cpp(52,32): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\Files\Include\crylib\byte_string.cpp(98,37): warning C4333: '>>': 오른쪽 시프트 횟수가 너무 커 데이터가 손실됩니다.
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\Files\Include\crylib\byte_string.cpp(99,37): warning C4333: '>>': 오른쪽 시프트 횟수가 너무 커 데이터가 손실됩니다.
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\Files\Include\crylib\byte_string.cpp(100,37): warning C4333: '>>': 오른쪽 시프트 횟수가 너무 커 데이터가 손실됩니다.
+  ConvertStringDlg.cpp
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
+  (소스 파일 'ConvertStringDlg.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다...
+  ConvertString.vcxproj -> D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[03] ConvertString\ConvertString\x64\Debug\ConvertString.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
+  Set-Content : 'C:\WINDOWS\System32\WindowsPowerShell\v1.0\ConvertString\x64\Debug\vcpkg.applocal.log' 경로의 일부를 찾
+  을 수 없습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:12 문자:5
+  +     Set-Content -Path $copiedFilesLog -Value "" -Encoding UTF8
+  +     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : ObjectNotFound: (C:\WINDOWS\Syst...kg.applocal.log:String) [Set-Content], DirectoryNotFo 
+     undException
+      + FullyQualifiedErrorId : GetContentWriterDirectoryNotFoundError,Microsoft.PowerShell.Commands.SetContentCommand
+   
+  Split-Path : 'Path' 매개 변수가 null이므로 인수를 해당 매개 변수에 바인딩할 수 없습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:76 문자:39
+  +     $baseTargetBinaryDir = Split-Path $baseBinaryPath -parent
+  +                                       ~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
+  Split-Path : 'Path' 매개 변수가 null이므로 인수를 해당 매개 변수에 바인딩할 수 없습니다.
+  위치 D:\Work\Temp\vcpkg\scripts\buildsystems\msbuild\applocal.ps1:94 문자:35
+  +     $targetBinaryDir = Split-Path $targetBinaryPath -parent
+  +                                   ~~~~~~~~~~~~~~~~~
+      + CategoryInfo          : InvalidData: (:) [Split-Path], ParameterBindingValidationException
+      + FullyQualifiedErrorId : ParameterArgumentValidationErrorNullNotAllowed,Microsoft.PowerShell.Commands.SplitPathCo 
+     mmand
+   
