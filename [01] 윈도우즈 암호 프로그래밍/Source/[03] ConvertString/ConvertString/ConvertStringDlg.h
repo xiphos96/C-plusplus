@@ -33,4 +33,9 @@ protected:
 	afx_msg void OnPaint();
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedBtnConvertToNumber();
+	void mympz_inp_raw(mpz_t z, const unsigned char* c, int n);
+private:
+	
 };

@@ -12,7 +12,6 @@
 #define IDC_EDT_INPUT_CHARACTER         1002
 #define IDC_EDT_OUTPUT_HEXA_CHARACTER   1003
 #define IDC_EDT_INPUT_HEXA_CHARACTER    1004
-#define IDC_EDT_OUTPUT_CHARACTER2       1005
 #define IDC_EDT_OUTPUT_CHARACTER        1005
 
 // Next default values for new objects

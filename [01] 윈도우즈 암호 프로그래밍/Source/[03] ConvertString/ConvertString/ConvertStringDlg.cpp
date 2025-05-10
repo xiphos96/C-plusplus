@@ -65,6 +65,7 @@ BEGIN_MESSAGE_MAP(CConvertStringDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_BN_CLICKED(IDC_BTN_CONVERT_TO_NUMBER, &CConvertStringDlg::OnBnClickedBtnConvertToNumber)
 END_MESSAGE_MAP()
 
 
@@ -153,3 +154,48 @@ HCURSOR CConvertStringDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+void CConvertStringDlg::OnBnClickedBtnConvertToNumber()
+{
+	UpdateData(TRUE);
+
+	CString strNumberInput, strNumberOutput;
+	CString strCharacterInput, strCharacterOutput;
+
+	GetDlgItem(IDC_EDT_INPUT_CHARACTER)->GetWindowTextW(strCharacterInput);
+
+	mpz_t z;
+	char str_mpz[1024];
+	mpz_init(z);
+	
+	CStringA strA = CStringA(strCharacterInput);
+	char* pChar = strA.GetBuffer();
+	int nLen0 = strA.GetLength();
+	int nLen1 = nLen0 + 1;
+	unsigned char *chArray = new unsigned char[nLen1];
+	memcpy(chArray, strA.GetBuffer(), strA.GetLength());
+	
+	mympz_inp_raw(z, chArray, nLen0);
+	mpz_get_str(str_mpz, 16, z);
+
+	CString cstring(str_mpz);
+	strNumberOutput = cstring;
+	GetDlgItem(IDC_EDT_OUTPUT_HEXA_CHARACTER)->SetWindowTextW(strNumberOutput);
+
+	mpz_clear(z);
+	delete[] chArray;
+	UpdateData(FALSE);
+}
+
+void CConvertStringDlg::mympz_inp_raw(mpz_t z, const unsigned char* c, int n)
+{
+	int i = 0;
+	mpz_set_ui(z, 0);
+	while (i < n)
+	{
+		mpz_mul_2exp(z, z, 8);
+		mpz_add_ui(z, z, c[i]);
+
+		i++;
+	}
+}
