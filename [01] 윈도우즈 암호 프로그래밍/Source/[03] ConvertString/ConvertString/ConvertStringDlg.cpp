@@ -168,14 +168,15 @@ void CConvertStringDlg::OnBnClickedBtnConvertToNumber()
 	char str_mpz[1024];
 	mpz_init(z);
 	
+	// CString을 char* 형식으로 바꾸기
 	CStringA strA = CStringA(strCharacterInput);
-	char* pChar = strA.GetBuffer();
-	int nLen0 = strA.GetLength();
-	int nLen1 = nLen0 + 1;
-	unsigned char *chArray = new unsigned char[nLen1];
-	memcpy(chArray, strA.GetBuffer(), strA.GetLength());
+	//char* pChar = strA.GetBuffer();
+
+	int nLen = strA.GetLength();
+	unsigned char *chArray = new unsigned char[nLen];
+	memcpy(chArray, strA.GetBuffer(), nLen);
 	
-	mympz_inp_raw(z, chArray, nLen0);
+	mympz_inp_raw(z, chArray, nLen);
 	mpz_get_str(str_mpz, 16, z);
 
 	CString cstring(str_mpz);
