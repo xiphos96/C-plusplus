@@ -1,5 +1,4 @@
-﻿  pch.cpp
-  GMPProcess.cpp
+﻿  GMPProcess.cpp
 D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
   (소스 파일 '/GMPProcess.cpp'을(를) 컴파일하는 중)
   
@@ -9,9 +8,14 @@ D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래�
 D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\GMPAdd\GMPProcess.cpp(90,7): warning C4101: 'cMulResult' :참조되지 않은 지역 변수입니다.
   (소스 파일 '/GMPProcess.cpp'을(를) 컴파일하는 중)
   
-  GMPAdd.cpp
-D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.
-  (소스 파일 '/GMPAdd.cpp'을(를) 컴파일하는 중)
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\GMPAdd\GMPProcess.cpp(130,51): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/GMPProcess.cpp'을(를) 컴파일하는 중)
+  
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\GMPAdd\GMPProcess.cpp(132,45): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  (소스 파일 '/GMPProcess.cpp'을(를) 컴파일하는 중)
+  
+D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\GMPAdd\GMPProcess.cpp(135,13): warning C4002: 함수 같은 매크로 호출 '_T'에 대해 인수가 너무 많습니다.
+  (소스 파일 '/GMPProcess.cpp'을(를) 컴파일하는 중)
   
   GMPAddDlg.cpp
 D:\Work\[01] GIT\Github xiphos96\[04] C++\[01] 윈도우즈 암호 프로그래밍\Source\[02] GMPAddTest\Files\Include\gmp.h(1591,23): warning C4146: 단항 빼기 연산자가 부호 없는 형식에 적용되었습니다. 결과는 역시 unsigned입니다.

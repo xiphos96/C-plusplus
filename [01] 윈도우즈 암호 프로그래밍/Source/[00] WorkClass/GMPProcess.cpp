@@ -120,3 +120,19 @@ CString CGMPProcess::GetResult()
 {
 	return m_strCalcResult;
 }
+
+CString CGMPProcess::CharToCString(char *data)
+{
+	int len;
+	CString str;
+	BSTR buf;
+	// char* to wchar* conversion
+	len = MultiByteToWideChar(CP_ACP, 0, data, strlen(data), NULL, NULL);
+	buf = SysAllocStringLen(NULL, len);
+	MultiByteToWideChar(CP_ACP, 0, data, strlen(data), buf, len);
+	
+	// wchar* to CString conversion
+	str.Format(_T("%s", buf));
+	
+	return str;
+}

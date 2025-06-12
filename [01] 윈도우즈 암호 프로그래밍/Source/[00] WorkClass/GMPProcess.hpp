@@ -15,4 +15,5 @@ class CGMPProcess
 	private:
 		CString m_strCalcResult;
 	protected:
+		CString CharToCString(char *data);
 };
