@@ -35,7 +35,10 @@ protected:
 	DECLARE_MESSAGE_MAP()
 public:
 	afx_msg void OnBnClickedBtnConvertToNumber();
-	void mympz_inp_raw(mpz_t z, const unsigned char* c, int n);
 private:
-	
+	void mympz_inp_raw(mpz_t z, const unsigned char* c, int n);
+	void mympz_out_raw(mpz_t x, unsigned char* c, int n);
+	int mympz_sizeinbytes(mpz_t x);
+public:
+	afx_msg void OnBnClickedBtnConvertToCharacter();
 };

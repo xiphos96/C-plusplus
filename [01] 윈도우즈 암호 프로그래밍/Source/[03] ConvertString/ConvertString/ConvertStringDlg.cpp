@@ -66,6 +66,7 @@ BEGIN_MESSAGE_MAP(CConvertStringDlg, CDialogEx)
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BTN_CONVERT_TO_NUMBER, &CConvertStringDlg::OnBnClickedBtnConvertToNumber)
+	ON_BN_CLICKED(IDC_BTN_CONVERT_TO_CHARACTER, &CConvertStringDlg::OnBnClickedBtnConvertToCharacter)
 END_MESSAGE_MAP()
 
 
@@ -199,4 +200,74 @@ void CConvertStringDlg::mympz_inp_raw(mpz_t z, const unsigned char* c, int n)
 
 		i++;
 	}
+}
+void CConvertStringDlg::OnBnClickedBtnConvertToCharacter()
+{
+	UpdateData(TRUE);
+
+	CString strHexaCharacterInput;
+	GetDlgItem(IDC_EDT_INPUT_HEXA_CHARACTER)->GetWindowTextW(strHexaCharacterInput);
+
+	mpz_t temp;
+	mpz_init(temp);
+	CStringA strA(strHexaCharacterInput);
+	const char* cCStringToChar = strA;
+	mpz_init_set_str(temp, cCStringToChar, 16);
+	
+
+	// 숫자 mpz_t temp를 문자로 변환
+	byte_string_t bs2;
+	int i = mympz_sizeinbytes(temp);
+	byte_string_init(bs2, i);
+	mympz_out_raw(temp, bs2->data, i);
+	char* d = new char[bs2->len+1];
+	memcpy(d, bs2->data, bs2->len);
+	d[bs2->len] = '\0';
+
+	// char* -> wchar 변환
+	BSTR buf;
+	int len = MultiByteToWideChar(CP_ACP, 0, d, strlen(d), NULL, NULL);
+	buf = SysAllocStringLen(NULL, len);
+	MultiByteToWideChar(CP_ACP, 0, d, strlen(d), buf, len);
+
+	// wchar_t( to CString
+	CString strStringOutput;
+	strStringOutput.Format(_T("%s"), buf);
+
+	GetDlgItem(IDC_EDT_OUTPUT_CHARACTER)->SetWindowTextW(strStringOutput);
+	byte_string_clear(bs2);
+	UpdateData(FALSE);
+
+	delete[] d;
+}
+
+void CConvertStringDlg::mympz_out_raw(mpz_t x, unsigned char* c, int n)
+{
+	// 숫자를 문자로 변환
+	unsigned long l;
+	mpz_t z;
+	int i = n - 1; // 배열은 0부터 시작하기 때문
+	mpz_init_set(z, x);
+	while (i >= 0)
+	{
+		l = mpz_get_ui(z); // mpz_t를 c타입 정수 unsigned long 형 타입으로 변환
+		c[i] = (unsigned char)l;
+		mpz_tdiv_q_2exp(z, z, 8);
+		i--;
+	}
+
+	mpz_clear(z);
+}
+
+int CConvertStringDlg::mympz_sizeinbytes(mpz_t x)
+{
+	int i, n;
+	n = mpz_sizeinbase(x, 2); // 영문자 개수 = m이면 n = m-1 => 2^n으로 표현
+	i = n >> 3; // 3칸 왼쪽으로 이동 => 2^3으로 나눔 효과
+	if (n % 8)
+	{
+		i++; // 영문자 입력 개수, 한글 입력 개수 * 2
+	}
+
+	return i;
 }
