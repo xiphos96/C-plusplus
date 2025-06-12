@@ -4,6 +4,7 @@ del /s /q /f *.obj
 del /s /q /f *.iobj
 del /s /q /f *.idb
 del /s /q /f *.tlog
+del /s /q /f *.log
 del /s /q /f *.pdb
 del /s /q /f *.ipdb
 del /s /q /f *.exe
